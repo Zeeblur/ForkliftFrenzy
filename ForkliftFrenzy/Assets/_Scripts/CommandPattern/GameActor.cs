@@ -3,7 +3,7 @@ using System.Collections;
 
 public class GameActor : MonoBehaviour
 {
-    public float speed = 2;
+    public float speed = 2.0f;
 
     private GameObject fork;
 
@@ -29,24 +29,29 @@ public class GameActor : MonoBehaviour
     {
         Vector3 translation = this.transform.forward;
 
-        translation *= direction;
+        translation *= direction * speed * Time.deltaTime;
 
         this.transform.position += translation;
     }
 
     public void Turn(float rotation)
     {
-        this.transform.Rotate(new Vector3(0.0f, 1.0f, 0.0f), rotation);
+        // up vector
+        Vector3 axis = new Vector3(0.0f, 1.0f, 0.0f);
+
+        this.transform.Rotate(axis, rotation);
     }
 
     public void LowerForks()
     {
-        fork.transform.Translate(new Vector3(0.0f, -0.1f, 0.0f));
+        Vector3 translation = new Vector3(0.0f, -0.1f, 0.0f);
+        fork.transform.Translate(translation);
     }
 
     public void RaiseForks()
     {
-        fork.transform.Translate(new Vector3(0.0f, 0.1f, 0.0f));
+        Vector3 translation = new Vector3(0.0f, 0.1f, 0.0f);
+        fork.transform.Translate(translation);
     }
 
     public void Ability()

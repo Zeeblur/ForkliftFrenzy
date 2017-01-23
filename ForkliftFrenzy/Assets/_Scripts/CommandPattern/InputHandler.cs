@@ -40,10 +40,10 @@ public class InputHandler : MonoBehaviour
             return new TurnCommand(horz);
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKey(KeyCode.Q))
             return new RaiseCommand();
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKey(KeyCode.E))
             return new LowerCommand();
 
         return null;
