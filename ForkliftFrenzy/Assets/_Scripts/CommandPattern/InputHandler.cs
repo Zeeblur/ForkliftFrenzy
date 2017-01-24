@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 using System.Collections;
 
 public class InputHandler : MonoBehaviour
@@ -15,37 +16,41 @@ public class InputHandler : MonoBehaviour
 	void Update ()
     {
 
-        Command input = handleInput();
+        // multi input support
+        List<Command> input = handleInput();
         if (input != null)
         {
-            Debug.Log("input not null");
-            input.Execute(player);
+            foreach (Command c in input)
+                c.Execute(player);
         }
 	}
 
-    Command handleInput()
+    List<Command> handleInput()
     {
+        List<Command> commands = new List<Command>();
+
         // get input from axes
         // Raw input has fixed values -1, 0 or 1
         float horz = Input.GetAxisRaw("Horizontal");
         float vert = Input.GetAxisRaw("Vertical");
 
+        bool move = true;
+
         if (vert != 0.0f)
         {
-            return new DriveCommand(vert);
+            commands.Add(new DriveCommand(vert));
+            move = false;
         }
 
-        if (horz != 0.0f)
-        {
-            return new TurnCommand(horz);
-        }
+        // always send turn command for resetting wheels if no input
+        commands.Add(new TurnCommand(horz, move));
 
         if (Input.GetKey(KeyCode.Q))
-            return new RaiseCommand();
+            commands.Add(new RaiseCommand());
 
         if (Input.GetKey(KeyCode.E))
-            return new LowerCommand();
+            commands.Add(new LowerCommand());
 
-        return null;
+        return commands;
     }
 }

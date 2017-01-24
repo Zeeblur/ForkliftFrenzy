@@ -7,14 +7,16 @@ using System.Collections;
 public class TurnCommand : Command
 {
     private float turnValue;
+    private bool moving;
 
-    public TurnCommand(float input)
+    public TurnCommand(float input, bool mov)
     {
         turnValue = input;
+        moving = mov;
     }
 
     public override void Execute(GameActor actor)
     {
-        actor.Turn(turnValue);
+        actor.Turn(turnValue, moving);
     }
 }
