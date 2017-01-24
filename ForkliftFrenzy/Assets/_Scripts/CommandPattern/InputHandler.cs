@@ -34,12 +34,12 @@ public class InputHandler : MonoBehaviour
         float horz = Input.GetAxisRaw("Horizontal");
         float vert = Input.GetAxisRaw("Vertical");
 
-        bool move = true;
+        bool move = false;
 
         if (vert != 0.0f)
         {
             commands.Add(new DriveCommand(vert));
-            move = false;
+            move = true;
         }
 
         // always send turn command for resetting wheels if no input

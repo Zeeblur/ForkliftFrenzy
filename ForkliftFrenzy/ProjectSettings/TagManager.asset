@@ -5,8 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Fork
-  - RightWheel
-  - LeftWheel
+  - RightBackWheel
+  - LeftBackWheel
+  - RightFrontWheel
+  - LeftFrontWheel
+  - Wheels
   layers:
   - Default
   - TransparentFX

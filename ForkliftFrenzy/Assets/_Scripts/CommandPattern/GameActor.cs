@@ -7,8 +7,8 @@ public class GameActor : MonoBehaviour
     public float forkSpeed = 2.0f;
 
     private GameObject fork;
-    private GameObject[] rightWheels;
-    private GameObject[] leftWheels;
+    private GameObject[] wheels;
+    private GameObject[] frontWheels = new GameObject[2];
 
     public float turnSpeed = 2.0f;
 
@@ -18,8 +18,9 @@ public class GameActor : MonoBehaviour
     void Start()
     {
         fork = GameObject.FindGameObjectWithTag("Fork");
-        rightWheels = GameObject.FindGameObjectsWithTag("RightWheel");
-        leftWheels = GameObject.FindGameObjectsWithTag("LeftWheel");
+        wheels = GameObject.FindGameObjectsWithTag("Wheels");
+        frontWheels[0] = GameObject.Find("Wheel_front_R");
+        frontWheels[1] = GameObject.Find("Wheel_front_L");
 
         // camera offset 
         offset = new Vector3(transform.position.x, transform.position.y + 8.0f, transform.position.z + 7.0f);
@@ -42,31 +43,38 @@ public class GameActor : MonoBehaviour
         rotation *= direction;
 
         // spin wheels according to direction
-        SpinWheels(rightWheels, new Vector3(1.0f, 0.0f, 0.0f), rotation);
-        SpinWheels(leftWheels, new Vector3(0.0f, 1.0f, 0.0f), -rotation);
+        SpinWheels(wheels, new Vector3(1.0f, 0.0f, 0.0f), rotation);
     }
 
     public void Turn(float rotation, bool moving)
     {
-        // up vector
-        Vector3 axis = new Vector3(0.0f, 1.0f, 0.0f);
-
-        this.transform.Rotate(axis, rotation);
-
-        Vector3 currentAngle = rightWheels[0].transform.rotation.eulerAngles;
+        // spin wheels
 
         // stopp spin at 45 degress
-        if (rightWheels[0].transform.rotation.eulerAngles.y > 0.0f && rotation == 0.0f)
+        if (frontWheels[0].transform.rotation.eulerAngles.y > 0.0f && rotation == 0.0f)
         {
-            rightWheels[0].transform.localRotation = Quaternion.identity; //Quaternion.Lerp(Quaternion.Euler(currentAngle), new Quaternion(0.0f, 0.0f, 0.0f, 0.0f), Time.deltaTime * speed);
+            frontWheels[0].transform.localRotation = Quaternion.identity;
+            frontWheels[1].transform.localRotation = Quaternion.identity;
         }
 
         if (rotation == 0.0f)
         {
-           // SpinWheels(rightWheels, new Vector3(0.0f, 1.0f, 0.0f), rotation);
+            // SpinWheels(rightWheels, new Vector3(0.0f, 1.0f, 0.0f), rotation);
         }
         else
-            SpinWheels(rightWheels, new Vector3(0.0f, 1.0f, 0.0f), rotation);
+        {
+            SpinWheels(frontWheels, new Vector3(0.0f, 1.0f, 0.0f), rotation);
+        }
+
+        // translation of fork
+        if (!moving)
+            return;
+
+        // up vector
+        Vector3 axis = new Vector3(0.0f, 1.0f, 0.0f);
+
+        this.transform.Rotate(axis, rotation);
+               
     }
 
     private void SpinWheels(GameObject[] wheels, Vector3 axis, float rotation)
