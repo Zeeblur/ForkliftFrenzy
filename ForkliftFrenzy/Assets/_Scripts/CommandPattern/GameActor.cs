@@ -7,8 +7,8 @@ public class GameActor : MonoBehaviour
     public float forkSpeed = 2.0f;
 
     private GameObject fork;
-    private GameObject[] wheels;
-    private GameObject[] frontWheels = new GameObject[2];
+    private GameObject[] backWheels;
+    private GameObject[] frontWheels;
 
     public float turnSpeed = 2.0f;
 
@@ -18,9 +18,8 @@ public class GameActor : MonoBehaviour
     void Start()
     {
         fork = GameObject.FindGameObjectWithTag("Fork");
-        wheels = GameObject.FindGameObjectsWithTag("Wheels");
-        frontWheels[0] = GameObject.Find("Wheel_front_R");
-        frontWheels[1] = GameObject.Find("Wheel_front_L");
+        backWheels = GameObject.FindGameObjectsWithTag("backWheels");
+        frontWheels = GameObject.FindGameObjectsWithTag("frontWheels");
 
         // camera offset 
         offset = new Vector3(transform.position.x, transform.position.y + 8.0f, transform.position.z + 7.0f);
@@ -43,7 +42,8 @@ public class GameActor : MonoBehaviour
         rotation *= direction;
 
         // spin wheels according to direction
-        SpinWheels(wheels, new Vector3(1.0f, 0.0f, 0.0f), rotation);
+        SpinWheels(backWheels, new Vector3(1.0f, 0.0f, 0.0f), rotation);
+        SpinWheels(frontWheels, new Vector3(1.0f, 0.0f, 0.0f), rotation);
     }
 
     public void Turn(float rotation, bool moving)
@@ -53,8 +53,10 @@ public class GameActor : MonoBehaviour
         // stopp spin at 45 degress
         if (frontWheels[0].transform.rotation.eulerAngles.y > 0.0f && rotation == 0.0f)
         {
-            frontWheels[0].transform.localRotation = Quaternion.identity;
-            frontWheels[1].transform.localRotation = Quaternion.identity;
+            foreach(GameObject frontWheel in frontWheels)
+            {
+                frontWheel.transform.localRotation = Quaternion.identity;
+            }
         }
 
         if (rotation == 0.0f)
@@ -88,7 +90,7 @@ public class GameActor : MonoBehaviour
     public void LowerForks()
     {
         // constraint
-        if (fork.transform.localPosition.y < 0.55f)
+        if (fork.transform.localPosition.y < -0.5f)
             return;
 
         Vector3 translation = new Vector3(0.0f, -0.1f, 0.0f);
@@ -99,7 +101,7 @@ public class GameActor : MonoBehaviour
     public void RaiseForks()
     {
         // constraint
-        if (fork.transform.localPosition.y > 2.22f)
+        if (fork.transform.localPosition.y > 0.6f)
             return;
 
         Vector3 translation = new Vector3(0.0f, 0.1f, 0.0f);
