@@ -101,7 +101,7 @@ public class GameActor : MonoBehaviour
     public void RaiseForks()
     {
         // constraint
-        if (fork.transform.localPosition.y > 0.6f)
+        if (fork.transform.localPosition.y > 2.3f)
             return;
 
         Vector3 translation = new Vector3(0.0f, 0.1f, 0.0f);
@@ -123,6 +123,7 @@ public class GameActor : MonoBehaviour
 
     void LateUpdate()
     {
+        // transform x asis
         offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * turnSpeed, Vector3.up) * offset;
         Camera.main.transform.position = transform.position + offset;
         Camera.main.transform.LookAt(transform.position);
