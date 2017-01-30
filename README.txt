@@ -26,6 +26,15 @@ When features finished. Switch back to main branch when ready to merge. ONLY PRO
 git checkout master
 git merge --no-ff developmentZ
 
+
+When finished own work, whilst still on own branch:
+* Push and update my own branch as normal
+* git checkout master
+* git pull
+* git checkout mattDev
+* git -abort if you're scared
+
+
 --no-ff : No fast forward. keeps branch history, don't forget this!
 
 Matt's branch : mattDev
