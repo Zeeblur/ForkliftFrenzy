@@ -1,0 +1,200 @@
+fileFormatVersion: 2
+guid: c167a0f74e6f77149a90dea1c0099f2f
+timeCreated: 1485810691
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: base_plate
+    100002: beacon
+    100004: exhaust
+    100006: fork_upright
+    100008: forks
+    100010: forks 1
+    100012: front_left_headlight
+    100014: front_right_headlight
+    100016: headlight
+    100018: headlight 1
+    100020: headlight_lens
+    100022: headlight_lens 1
+    100024: headlights
+    100026: hub
+    100028: hub 1
+    100030: hub 2
+    100032: hub 3
+    100034: lhs_window
+    100036: main_body
+    100038: main_body 1
+    100040: rhs_window
+    100042: //RootNode
+    100044: tyre4
+    100046: tyre4 1
+    100048: tyre4 2
+    100050: tyre4 3
+    100052: wheel_back_left
+    100054: wheel_back_right
+    100056: wheel_front_left
+    100058: wheel_front_right
+    100060: wheels
+    100062: windscreen
+    400000: base_plate
+    400002: beacon
+    400004: exhaust
+    400006: fork_upright
+    400008: forks
+    400010: forks 1
+    400012: front_left_headlight
+    400014: front_right_headlight
+    400016: headlight
+    400018: headlight 1
+    400020: headlight_lens
+    400022: headlight_lens 1
+    400024: headlights
+    400026: hub
+    400028: hub 1
+    400030: hub 2
+    400032: hub 3
+    400034: lhs_window
+    400036: main_body
+    400038: main_body 1
+    400040: rhs_window
+    400042: //RootNode
+    400044: tyre4
+    400046: tyre4 1
+    400048: tyre4 2
+    400050: tyre4 3
+    400052: wheel_back_left
+    400054: wheel_back_right
+    400056: wheel_front_left
+    400058: wheel_front_right
+    400060: wheels
+    400062: windscreen
+    2300000: base_plate
+    2300002: beacon
+    2300004: exhaust
+    2300006: fork_upright
+    2300008: forks 1
+    2300010: headlight
+    2300012: headlight 1
+    2300014: headlight_lens
+    2300016: headlight_lens 1
+    2300018: hub
+    2300020: hub 1
+    2300022: hub 2
+    2300024: hub 3
+    2300026: lhs_window
+    2300028: main_body 1
+    2300030: rhs_window
+    2300032: tyre4
+    2300034: tyre4 1
+    2300036: tyre4 2
+    2300038: tyre4 3
+    2300040: windscreen
+    3300000: base_plate
+    3300002: beacon
+    3300004: exhaust
+    3300006: fork_upright
+    3300008: forks 1
+    3300010: headlight
+    3300012: headlight 1
+    3300014: headlight_lens
+    3300016: headlight_lens 1
+    3300018: hub
+    3300020: hub 1
+    3300022: hub 2
+    3300024: hub 3
+    3300026: lhs_window
+    3300028: main_body 1
+    3300030: rhs_window
+    3300032: tyre4
+    3300034: tyre4 1
+    3300036: tyre4 2
+    3300038: tyre4 3
+    3300040: windscreen
+    4300000: tyre4
+    4300002: hub
+    4300004: tyre4
+    4300006: hub
+    4300008: tyre4
+    4300010: hub
+    4300012: tyre4
+    4300014: hub
+    4300016: fork_upright
+    4300018: forks
+    4300020: headlight
+    4300022: headlight_lens
+    4300024: headlight
+    4300026: headlight_lens
+    4300028: main_body
+    4300030: beacon
+    4300032: lhs_window
+    4300034: rhs_window
+    4300036: windscreen
+    4300038: exhaust
+    4300040: base_plate
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.2
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

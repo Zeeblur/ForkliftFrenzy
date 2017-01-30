@@ -8,6 +8,8 @@ TagManager:
   - backWheels
   - frontWheels
   - Pick-Up
+  - breakLights
+  - modelParent
   layers:
   - Default
   - TransparentFX
