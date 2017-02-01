@@ -16,9 +16,6 @@ public class GameActor : MonoBehaviour
 
     public float turnSpeed = 2.0f;
 
-    private Vector3 offset;
-    private Vector3 offsetY;
-
     public Vector3 com;
     public Rigidbody rb;
 
@@ -36,25 +33,22 @@ public class GameActor : MonoBehaviour
         backWheels = GameObject.FindGameObjectsWithTag("backWheels");
         frontWheels = GameObject.FindGameObjectsWithTag("frontWheels");
 
-        // camera offset 
-        offset = new Vector3(transform.position.x, transform.position.y + 8.0f, transform.position.z + 7.0f);
-        offsetY = new Vector3(transform.position.x, transform.position.y, transform.position.z + 7.0f);
-
         BreakLightsInit();
     }
 
     void Update()
     {
         rb.centerOfMass = com;
-        CameraRotation();
 
         // Temp test will change
         if (Input.GetKeyDown(KeyCode.F))
         {
             forkliftChoice ^= 1;
+            breakLights[0].enabled = !breakLights[0].enabled;
+            breakLights[1].enabled = !breakLights[1].enabled;
         }
 
-        ChangeFork();
+       // ChangeFork();
     }
 
     void ChangeFork()
@@ -170,21 +164,4 @@ public class GameActor : MonoBehaviour
             breakLights[i].enabled = false;
         }
     }
-
-    public void CameraRotation()
-    {
-       //float h = Input.GetAxis("Mouse Y");
-       //float v = Input.GetAxis("Mouse X");
-       //Camera.main.gameObject.transform.Rotate(transform.position, h* 40.0f);
-    }
-
-    void LateUpdate()
-    {
-        // transform x asis
-        offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * turnSpeed, Vector3.up) * offset;
-        //offsetY = Quaternion.AngleAxis(Input.GetAxis("Mouse Y") * turnSpeed, Vector3.right) * offsetY;
-        Camera.main.transform.position = transform.position + offset;// + offsetY;
-        Camera.main.transform.LookAt(transform.position);
-    }
-
 }

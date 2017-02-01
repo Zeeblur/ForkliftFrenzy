@@ -1,0 +1,456 @@
+fileFormatVersion: 2
+guid: 63efd38cc855c5446b801bd169ce2bd8
+timeCreated: 1485900611
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Breaklight_L
+    100002: Breaklight_R
+    100004: Breaklights
+    100006: Chassis
+    100008: curve1
+    100010: curve4
+    100012: Engine
+    100014: Exhaust
+    100016: Fork
+    100018: Forks
+    100020: Hinges_L
+    100022: Hydraulic
+    100024: L_Door
+    100026: L_Handle
+    100028: Lights
+    100030: Main_Body
+    100032: pCube10
+    100034: pCube12
+    100036: pCube21
+    100038: pCube4
+    100040: pCube4 1
+    100042: pCube5
+    100044: pCube5 1
+    100046: pCube8
+    100048: pCylinder10
+    100050: pCylinder13
+    100052: pCylinder14
+    100054: pCylinder15
+    100056: pCylinder16
+    100058: pCylinder17
+    100060: pCylinder18
+    100062: pCylinder19
+    100064: pCylinder20
+    100066: pCylinder21
+    100068: pCylinder22
+    100070: pCylinder23
+    100072: pCylinder24
+    100074: pCylinder25
+    100076: pCylinder26
+    100078: pCylinder7
+    100080: pCylinder8
+    100082: pCylinder9
+    100084: polySurface14
+    100086: polySurface16
+    100088: polySurface17
+    100090: polySurface21
+    100092: polySurface22
+    100094: polySurface25
+    100096: polySurface26
+    100098: polySurface27
+    100100: polySurface28
+    100102: polySurface28 1
+    100104: polySurface28 2
+    100106: polySurface29
+    100108: polySurface30
+    100110: polySurface31
+    100112: polySurface32
+    100114: polySurface33
+    100116: polySurface34
+    100118: polySurface35
+    100120: polySurface36
+    100122: polySurface37
+    100124: polySurface38
+    100126: polySurface5
+    100128: polySurface6
+    100130: pPipe1
+    100132: pPipe2
+    100134: pPipe3
+    100136: pPipe4
+    100138: pPipe5
+    100140: pPipe6
+    100142: pPipe7
+    100144: pPipe8
+    100146: pSphere3
+    100148: pSphere4
+    100150: pSphere4 1
+    100152: pSphere4 2
+    100154: R_Door
+    100156: //RootNode
+    100158: Reg_Plate
+    100160: Rollbar
+    100162: Side_Windows
+    100164: Spotlight_Left
+    100166: Spotlight_Mid
+    100168: Spotlight_Right
+    100170: Spotlights
+    100172: Top_Alarm
+    100174: Wheel_Back_Left
+    100176: Wheel_Back_Right
+    100178: Wheel_Front_Left
+    100180: Wheel_Front_Right
+    100182: Wheels
+    100184: WindScreen
+    400000: Breaklight_L
+    400002: Breaklight_R
+    400004: Breaklights
+    400006: Chassis
+    400008: curve1
+    400010: curve4
+    400012: Engine
+    400014: Exhaust
+    400016: Fork
+    400018: Forks
+    400020: Hinges_L
+    400022: Hydraulic
+    400024: L_Door
+    400026: L_Handle
+    400028: Lights
+    400030: Main_Body
+    400032: pCube10
+    400034: pCube12
+    400036: pCube21
+    400038: pCube4
+    400040: pCube4 1
+    400042: pCube5
+    400044: pCube5 1
+    400046: pCube8
+    400048: pCylinder10
+    400050: pCylinder13
+    400052: pCylinder14
+    400054: pCylinder15
+    400056: pCylinder16
+    400058: pCylinder17
+    400060: pCylinder18
+    400062: pCylinder19
+    400064: pCylinder20
+    400066: pCylinder21
+    400068: pCylinder22
+    400070: pCylinder23
+    400072: pCylinder24
+    400074: pCylinder25
+    400076: pCylinder26
+    400078: pCylinder7
+    400080: pCylinder8
+    400082: pCylinder9
+    400084: polySurface14
+    400086: polySurface16
+    400088: polySurface17
+    400090: polySurface21
+    400092: polySurface22
+    400094: polySurface25
+    400096: polySurface26
+    400098: polySurface27
+    400100: polySurface28
+    400102: polySurface28 1
+    400104: polySurface28 2
+    400106: polySurface29
+    400108: polySurface30
+    400110: polySurface31
+    400112: polySurface32
+    400114: polySurface33
+    400116: polySurface34
+    400118: polySurface35
+    400120: polySurface36
+    400122: polySurface37
+    400124: polySurface38
+    400126: polySurface5
+    400128: polySurface6
+    400130: pPipe1
+    400132: pPipe2
+    400134: pPipe3
+    400136: pPipe4
+    400138: pPipe5
+    400140: pPipe6
+    400142: pPipe7
+    400144: pPipe8
+    400146: pSphere3
+    400148: pSphere4
+    400150: pSphere4 1
+    400152: pSphere4 2
+    400154: R_Door
+    400156: //RootNode
+    400158: Reg_Plate
+    400160: Rollbar
+    400162: Side_Windows
+    400164: Spotlight_Left
+    400166: Spotlight_Mid
+    400168: Spotlight_Right
+    400170: Spotlights
+    400172: Top_Alarm
+    400174: Wheel_Back_Left
+    400176: Wheel_Back_Right
+    400178: Wheel_Front_Left
+    400180: Wheel_Front_Right
+    400182: Wheels
+    400184: WindScreen
+    2300000: Breaklight_L
+    2300002: Breaklight_R
+    2300004: Chassis
+    2300006: Forks
+    2300008: L_Door
+    2300010: pCube10
+    2300012: pCube12
+    2300014: pCube21
+    2300016: pCube4
+    2300018: pCube4 1
+    2300020: pCube5
+    2300022: pCube5 1
+    2300024: pCube8
+    2300026: pCylinder10
+    2300028: pCylinder13
+    2300030: pCylinder14
+    2300032: pCylinder15
+    2300034: pCylinder16
+    2300036: pCylinder17
+    2300038: pCylinder18
+    2300040: pCylinder19
+    2300042: pCylinder20
+    2300044: pCylinder21
+    2300046: pCylinder22
+    2300048: pCylinder23
+    2300050: pCylinder24
+    2300052: pCylinder25
+    2300054: pCylinder26
+    2300056: pCylinder7
+    2300058: pCylinder8
+    2300060: pCylinder9
+    2300062: polySurface14
+    2300064: polySurface17
+    2300066: polySurface22
+    2300068: polySurface25
+    2300070: polySurface26
+    2300072: polySurface27
+    2300074: polySurface28
+    2300076: polySurface28 1
+    2300078: polySurface28 2
+    2300080: polySurface29
+    2300082: polySurface30
+    2300084: polySurface31
+    2300086: polySurface32
+    2300088: polySurface33
+    2300090: polySurface34
+    2300092: polySurface35
+    2300094: polySurface37
+    2300096: polySurface38
+    2300098: polySurface5
+    2300100: polySurface6
+    2300102: pPipe1
+    2300104: pPipe2
+    2300106: pPipe3
+    2300108: pPipe4
+    2300110: pPipe5
+    2300112: pPipe6
+    2300114: pPipe7
+    2300116: pPipe8
+    2300118: pSphere3
+    2300120: pSphere4
+    2300122: pSphere4 1
+    2300124: pSphere4 2
+    2300126: R_Door
+    2300128: Reg_Plate
+    2300130: Rollbar
+    3300000: Breaklight_L
+    3300002: Breaklight_R
+    3300004: Chassis
+    3300006: Forks
+    3300008: L_Door
+    3300010: pCube10
+    3300012: pCube12
+    3300014: pCube21
+    3300016: pCube4
+    3300018: pCube4 1
+    3300020: pCube5
+    3300022: pCube5 1
+    3300024: pCube8
+    3300026: pCylinder10
+    3300028: pCylinder13
+    3300030: pCylinder14
+    3300032: pCylinder15
+    3300034: pCylinder16
+    3300036: pCylinder17
+    3300038: pCylinder18
+    3300040: pCylinder19
+    3300042: pCylinder20
+    3300044: pCylinder21
+    3300046: pCylinder22
+    3300048: pCylinder23
+    3300050: pCylinder24
+    3300052: pCylinder25
+    3300054: pCylinder26
+    3300056: pCylinder7
+    3300058: pCylinder8
+    3300060: pCylinder9
+    3300062: polySurface14
+    3300064: polySurface17
+    3300066: polySurface22
+    3300068: polySurface25
+    3300070: polySurface26
+    3300072: polySurface27
+    3300074: polySurface28
+    3300076: polySurface28 1
+    3300078: polySurface28 2
+    3300080: polySurface29
+    3300082: polySurface30
+    3300084: polySurface31
+    3300086: polySurface32
+    3300088: polySurface33
+    3300090: polySurface34
+    3300092: polySurface35
+    3300094: polySurface37
+    3300096: polySurface38
+    3300098: polySurface5
+    3300100: polySurface6
+    3300102: pPipe1
+    3300104: pPipe2
+    3300106: pPipe3
+    3300108: pPipe4
+    3300110: pPipe5
+    3300112: pPipe6
+    3300114: pPipe7
+    3300116: pPipe8
+    3300118: pSphere3
+    3300120: pSphere4
+    3300122: pSphere4 1
+    3300124: pSphere4 2
+    3300126: R_Door
+    3300128: Reg_Plate
+    3300130: Rollbar
+    4300000: pCylinder7
+    4300002: pSphere3
+    4300004: Breaklight_L
+    4300006: Breaklight_R
+    4300008: pSphere4
+    4300010: polySurface28
+    4300012: pSphere4
+    4300014: polySurface28
+    4300016: pSphere4
+    4300018: polySurface28
+    4300020: polySurface35
+    4300022: polySurface37
+    4300024: polySurface38
+    4300026: polySurface17
+    4300028: polySurface5
+    4300030: polySurface6
+    4300032: polySurface22
+    4300034: polySurface14
+    4300036: polySurface27
+    4300038: L_Door
+    4300040: Chassis
+    4300042: R_Door
+    4300044: pCube5
+    4300046: pCube4
+    4300048: pCube5
+    4300050: pCube4
+    4300052: pCube8
+    4300054: pCube10
+    4300056: Rollbar
+    4300058: pPipe1
+    4300060: pPipe2
+    4300062: pCube12
+    4300064: pPipe3
+    4300066: pPipe4
+    4300068: pPipe5
+    4300070: pCylinder9
+    4300072: pCylinder10
+    4300074: pCylinder13
+    4300076: pCylinder14
+    4300078: pCylinder15
+    4300080: pCylinder16
+    4300082: pCylinder17
+    4300084: pCylinder18
+    4300086: pCylinder19
+    4300088: pCylinder20
+    4300090: pCylinder21
+    4300092: pCylinder8
+    4300094: pCylinder22
+    4300096: pCylinder23
+    4300098: pCylinder24
+    4300100: pCylinder25
+    4300102: pPipe6
+    4300104: pPipe7
+    4300106: pPipe8
+    4300108: pCylinder26
+    4300110: pCube21
+    4300112: Reg_Plate
+    4300114: polySurface26
+    4300116: polySurface25
+    4300118: polySurface33
+    4300120: polySurface34
+    4300122: polySurface32
+    4300124: polySurface31
+    4300126: polySurface30
+    4300128: polySurface29
+    4300130: Forks
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
