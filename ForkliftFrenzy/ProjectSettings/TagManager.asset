@@ -11,6 +11,7 @@ TagManager:
   - breakLights
   - modelParent
   - ground
+  - crateSpawn
   layers:
   - Default
   - TransparentFX

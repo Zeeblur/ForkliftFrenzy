@@ -19,7 +19,7 @@ public class PickUpBehaviour : MonoBehaviour
         if (colInfo.collider.tag == "ground")
         {
             //Debug.Log("On the ground");
-            this.transform.SetParent(GameObject.FindGameObjectWithTag("crateSpawn").transform);
+            this.transform.SetParent(GameObject.Find("CrateHolder").transform);
         }
     }
 }
