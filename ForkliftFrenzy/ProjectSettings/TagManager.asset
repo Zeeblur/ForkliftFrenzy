@@ -10,6 +10,7 @@ TagManager:
   - Pick-Up
   - breakLights
   - modelParent
+  - ground
   layers:
   - Default
   - TransparentFX
