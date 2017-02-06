@@ -1,0 +1,164 @@
+fileFormatVersion: 2
+guid: 94d23f98346839840a4975e349ad8037
+timeCreated: 1486151744
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Arm_L
+    100002: Arm_R
+    100004: B_parent
+    100006: Body
+    100008: curve1
+    100010: curve2
+    100012: curve3
+    100014: curve4
+    100016: curve5
+    100018: curve6
+    100020: curve7
+    100022: Fork
+    100024: Forks
+    100026: loftedSurface1
+    100028: loftedSurface2
+    100030: loftedSurface3
+    100032: loftedSurface4
+    100034: loftedSurface5
+    100036: loftedSurface6
+    100038: NURBS
+    100040: Piston_L
+    100042: Piston_R
+    100044: //RootNode
+    100046: Sleeve_L
+    100048: Sleeve_R
+    100050: transform1
+    100052: Wheel_Back
+    100054: Wheel_cover
+    100056: Wheel_Front
+    100058: Wheels
+    100060: Windscreen
+    400000: Arm_L
+    400002: Arm_R
+    400004: B_parent
+    400006: Body
+    400008: curve1
+    400010: curve2
+    400012: curve3
+    400014: curve4
+    400016: curve5
+    400018: curve6
+    400020: curve7
+    400022: Fork
+    400024: Forks
+    400026: loftedSurface1
+    400028: loftedSurface2
+    400030: loftedSurface3
+    400032: loftedSurface4
+    400034: loftedSurface5
+    400036: loftedSurface6
+    400038: NURBS
+    400040: Piston_L
+    400042: Piston_R
+    400044: //RootNode
+    400046: Sleeve_L
+    400048: Sleeve_R
+    400050: transform1
+    400052: Wheel_Back
+    400054: Wheel_cover
+    400056: Wheel_Front
+    400058: Wheels
+    400060: Windscreen
+    2300000: B_parent
+    2300002: Fork
+    2300004: Piston_L
+    2300006: Piston_R
+    2300008: Sleeve_L
+    2300010: Sleeve_R
+    2300012: Wheel_Back
+    2300014: Wheel_cover
+    2300016: Wheel_Front
+    2300018: Windscreen
+    3300000: B_parent
+    3300002: Fork
+    3300004: Piston_L
+    3300006: Piston_R
+    3300008: Sleeve_L
+    3300010: Sleeve_R
+    3300012: Wheel_Back
+    3300014: Wheel_cover
+    3300016: Wheel_Front
+    3300018: Windscreen
+    4300000: B_parent
+    4300002: Sleeve_R
+    4300004: Sleeve_L
+    4300006: Wheel_cover
+    4300008: Windscreen
+    4300010: Fork
+    4300012: Piston_R
+    4300014: Piston_L
+    4300016: Wheel_Back
+    4300018: Wheel_Front
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

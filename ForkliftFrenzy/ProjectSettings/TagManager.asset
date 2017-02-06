@@ -10,6 +10,8 @@ TagManager:
   - Pick-Up
   - breakLights
   - modelParent
+  - ground
+  - crateSpawn
   layers:
   - Default
   - TransparentFX
