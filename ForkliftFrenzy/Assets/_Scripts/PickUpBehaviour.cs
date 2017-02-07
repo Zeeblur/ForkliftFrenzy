@@ -6,6 +6,11 @@ public class PickUpBehaviour : MonoBehaviour
     void OnTriggerStay(Collider other)
     {
 
+        if (other.gameObject.tag != "Fork")
+        {
+            return;
+        }
+
         if (transform.localPosition.y > 0.5f)
         {
             //Debug.Log("pick me up");
@@ -18,7 +23,7 @@ public class PickUpBehaviour : MonoBehaviour
     
     void OnCollisionStay(Collision colInfo)
     {
-        if (colInfo.collider.tag == "ground")
+        if (colInfo.gameObject.layer == 8)
         {
             //Debug.Log("On the ground");
             this.transform.SetParent(GameObject.Find("CrateHolder").transform);
