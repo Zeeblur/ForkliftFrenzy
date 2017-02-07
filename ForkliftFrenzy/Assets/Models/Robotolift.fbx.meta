@@ -1,0 +1,134 @@
+fileFormatVersion: 2
+guid: 3f2ddf8c95968904fa11739ab4bfc096
+timeCreated: 1486468206
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: B_parent
+    100002: Body
+    100004: Fork
+    100006: Frk
+    100008: Piston_L
+    100010: Piston_R
+    100012: ROBOTOLIFT
+    100014: //RootNode
+    100016: Sleeve_L
+    100018: Sleeve_R
+    100020: transform1
+    100022: Wheel_Back
+    100024: Wheel_cover
+    100026: Wheel_Front
+    100028: Wheels
+    100030: Windscreen
+    400000: B_parent
+    400002: Body
+    400004: Fork
+    400006: Frk
+    400008: Piston_L
+    400010: Piston_R
+    400012: ROBOTOLIFT
+    400014: //RootNode
+    400016: Sleeve_L
+    400018: Sleeve_R
+    400020: transform1
+    400022: Wheel_Back
+    400024: Wheel_cover
+    400026: Wheel_Front
+    400028: Wheels
+    400030: Windscreen
+    2300000: B_parent
+    2300002: Fork
+    2300004: Piston_L
+    2300006: Piston_R
+    2300008: Sleeve_L
+    2300010: Sleeve_R
+    2300012: Wheel_Back
+    2300014: Wheel_cover
+    2300016: Wheel_Front
+    2300018: Windscreen
+    3300000: B_parent
+    3300002: Fork
+    3300004: Piston_L
+    3300006: Piston_R
+    3300008: Sleeve_L
+    3300010: Sleeve_R
+    3300012: Wheel_Back
+    3300014: Wheel_cover
+    3300016: Wheel_Front
+    3300018: Windscreen
+    4300000: B_parent
+    4300002: Sleeve_R
+    4300004: Sleeve_L
+    4300006: Wheel_cover
+    4300008: Windscreen
+    4300010: Wheel_Back
+    4300012: Wheel_Front
+    4300014: Fork
+    4300016: Piston_R
+    4300018: Piston_L
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
