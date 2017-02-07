@@ -3,36 +3,23 @@ using System.Collections;
 
 public class ClockIn : MonoBehaviour {
 
-    // Set main camera in inspector
+    // Assign cameras in inspector
     public Camera mainCam;
-    public Transform clockIn;
-    public Transform player;
-
-    public bool moveCam = false;
-    public float speed = 2.0f;
-
-    void Update()
+    public Camera clockCam;
+    
+    void Awake()
     {
-        if (moveCam)
-            ClockInFocus();
+        clockCam.enabled = false;
     }
 
-
-    private void ClockInFocus()
-    {
-        Debug.Log("changing cam target");
-        mainCam.transform.position = clockIn.position;
-        mainCam.transform.LookAt(clockIn);
-
-    }
-
-
-	
     void OnTriggerStay(Collider col)
     {
         if (col.gameObject.tag == "Fork")
         {
-            moveCam = true;
+            // Disable normal camera
+            mainCam.enabled = false;
+            // Enable clock in camera
+            clockCam.enabled = true;
         }
     }
 
@@ -40,7 +27,11 @@ public class ClockIn : MonoBehaviour {
     {
         if (col.gameObject.tag == "Fork")
         {
-            moveCam = false;
+            // Disable clock cam
+            clockCam.enabled = false;
+            // Enable normal cam
+            mainCam.enabled = true;
         }
     }
+  
 }

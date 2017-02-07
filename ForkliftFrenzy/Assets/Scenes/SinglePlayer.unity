@@ -357,11 +357,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.15, z: 1}
   m_Center: {x: 0, y: 0.55, z: 0}
---- !u!4 &307107713 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4000012855945680, guid: 4e01991f8673f7e40977425cc61333cc,
-    type: 2}
-  m_PrefabInternal: {fileID: 1005732653}
 --- !u!1 &347152770
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,6 +399,93 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 508583f5cebf0df4291a4ea332d574ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &444722163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 444722164}
+  - 20: {fileID: 444722168}
+  - 124: {fileID: 444722167}
+  - 92: {fileID: 444722166}
+  - 81: {fileID: 444722165}
+  m_Layer: 0
+  m_Name: ClockCam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &444722164
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 444722163}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 14, y: 0, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1750844459}
+  m_RootOrder: 3
+--- !u!81 &444722165
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 444722163}
+  m_Enabled: 1
+--- !u!92 &444722166
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 444722163}
+  m_Enabled: 1
+--- !u!124 &444722167
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 444722163}
+  m_Enabled: 1
+--- !u!20 &444722168
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 444722163}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 10
+  field of view: 31
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
 --- !u!1 &460313291
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,6 +641,69 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &621706388
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 621706389}
+  - 108: {fileID: 621706390}
+  m_Layer: 0
+  m_Name: Point light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &621706389
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 621706388}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.46, y: 2.09, z: 0.73}
+  m_LocalScale: {x: 3.3333333, y: 1, z: 1.4285715}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1750844459}
+  m_RootOrder: 2
+--- !u!108 &621706390
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 621706388}
+  m_Enabled: 1
+  serializedVersion: 7
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &781266225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1403,10 +1548,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCam: {fileID: 1097419815}
-  clockIn: {fileID: 1364495983}
-  player: {fileID: 307107713}
-  moveCam: 0
-  speed: 2
+  clockCam: {fileID: 444722168}
 --- !u!65 &1280477441
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1564,7 +1706,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1364495983}
   m_Layer: 0
-  m_Name: TargetTransform
+  m_Name: EndCamPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1576,13 +1718,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1364495982}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 14, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_Children: []
-  m_Father: {fileID: 2051637976}
-  m_RootOrder: 0
+  m_Father: {fileID: 1750844459}
+  m_RootOrder: 4
 --- !u!1 &1513192019
 GameObject:
   m_ObjectHideFlags: 0
@@ -1913,6 +2055,9 @@ Transform:
   m_Children:
   - {fileID: 2051637976}
   - {fileID: 1280477439}
+  - {fileID: 621706389}
+  - {fileID: 444722164}
+  - {fileID: 1364495983}
   m_Father: {fileID: 0}
   m_RootOrder: 10
 --- !u!1 &1792935585
@@ -2239,8 +2384,7 @@ Transform:
   m_LocalPosition: {x: -0.37, y: 0, z: 1.2528569}
   m_LocalScale: {x: 0.33333334, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 1364495983}
+  m_Children: []
   m_Father: {fileID: 1750844459}
   m_RootOrder: 0
 --- !u!23 &2051637977
