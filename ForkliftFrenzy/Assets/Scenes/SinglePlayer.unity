@@ -819,6 +819,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 272672854}
+  - 114: {fileID: 272672856}
   m_Layer: 0
   m_Name: Forks
   m_TagString: Untagged
@@ -842,6 +843,28 @@ Transform:
   - {fileID: 255189393}
   m_Father: {fileID: 123145272}
   m_RootOrder: 0
+--- !u!114 &272672856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 272672853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Forklift_Forks/Forks_up
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 2.2
+  OverrideMaxDistance: 100
 --- !u!1 &272785171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1165,6 +1188,7 @@ GameObject:
   - 4: {fileID: 340057234}
   - 95: {fileID: 340057236}
   - 65: {fileID: 340057235}
+  - 114: {fileID: 340057237}
   m_Layer: 0
   m_Name: RedNeck with separate fork
   m_TagString: Untagged
@@ -1218,6 +1242,28 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &340057237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 340057233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Forklift_1_Redneck/Engine_Full
+  PlayEvent: 1
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 2
+  OverrideMaxDistance: 200
 --- !u!1 &360760556
 GameObject:
   m_ObjectHideFlags: 0
@@ -1753,6 +1799,7 @@ GameObject:
   - 81: {fileID: 575819418}
   - 114: {fileID: 575819422}
   - 114: {fileID: 575819423}
+  - 114: {fileID: 575819424}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1781,7 +1828,7 @@ AudioListener:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 575819416}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &575819419
 Behaviour:
   m_ObjectHideFlags: 0
@@ -1845,10 +1892,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6280f3cf3174d94eaacb8ff295a5a38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1190532780}
-  turnSpeed: 2
-  offset: {x: 0, y: 0, z: 0}
-  offsetY: {x: 0, y: 0, z: 0}
 --- !u!114 &575819423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1863,6 +1906,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 123145271}
   rotateSpeed: 5
+--- !u!114 &575819424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 575819416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
 --- !u!1 &577011259
 GameObject:
   m_ObjectHideFlags: 0
@@ -5088,6 +5143,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1693423398}
   m_Mesh: {fileID: 4300030, guid: 2ca76bd0ca0d05a46bb9aa0f59c691c7, type: 3}
+--- !u!1 &1698569468
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1698569469}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1698569469
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1698569468}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 946.9889, y: -257.20355, z: -195.63292}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
 --- !u!1 &1700072014
 GameObject:
   m_ObjectHideFlags: 0
