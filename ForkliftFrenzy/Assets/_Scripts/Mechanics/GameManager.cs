@@ -3,11 +3,12 @@ using UnityEngine.UI;
 using System.Collections;
 
 public enum Difficulty { EASY = 1, MEDIUM, HARD };
+public enum ForkLift { SPEEDY, ENGIE, TANK, TRICKSY };
 
 public class GameManager : MonoBehaviour {
 
     private bool inPlay = false;
-    private float timeLeft = 120;
+    private float timeLeft = 60;
 
     public Mission currentMission;
 
@@ -16,10 +17,15 @@ public class GameManager : MonoBehaviour {
 
     private int currentScore = 0;
 
+    private PlayerData player;
+
+    public int totalBoxes = 0;
+
 	// Use this for initialization
 	void Start () {
         timer = GameObject.Find("Timer").GetComponent<Text>();
         score = GameObject.Find("Score").GetComponent<Text>();
+        player = GetComponent<PlayerData>();
 	}
 	
 	// Update is called once per frame
@@ -29,6 +35,7 @@ public class GameManager : MonoBehaviour {
         {
             inPlay = true;
             currentMission.SpawnBoxes(Difficulty.HARD);
+            totalBoxes = (int)Difficulty.HARD;
             Debug.Log("Start Mission");
         }
 	
@@ -48,15 +55,25 @@ public class GameManager : MonoBehaviour {
         int seconds = (val % (60 * 100)) / 100;
         timer.text = string.Format("{0:00}:{1:00}", minutes, seconds);
 
+        if (minutes == 0 && seconds == 0 || totalBoxes == 0)
+            EndGame();
 
         // update score
         score.text = currentScore.ToString();
 
     }
 
+    private void EndGame()
+    {
+        inPlay = false;
+        player.score = currentScore;
+        player.dirty = true;
+    }
+
     public void SendBox(GameObject box)
     {
-        // check for type of box here
+        // TODO: Check for type of box here
         currentScore += 200;
+        totalBoxes--;
     }
 }

@@ -8,10 +8,10 @@ public struct Spawn
     Transform location;
     public bool full;
 
-    public Spawn(Transform t)
+    public Spawn(Transform t, bool f)
     {
         location = t;
-        full = false;
+        full = f;
     }
 
     public Transform GetTransform()
@@ -49,7 +49,7 @@ public class Mission : MonoBehaviour {
             // add each child
             foreach (Transform tr in go.transform)
             {
-                spawnLoc.Add(new Spawn(tr));
+                spawnLoc.Add(new Spawn(tr, false));
             }
         }
     }
@@ -75,6 +75,9 @@ public class Mission : MonoBehaviour {
 
 
             crate.transform.SetParent(spawnLoc[rng].GetTransform(), false);
+
+            // set spawnlocation to full to stop them spawning ontop of eachother
+            spawnLoc[rng] = new Spawn(spawnLoc[rng].GetTransform(), true);
         }
     }
 }
