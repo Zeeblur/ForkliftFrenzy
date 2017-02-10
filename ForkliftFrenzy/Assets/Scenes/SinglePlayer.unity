@@ -1225,6 +1225,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 918453401}
   - 114: {fileID: 918453400}
+  - 65: {fileID: 918453402}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1244,6 +1245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentMission: {fileID: 347152772}
+  totalBoxes: 0
 --- !u!4 &918453401
 Transform:
   m_ObjectHideFlags: 0
@@ -1251,13 +1253,25 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 918453399}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.4421525, y: 2.2582092, z: 5.869156}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1525270041}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!65 &918453402
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 918453399}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 1.5}
 --- !u!1 &970516072
 GameObject:
   m_ObjectHideFlags: 0
@@ -1456,21 +1470,6 @@ Prefab:
     - target: {fileID: 4000012855945680, guid: 4e01991f8673f7e40977425cc61333cc, type: 2}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 65000010256965960, guid: 4e01991f8673f7e40977425cc61333cc,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 65000010256965960, guid: 4e01991f8673f7e40977425cc61333cc,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 65000010256965960, guid: 4e01991f8673f7e40977425cc61333cc,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 0.56
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e01991f8673f7e40977425cc61333cc, type: 2}

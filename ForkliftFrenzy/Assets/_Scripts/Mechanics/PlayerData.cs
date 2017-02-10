@@ -60,7 +60,8 @@ public class PlayerData : MonoBehaviour
     private void UpdateData()
     {
         // update player preferences on checkpoint save
-        PlayerPrefs.SetInt(highKey, score);
+        if (score > PlayerPrefs.GetInt(highKey))
+            PlayerPrefs.SetInt(highKey, score);
 
         // update ui test
         highScore.text = "HighScore: " + PlayerPrefs.GetInt(highKey);

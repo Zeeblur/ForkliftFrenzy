@@ -11,6 +11,8 @@ public class FollowCam : MonoBehaviour {
 
     void Start()
     {
+        // set default target
+        target = GameObject.FindGameObjectWithTag("Player");
     }
 
     void Update()

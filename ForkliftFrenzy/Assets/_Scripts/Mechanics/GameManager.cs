@@ -17,7 +17,9 @@ public class GameManager : MonoBehaviour {
 
     private int currentScore = 0;
 
-    private PlayerData player;
+    // var for persistence
+    private PlayerData playerData;
+    private GameActor playerScript;
 
     public int totalBoxes = 0;
 
@@ -25,7 +27,8 @@ public class GameManager : MonoBehaviour {
 	void Start () {
         timer = GameObject.Find("Timer").GetComponent<Text>();
         score = GameObject.Find("Score").GetComponent<Text>();
-        player = GetComponent<PlayerData>();
+        playerData = GetComponent<PlayerData>();
+        playerScript = GameObject.Find("Player").GetComponent<GameActor>();
 	}
 	
 	// Update is called once per frame
@@ -43,6 +46,13 @@ public class GameManager : MonoBehaviour {
         {
             UpdateUI();
         }
+
+        // gamehacks to add score and end game quickly
+        if (Input.GetKeyDown(KeyCode.I))
+            currentScore += 200;
+
+        if (Input.GetKeyDown(KeyCode.N))
+            EndGame();
 	}
 
     private void UpdateUI()
@@ -66,8 +76,8 @@ public class GameManager : MonoBehaviour {
     private void EndGame()
     {
         inPlay = false;
-        player.score = currentScore;
-        player.dirty = true;
+        playerData.score = currentScore;
+        playerData.dirty = true;
     }
 
     public void SendBox(GameObject box)
@@ -75,5 +85,25 @@ public class GameManager : MonoBehaviour {
         // TODO: Check for type of box here
         currentScore += 200;
         totalBoxes--;
+    }
+
+
+    // collider for respawn zone
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "backWheels" || other.tag == "frontWheels")
+        {
+            // TODO will need to change this to UI, just for testing 1234 keys for forklift select
+
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+                playerScript.ChangeFork(ForkLift.ENGIE);
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
+                playerScript.ChangeFork(ForkLift.SPEEDY);
+            else if (Input.GetKeyDown(KeyCode.Alpha3))
+                playerScript.ChangeFork(ForkLift.TANK);
+            else if (Input.GetKeyDown(KeyCode.Alpha4))
+                playerScript.ChangeFork(ForkLift.TRICKSY);
+
+        }
     }
 }
