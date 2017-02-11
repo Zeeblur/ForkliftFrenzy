@@ -54,14 +54,17 @@ public class Mission : MonoBehaviour {
         }
     }
 
-    void ClearBoxes()
+    public void ClearBoxes()
     {
-
+        foreach (GameObject GO in GameObject.FindGameObjectsWithTag("Pick-Up"))
+        {
+            DestroyObject(GO);
+        }
     }
 
     public void SpawnBoxes(Difficulty choice)
     {
-        for (int i = 0; i < (int)choice; i++)
+        for (int i = 0; i < (int)choice * GameManager.boxMultiplier; i++)
         {
             GameObject crate = Instantiate(cratePrefab) as GameObject;
 

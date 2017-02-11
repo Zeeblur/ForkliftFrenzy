@@ -46,7 +46,7 @@ public class GameActor : MonoBehaviour
     {
         // get rid of old fork
         if (transform.childCount > 1)
-            Destroy(transform.GetChild(1).gameObject);
+            DestroyImmediate(transform.GetChild(1).gameObject);
 
         GameObject forklift = Instantiate(forkModelPrefabs[(int)forkliftChoice]) as GameObject;
         forklift.transform.SetParent(this.transform);

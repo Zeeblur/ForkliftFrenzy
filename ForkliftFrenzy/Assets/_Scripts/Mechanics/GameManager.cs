@@ -21,7 +21,15 @@ public class GameManager : MonoBehaviour {
     private PlayerData playerData;
     private GameActor playerScript;
 
+    // to store current boxes in play
     public int totalBoxes = 0;
+
+    // multiplier for difficulty
+    public const int boxMultiplier = 3;
+
+    public GameObject endGameUI;
+    private string endGameMessage;
+    private bool gameOver = false;
 
 	// Use this for initialization
 	void Start () {
@@ -29,6 +37,9 @@ public class GameManager : MonoBehaviour {
         score = GameObject.Find("Score").GetComponent<Text>();
         playerData = GetComponent<PlayerData>();
         playerScript = GameObject.Find("Player").GetComponent<GameActor>();
+
+        // store original endgame message for parsing
+        endGameMessage = endGameUI.GetComponentInChildren<Text>().text;
 	}
 	
 	// Update is called once per frame
@@ -37,8 +48,9 @@ public class GameManager : MonoBehaviour {
         if (!inPlay && Input.GetKeyDown(KeyCode.P))
         {
             inPlay = true;
+            currentMission.ClearBoxes();
             currentMission.SpawnBoxes(Difficulty.HARD);
-            totalBoxes = (int)Difficulty.HARD;
+            totalBoxes = (int)Difficulty.HARD * boxMultiplier;
             Debug.Log("Start Mission");
         }
 	
@@ -46,6 +58,12 @@ public class GameManager : MonoBehaviour {
         {
             UpdateUI();
         }
+
+        if (gameOver && Input.anyKeyDown)
+        {
+            ResetGame();
+        }
+
 
         // gamehacks to add score and end game quickly
         if (Input.GetKeyDown(KeyCode.I))
@@ -73,11 +91,43 @@ public class GameManager : MonoBehaviour {
 
     }
 
+    private void ResetGame()
+    {
+        // hide UI
+        endGameUI.SetActive(false);
+        currentScore = 0;
+        timeLeft = 0;
+
+        UpdateUI();
+
+    }
+
     private void EndGame()
     {
         inPlay = false;
-        playerData.score = currentScore;
+        gameOver = true;
+
+        // update player data
+        bool highbeat = playerData.HasBeatenHighscore(currentScore);
         playerData.dirty = true;
+
+        // set original end game message
+        string newText = endGameMessage;
+
+        // update text and show ui
+        if (highbeat)
+        {
+            newText = newText.Replace("HS", "You beat your highscore!");
+        }
+        else
+        {
+            newText = newText.Replace("HS", "\n");
+        }
+
+        newText = newText.Replace("%", "" + currentScore);
+
+        endGameUI.GetComponentInChildren<Text>().text = newText;
+        endGameUI.SetActive(true);
     }
 
     public void SendBox(GameObject box)

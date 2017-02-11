@@ -28,8 +28,6 @@ public class PlayerData : MonoBehaviour
     // test var for persistence
     private Text highScore;
 
-    public int score = 0;
-
     public bool dirty = false; // flag to see if player needs saving
 
     void Awake()
@@ -59,15 +57,24 @@ public class PlayerData : MonoBehaviour
 
     private void UpdateData()
     {
-        // update player preferences on checkpoint save
-        if (score > PlayerPrefs.GetInt(highKey))
-            PlayerPrefs.SetInt(highKey, score);
 
         // update ui test
         highScore.text = "HighScore: " + PlayerPrefs.GetInt(highKey);
 
+        // write data
         PlayerPrefs.Save();
 
         dirty = false;
+    }
+
+    public bool HasBeatenHighscore(int currScore)
+    {
+        if (currScore > PlayerPrefs.GetInt(highKey))
+        {
+            // update player preferences 
+            PlayerPrefs.SetInt(highKey, currScore);
+            return true;
+        }
+        else { return false; }
     }
 }
