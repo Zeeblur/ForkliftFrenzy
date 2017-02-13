@@ -40,6 +40,9 @@ public class GameManager : MonoBehaviour {
 
         // store original endgame message for parsing
         endGameMessage = endGameUI.GetComponentInChildren<Text>().text;
+
+        // initial forklift unlock for player
+        playerData.UnlockForklift(ForkLift.ENGIE);
 	}
 	
 	// Update is called once per frame
@@ -131,6 +134,30 @@ public class GameManager : MonoBehaviour {
 
         newText = newText.Replace("%", "" + currentScore);
 
+        // replace money with earnings
+        int earnings = currentScore / 10;
+
+        newText = newText.Replace("$", "" + earnings);
+
+        int timeBonus = 0;
+
+        // time bonus for extra time
+        if (timeLeft >= 10)
+        {
+            // get rounded 
+            timeBonus = (int)timeLeft / 10;
+
+            timeBonus *= 10;
+            
+            newText = newText.Replace("tb", "+ Time Bonus " + timeBonus);
+        }
+        else
+        {
+            newText = newText.Replace("tb", "");
+        }
+
+        playerData.AddMoney(earnings + timeBonus);
+
         endGameUI.GetComponentInChildren<Text>().text = newText;
         endGameUI.SetActive(true);
     }
@@ -149,14 +176,14 @@ public class GameManager : MonoBehaviour {
         if (other.tag == "backWheels" || other.tag == "frontWheels")
         {
             // TODO will need to change this to UI, just for testing 1234 keys for forklift select
-
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+            
+            if (Input.GetKeyDown(KeyCode.Alpha1) && playerData.IsForkUnlocked(ForkLift.ENGIE))
                 playerScript.ChangeFork(ForkLift.ENGIE);
-            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            else if (Input.GetKeyDown(KeyCode.Alpha2) && playerData.IsForkUnlocked(ForkLift.SPEEDY))
                 playerScript.ChangeFork(ForkLift.SPEEDY);
-            else if (Input.GetKeyDown(KeyCode.Alpha3))
+            else if (Input.GetKeyDown(KeyCode.Alpha3) && playerData.IsForkUnlocked(ForkLift.TANK))
                 playerScript.ChangeFork(ForkLift.TANK);
-            else if (Input.GetKeyDown(KeyCode.Alpha4))
+            else if (Input.GetKeyDown(KeyCode.Alpha4) && playerData.IsForkUnlocked(ForkLift.TRICKSY))
                 playerScript.ChangeFork(ForkLift.TRICKSY);
 
         }

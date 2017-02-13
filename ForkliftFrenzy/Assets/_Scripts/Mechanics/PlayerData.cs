@@ -22,8 +22,11 @@ public class PlayerData : MonoBehaviour
 
     // key for unlocked forks
     private string[] forkKey;
+    private bool[] unlockedForks = { false, false, false, false };
 
     private string highKey = "HighestScore";
+
+    private string moneyKey = "Money";
 
     // test var for persistence
     private Text highScore;
@@ -52,6 +55,16 @@ public class PlayerData : MonoBehaviour
         // check if keys exist. If so update ui
         if (PlayerPrefs.HasKey(highKey))
             highScore.text = "HighScore: " + PlayerPrefs.GetInt(highKey);
+        
+        // get fork data
+        for (int i = 0; i < forkKey.Length; i++)
+        {
+            if (PlayerPrefs.HasKey(forkKey[i]))
+            {
+                // if it's a 1, fork is unlocked, else not locked
+                unlockedForks[i] = PlayerPrefs.GetInt(forkKey[i]) > 0 ? true : false;
+            }
+        }
 
     }
 
@@ -60,6 +73,7 @@ public class PlayerData : MonoBehaviour
 
         // update ui test
         highScore.text = "HighScore: " + PlayerPrefs.GetInt(highKey);
+
 
         // write data
         PlayerPrefs.Save();
@@ -76,5 +90,24 @@ public class PlayerData : MonoBehaviour
             return true;
         }
         else { return false; }
+    }
+
+    public void AddMoney(int money)
+    {
+        money += PlayerPrefs.GetInt(moneyKey);
+        PlayerPrefs.SetInt(moneyKey, money);
+    }
+
+    public void UnlockForklift(ForkLift choice)
+    {
+        PlayerPrefs.SetInt(forkKey[(int)choice], 1);
+
+        // update local copy
+        unlockedForks[(int)choice] = true;
+    }
+
+    public bool IsForkUnlocked(ForkLift choice)
+    {
+        return unlockedForks[(int)choice];
     }
 }
