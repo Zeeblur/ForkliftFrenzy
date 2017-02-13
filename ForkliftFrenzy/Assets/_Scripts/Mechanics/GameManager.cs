@@ -51,12 +51,18 @@ public class GameManager : MonoBehaviour {
             currentMission.ClearBoxes();
             currentMission.SpawnBoxes(Difficulty.HARD);
             totalBoxes = (int)Difficulty.HARD * boxMultiplier;
+
+            // TODO change to var depending on difficulty
+            timeLeft = 60;
             Debug.Log("Start Mission");
         }
 	
         if (inPlay)
         {
             UpdateUI();
+
+            if (timeLeft <= 0 || totalBoxes == 0)
+                EndGame();
         }
 
         if (gameOver && Input.anyKeyDown)
@@ -83,9 +89,6 @@ public class GameManager : MonoBehaviour {
         int seconds = (val % (60 * 100)) / 100;
         timer.text = string.Format("{0:00}:{1:00}", minutes, seconds);
 
-        if (minutes == 0 && seconds == 0 || totalBoxes == 0)
-            EndGame();
-
         // update score
         score.text = currentScore.ToString();
 
@@ -93,6 +96,8 @@ public class GameManager : MonoBehaviour {
 
     private void ResetGame()
     {
+        gameOver = false;
+
         // hide UI
         endGameUI.SetActive(false);
         currentScore = 0;

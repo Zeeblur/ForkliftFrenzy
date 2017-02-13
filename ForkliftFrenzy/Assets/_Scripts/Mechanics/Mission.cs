@@ -60,6 +60,10 @@ public class Mission : MonoBehaviour {
         {
             DestroyObject(GO);
         }
+
+        // reset spawnlocations to empty
+        for (int i = 0; i < spawnLoc.Count; i++)
+            spawnLoc[i] = new Spawn(spawnLoc[i].GetTransform(), false);
     }
 
     public void SpawnBoxes(Difficulty choice)
