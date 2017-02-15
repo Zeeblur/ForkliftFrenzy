@@ -13,9 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  SourceProjectPath: E:\Forklift Frenzy\ForkliftFrenzy\FMOD\Forklift Frenzy Main\Forklift
-    Frenzy Main.fspro
-  SourceBankPath: E:\Forklift Frenzy\ForkliftFrenzy\FMOD\Forklift Frenzy Main\Build
+  SourceProjectPath: ..\FMOD\Forklift Frenzy Main\Forklift Frenzy Main.fspro
+  SourceBankPath: ..\FMOD\Forklift Frenzy Main\Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0

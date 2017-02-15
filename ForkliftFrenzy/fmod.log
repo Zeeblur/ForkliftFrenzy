@@ -32,37 +32,29 @@
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
 [LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
 [LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
-[LOG] SystemI::createSound                     : filename = E:\Forklift Frenzy\ForkliftFrenzy\FMOD\Forklift Frenzy Main\Build\Desktop/Forklift_Engines.bank : mode 02010082
+[LOG] SystemI::createSound                     : filename = ..\FMOD\Forklift Frenzy Main\Build\Desktop/Forklift_Engines.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
 [LOG] Thread::initThread                       : Initializing FMOD nonblocking thread (0).  priority 1
 [LOG] Thread::initThread                       : - Stacksize 81920.  Stack pointer 0000000000000000 : usesemaphore = 1 : sleeptime = 0
 [LOG] Thread::callback                         : * FMOD nonblocking thread (0) started
-[LOG] SystemI::createSound                     : setdata soundi = 000000001728F408 : node = 0000000012F81770
-[LOG] SystemI::createSound                     : add node to async list : head = 000000000CFD82E8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001728F408
-[LOG] SystemI::createSoundInternal             :     filename = E:\Forklift Frenzy\ForkliftFrenzy\FMOD\Forklift Frenzy Main\Build\Desktop/Forklift_Engines.bank : mode 02010082
+[LOG] SystemI::createSound                     : setdata soundi = 0000000014D40E68 : node = 0000000013B7B560
+[LOG] SystemI::createSound                     : add node to async list : head = 000000002724B158.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000014D40E68
+[LOG] SystemI::createSoundInternal             :     filename = ..\FMOD\Forklift Frenzy Main\Build\Desktop/Forklift_Engines.bank : mode 02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190560
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 12736
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 165280
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10752
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000012F81888
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000013B7B678
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSound                     :     filename = E:\Forklift Frenzy\ForkliftFrenzy\FMOD\Forklift Frenzy Main\Build\Desktop/Forklift_Engines.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 000000001728FF68 : node = 0000000012F81A10
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000000CFD82E8.  list count = 0
-[LOG] SystemI::createSound                     :     filename = E:\Forklift Frenzy\ForkliftFrenzy\FMOD\Forklift Frenzy Main\Build\Desktop/Forklift_Engines.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 000000001728ED88 : node = 0000000035B14330
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000000CFD82E8.  list count = 1
 [LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
 [LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESTREAM
 [LOG] System::createSoundInternal              :     decode buffersize = 19200 : blocksize = 256 : format = 2
 [LOG] SystemI::createSample                    :     mode 02010082 length 19200 samples, lengthbytes 22912
 [LOG] SystemI::createSample                    :     channels = 1
-[LOG] SystemI::createSample                    :     output = 0000000031343D08
+[LOG] SystemI::createSample                    :     output = 00000000274CC458
 [LOG] OutputSoftware::createSample             :     lengthpcm 19200, lengthbytes 22912, channels 1, format 2, freq 48000, mode 0201008a
 [LOG] System::createSoundInternal              :     1 subsounds detected.
 [LOG] System::createSoundInternal              :     Seek stream to start
@@ -74,14 +66,23 @@
 [LOG] Thread::callback                         :         * FMOD file thread started
 [LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
 
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001728F408
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001728FF68
-[LOG] SystemI::createSoundInternal             :     filename = E:\Forklift Frenzy\ForkliftFrenzy\FMOD\Forklift Frenzy Main\Build\Desktop/Forklift_Engines.bank : mode 02010082
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000014D40E68
+[LOG] SoundI::getSubSound                      : sound 0000000014D40E68.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = ..\FMOD\Forklift Frenzy Main\Build\Desktop/Forklift_Engines.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000014D42528 : node = 0000000013B7B800
+[LOG] SystemI::createSound                     : add node to async list : head = 000000002724B158.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000014D42528
+[LOG] SystemI::createSound                     : filename = ..\FMOD\Forklift Frenzy Main\Build\Desktop/Forklift_Engines.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     filename = ..\FMOD\Forklift Frenzy Main\Build\Desktop/Forklift_Engines.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190560
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 12736
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 165280
+[LOG] SystemI::createSound                     :     setdata soundi = 0000000014D426C8 : node = 0000000013B7B950
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10752
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000002724B158.  list count = 0
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000012F81B28
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000013B7B918
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
@@ -90,7 +91,7 @@
 [LOG] System::createSoundInternal              :     decode buffersize = 19200 : blocksize = 256 : format = 2
 [LOG] SystemI::createSample                    :     mode 02010082 length 19200 samples, lengthbytes 16288
 [LOG] SystemI::createSample                    :     channels = 1
-[LOG] SystemI::createSample                    :     output = 0000000031343D08
+[LOG] SystemI::createSample                    :     output = 00000000274CC458
 [LOG] OutputSoftware::createSample             :     lengthpcm 19200, lengthbytes 16288, channels 1, format 2, freq 48000, mode 0201008a
 [LOG] System::createSoundInternal              :     1 subsounds detected.
 [LOG] System::createSoundInternal              :     Seek stream to start
@@ -99,14 +100,14 @@
 [LOG] System::createSoundInternal              :     switch file handle from small blocking single buffered to large nonblocking doublebuffered.
 [LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
 
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001728FF68
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001728ED88
-[LOG] SystemI::createSoundInternal             :     filename = E:\Forklift Frenzy\ForkliftFrenzy\FMOD\Forklift Frenzy Main\Build\Desktop/Forklift_Engines.bank : mode 02010082
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000014D42528
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000014D426C8
+[LOG] SystemI::createSoundInternal             :     filename = ..\FMOD\Forklift Frenzy Main\Build\Desktop/Forklift_Engines.bank : mode 02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190560
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 12736
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 165280
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10752
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000035B14448
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000013B7BA68
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
@@ -115,7 +116,7 @@
 [LOG] System::createSoundInternal              :     decode buffersize = 19200 : blocksize = 256 : format = 2
 [LOG] SystemI::createSample                    :     mode 02010082 length 19200 samples, lengthbytes 25312
 [LOG] SystemI::createSample                    :     channels = 1
-[LOG] SystemI::createSample                    :     output = 0000000031343D08
+[LOG] SystemI::createSample                    :     output = 00000000274CC458
 [LOG] OutputSoftware::createSample             :     lengthpcm 19200, lengthbytes 25312, channels 1, format 2, freq 48000, mode 0201008a
 [LOG] System::createSoundInternal              :     1 subsounds detected.
 [LOG] System::createSoundInternal              :     Seek stream to start
@@ -124,30 +125,29 @@
 [LOG] System::createSoundInternal              :     switch file handle from small blocking single buffered to large nonblocking doublebuffered.
 [LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
 
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001728ED88
-[LOG] SoundI::getSubSound                      : sound 000000001728F408.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 000000001728FF68.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 000000001728ED88.  Subsound index 0 / 1
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000012F6B648
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000012F6B648
-[LOG] SoundI::release                          : FF_Engine_1_Startup (000000001728F408)
-[LOG] SoundI::release                          : remove stream samples. (000000001728F408)
-[LOG] SoundI::release                          :     FF_Engine_1_Startup (000000003883F608)
-[LOG] SoundI::release                          : release subsounds. (000000001728F408)
-[LOG] SoundI::release                          :     FF_Engine_1_Startup (000000001728FA88)
-[LOG] SoundI::release                          : release codec. (000000001728F408)
-[LOG] SoundI::release                          : FF_Engine_1_Idle (000000001728ED88)
-[LOG] SoundI::release                          : remove stream samples. (000000001728ED88)
-[LOG] SoundI::release                          :     FF_Engine_1_Idle (00000000388413B8)
-[LOG] SoundI::release                          : release subsounds. (000000001728ED88)
-[LOG] SoundI::release                          :     FF_Engine_1_Idle (0000000012F6B648)
-[LOG] SoundI::release                          : release codec. (000000001728ED88)
-[LOG] SoundI::release                          : FF_Engine_1_Onidle (000000001728FF68)
-[LOG] SoundI::release                          : remove stream samples. (000000001728FF68)
-[LOG] SoundI::release                          :     FF_Engine_1_Onidle (000000003883E988)
-[LOG] SoundI::release                          : release subsounds. (000000001728FF68)
-[LOG] SoundI::release                          :     FF_Engine_1_Onidle (000000001728E8A8)
-[LOG] SoundI::release                          : release codec. (000000001728FF68)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000014D426C8
+[LOG] SoundI::getSubSound                      : sound 0000000014D42528.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0000000014D426C8.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000014D41348
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000014D41348
+[LOG] SoundI::release                          : FF_Engine_1_Startup (0000000014D40E68)
+[LOG] SoundI::release                          : remove stream samples. (0000000014D40E68)
+[LOG] SoundI::release                          :     FF_Engine_1_Startup (0000000027575778)
+[LOG] SoundI::release                          : release subsounds. (0000000014D40E68)
+[LOG] SoundI::release                          :     FF_Engine_1_Startup (0000000014D41008)
+[LOG] SoundI::release                          : release codec. (0000000014D40E68)
+[LOG] SoundI::release                          : FF_Engine_1_Idle (0000000014D426C8)
+[LOG] SoundI::release                          : remove stream samples. (0000000014D426C8)
+[LOG] SoundI::release                          :     FF_Engine_1_Idle (0000000027C7F028)
+[LOG] SoundI::release                          : release subsounds. (0000000014D426C8)
+[LOG] SoundI::release                          :     FF_Engine_1_Idle (0000000014D41348)
+[LOG] SoundI::release                          : release codec. (0000000014D426C8)
+[LOG] SoundI::release                          : FF_Engine_1_Onidle (0000000014D42528)
+[LOG] SoundI::release                          : remove stream samples. (0000000014D42528)
+[LOG] SoundI::release                          :     FF_Engine_1_Onidle (0000000027C7ED08)
+[LOG] SoundI::release                          : release subsounds. (0000000014D42528)
+[LOG] SoundI::release                          :     FF_Engine_1_Onidle (0000000014D419C8)
+[LOG] SoundI::release                          : release codec. (0000000014D42528)
 [LOG] Thread::callback                         : * FMOD Studio update thread finished
 [LOG] Thread::close                            : FMOD Studio update thread thread destroyed
 [LOG] Thread::callback                         : * FMOD Studio bank load thread finished
