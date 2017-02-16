@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// ClockIn should be attached to trigger area of clock in model. Deals with camera transition when entering this area.
 public class ClockIn : MonoBehaviour {
 
     // Assign cameras in inspector
@@ -16,12 +17,12 @@ public class ClockIn : MonoBehaviour {
     private Vector3 newDir;
     private bool camSetup = false;
 
+    // Disable clock cam at start
     void Awake()
     {
         // Disable clock cam on start
         clockCam.enabled = false;
     }
-
 
     // Whilst inside trigger area
     void OnTriggerStay(Collider col)
@@ -48,13 +49,12 @@ public class ClockIn : MonoBehaviour {
             // Gradually move closer, to avoid staring at back of forklift
             clockCam.transform.position = Vector3.MoveTowards(clockCam.transform.position, camEndPos.position, Time.deltaTime / speed);
             // Gradually rotate to face towards clock in
+            // NEEDS IMPROVING - CAMERA STUTTERS
             targetDir = clockViewTarget.position - clockCam.transform.position;
             newDir = Vector3.RotateTowards(clockCam.transform.forward, targetDir, Time.deltaTime / speed, 0.0f);
             clockCam.transform.rotation = Quaternion.LookRotation(newDir);
         }
     }
-
-
 
 
     // This just sets clockCam to mirror mainCam properties

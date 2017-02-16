@@ -5,42 +5,47 @@ using System.Collections.Generic;
 // spawn struct
 public struct Spawn
 {
+    // Game world transform of box spawn
     Transform location;
+    // Has this spawn been used/filled?
     public bool full;
 
+    // Constructor - set properties
     public Spawn(Transform t)
     {
         location = t;
         full = false;
     }
 
+    // Get method, returns location
     public Transform GetTransform()
     {
         return location;
     }
 }
 
+// Mission class called by GM - spawns boxes in random spawn locatios based on mission difficulty
 public class Mission : MonoBehaviour {
 
+    // Assign crate prefab in inspector
     public GameObject cratePrefab;
+    // Hold list of all available spawn locations on map
     private List<Spawn> spawnLoc = new List<Spawn>();
 
 	// Use this for initialization
 	void Start ()
     {
+        // Setup list of spawn points
         SpawnLocationInit();
-        Debug.Log("spawn" + spawnLoc.Count);
+        // Debugging - remove later
+        Debug.Log("spawn locations: " + spawnLoc.Count);
 	}
 	
-	// Update is called once per frame
-	void Update ()
-    {
-        
-	}
-
-    // retreive all possible spawn locations for crates
+	
+    // Add all possible spawn locations for crates to spawnLoc list
     void SpawnLocationInit()
     {
+        // Grab all game objects tagged as crateSpawn
         GameObject[] parents = GameObject.FindGameObjectsWithTag("crateSpawn");
 
         // for every shelf
@@ -49,22 +54,27 @@ public class Mission : MonoBehaviour {
             // add each child
             foreach (Transform tr in go.transform)
             {
+                // to the list!
                 spawnLoc.Add(new Spawn(tr));
             }
         }
     }
 
+    // Remove any crates left over from previous mission
     void ClearBoxes()
     {
 
     }
 
+    // Spawn number of boxes in random spawn locations
+    // Number determined by given difficulty (enum in GM)
     public void SpawnBoxes(Difficulty choice)
     {
         for (int i = 0; i < (int)choice; i++)
         {
+            // Instantiate crate prefab
             GameObject crate = Instantiate(cratePrefab) as GameObject;
-
+            // Pick a random spawn point
             int rng = Random.Range(0, spawnLoc.Count);
 
             // keep checking if space is full
@@ -73,7 +83,7 @@ public class Mission : MonoBehaviour {
                 rng = Random.Range(0, spawnLoc.Count);
             }
 
-
+            // Set crate transform to spawn it at location
             crate.transform.SetParent(spawnLoc[rng].GetTransform(), false);
         }
     }
