@@ -31,6 +31,8 @@ public class Mission : MonoBehaviour {
     public GameObject cratePrefab;
     // Hold list of all available spawn locations on map
     private List<Spawn> spawnLoc = new List<Spawn>();
+    // List to hold all created boxes
+    private List<GameObject> missionCrates = new List<GameObject>();
 
 	// Use this for initialization
 	void Start ()
@@ -60,16 +62,11 @@ public class Mission : MonoBehaviour {
         }
     }
 
-    // Remove any crates left over from previous mission
-    void ClearBoxes()
-    {
-
-    }
-
     // Spawn number of boxes in random spawn locations
     // Number determined by given difficulty (enum in GM)
     public void SpawnBoxes(Difficulty choice)
     {
+        Debug.Log("Spawning boxes...");
         for (int i = 0; i < (int)choice; i++)
         {
             // Instantiate crate prefab
@@ -85,6 +82,25 @@ public class Mission : MonoBehaviour {
 
             // Set crate transform to spawn it at location
             crate.transform.SetParent(spawnLoc[rng].GetTransform(), false);
+
+            // Add crate to list of mission crates
+            missionCrates.Add(crate);
         }
+        Debug.Log(missionCrates.Count + " boxes spawned");
+    }
+
+
+    // Update missionCrates list after delivering box - called by GM.SendBox()
+    public void UpdateCratesList(GameObject crate)
+    {
+        // Remove given crate from list
+        missionCrates.Remove(crate);
+        Debug.Log(missionCrates.Count + " crates left in current mission");
+    }
+
+    // Remove any crates left over from previous mission - called by GM
+    public void ClearBoxes()
+    {
+
     }
 }

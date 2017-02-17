@@ -2,41 +2,25 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public enum Difficulty { EASY = 1, MEDIUM, HARD };
+// Determines number of boxes to be spawned based on difficulty choice
+public enum Difficulty { EASY = 3, MEDIUM = 6, HARD = 10 };
 
+// GM starts missions, updates HUD with mission timer & player score
 public class GameManager : MonoBehaviour {
 
-    // Singleton pattern
-    public static GameManager instance = null;
-
-
+    // Is a mission already in progress?
     private bool inPlay = false;
+    // Mission time
     private float timeLeft = 120;
 
-    public Mission currentMission; // Is it better to use GetComponent/similar here rather than dragging via inspector for code files?
-
+    public Mission currentMission; // Is it better to use GetComponent/similar here rather than dragging via inspector for code files? Or create mission anew when necessary?
+    // HUD items
     private Text timer;
     private Text score;
-
+    // Current player score
     private int currentScore = 0;
 
-    // Ensure only 1 instance of GM
-    void Awake()
-    {
-        // Check if instance already exists
-        if (instance == null)
-            // if not, set instance to this
-            instance = this;
-        // if instance already exists & is not this
-        else if (instance != this)
-            // Then destroy this (singleton)
-            Destroy(gameObject);
-
-        // Sets this to be not destroyed when reloading scene
-        DontDestroyOnLoad(gameObject);
-    }
-
-
+   
 	// Assign timer & score Text objects
 	void Start () {
         timer = GameObject.Find("Timer").GetComponent<Text>();
@@ -86,9 +70,13 @@ public class GameManager : MonoBehaviour {
     }
 
     // Add points to player score based on box type
-    public void SendBox(GameObject box)
+    // Removes crate from missionCrates list
+    public void SendBox(GameObject crate)
     {
         // check for type of box here
         currentScore += 200;
+
+        // Remove this box from missionCrates list
+        currentMission.UpdateCratesList(crate);
     }
 }

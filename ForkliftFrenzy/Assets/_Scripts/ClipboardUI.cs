@@ -10,8 +10,9 @@ public class ClipboardUI : MonoBehaviour {
     // Assign buttons in inspector
     public Button easyBtn, medBtn, hardBtn, startBtn;
     // Public for debugging, make private later
-    public string difficulty;
     public Difficulty choice;
+    // Access GM
+    public GameManager GM;
 
     // Assign buttons and listeners
     void Start()
@@ -48,6 +49,6 @@ public class ClipboardUI : MonoBehaviour {
     public void StartMission()
     {
         // GM to call start mission
-        
+        GM.StartMission(choice);
     }
 }
