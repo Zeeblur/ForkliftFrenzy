@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 
 // Determines number of boxes to be spawned based on difficulty choice
-public enum Difficulty { EASY = 3, MEDIUM = 6, HARD = 10 };
+public enum Difficulty { EASY = 5, MEDIUM = 10, HARD = 15 };
 
 // GM starts missions, updates HUD with mission timer & player score
 public class GameManager : MonoBehaviour {

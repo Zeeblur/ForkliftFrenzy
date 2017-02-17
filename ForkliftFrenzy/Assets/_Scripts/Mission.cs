@@ -96,6 +96,13 @@ public class Mission : MonoBehaviour {
         // Remove given crate from list
         missionCrates.Remove(crate);
         Debug.Log(missionCrates.Count + " crates left in current mission");
+
+        // Check if all crates delivered
+        if(missionCrates.Count == 0)
+        {
+            // Mission success!
+            Debug.Log("Mission success! All crates delivered!");
+        }
     }
 
     // Remove any crates left over from previous mission - called by GM
