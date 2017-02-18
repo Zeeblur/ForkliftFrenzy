@@ -6,8 +6,7 @@ public class ConveyorBelt : MonoBehaviour {
     // Assign position to head towards
     public Transform beltEnd;
     // Belt speed
-    private float speed = 3.0f;
-
+    public float speed = 2.0f;
     
 
     // Moves pick-ups along belt at speed
