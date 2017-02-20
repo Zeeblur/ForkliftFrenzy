@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
-
-enum forkType { redneck, dinky };
+using System.Collections.Generic;
 
 public class GameActor : MonoBehaviour
 {
@@ -10,8 +8,8 @@ public class GameActor : MonoBehaviour
 
     private GameObject fork;
     private GameObject upperBound;     // game object reference to highest point
-    private GameObject[] backWheels;
-    private GameObject[] frontWheels;
+    private List<GameObject> backWheels = new List<GameObject>();
+    private List<GameObject> frontWheels = new List<GameObject>();
     private Light[] breakLights = new Light[2];
 
     public float turnSpeed = 2.0f;
@@ -19,54 +17,43 @@ public class GameActor : MonoBehaviour
     public Vector3 com;
     public Rigidbody rb;
 
-    // temp will change
-    public GameObject red;
-    public GameObject dink;
-
-    private int forkliftChoice = 0;
+    // reference to models to instantiate forklift at runtime
+    public GameObject[] forkModelPrefabs;
 
     // Initialise fork object
-    void Start()
+    void Awake()
+    {
+        ChangeFork(ForkLift.ENGIE);
+    }
+
+    private void AttachForkliftModel()
     {
         fork = GameObject.FindGameObjectWithTag("Fork");
         upperBound = GameObject.Find("UpperBound");
-        backWheels = GameObject.FindGameObjectsWithTag("backWheels");
-        frontWheels = GameObject.FindGameObjectsWithTag("frontWheels");
 
-        BreakLightsInit();
+        // find wheels and add to list
+
+        backWheels = new List<GameObject>();
+        backWheels.AddRange(GameObject.FindGameObjectsWithTag("backWheels"));
+
+        frontWheels.Clear();
+        frontWheels.AddRange(GameObject.FindGameObjectsWithTag("frontWheels"));
+
+       // BreakLightsInit();
     }
 
-    void Update()
+    public void ChangeFork(ForkLift forkliftChoice)
     {
-        rb.centerOfMass = com;
+        // get rid of old fork
+        if (transform.childCount > 1)
+            DestroyImmediate(transform.GetChild(1).gameObject);
 
-        // Temp test will change
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            forkliftChoice ^= 1;
-            breakLights[0].enabled = !breakLights[0].enabled;
-            breakLights[1].enabled = !breakLights[1].enabled;
-        }
+        GameObject forklift = Instantiate(forkModelPrefabs[(int)forkliftChoice]) as GameObject;
+        forklift.transform.SetParent(this.transform);
 
-       // ChangeFork();
-    }
-
-    void ChangeFork()
-    {
-        switch((forkType)forkliftChoice)
-        {
-            case forkType.redneck:
-                dink.SetActive(false);
-                red.SetActive(true);
-                
-                break;
-
-            case forkType.dinky:
-                dink.SetActive(true);
-                red.SetActive(false);
-
-                break;
-        }
+        // change target of camera to new fl
+        Camera.main.gameObject.GetComponent<FollowCam>().target = forklift;
+        AttachForkliftModel();
     }
 
     public void Drive(float direction)
@@ -88,15 +75,17 @@ public class GameActor : MonoBehaviour
     public void Turn(float rotation, bool moving)
     {
         // spin wheels
+        if (frontWheels[0] == null)
+            Debug.Log("EEEE");
 
         // stopp spin at 45 degress
-        if (frontWheels[0].transform.rotation.eulerAngles.y > 0.0f && rotation == 0.0f)
-        {
-            foreach(GameObject frontWheel in frontWheels)
-            {
-                frontWheel.transform.localRotation = Quaternion.identity;
-            }
-        }
+        //if (frontWheels[0].transform.rotation.eulerAngles.y > 0.0f && rotation == 0.0f)
+        //{
+        //    foreach(GameObject frontWheel in frontWheels)
+        //    {
+        //        frontWheel.transform.localRotation = Quaternion.identity;
+        //    }
+        //}
 
         if (rotation == 0.0f)
         {
@@ -118,7 +107,7 @@ public class GameActor : MonoBehaviour
                
     }
 
-    private void SpinWheels(GameObject[] wheels, Vector3 axis, float rotation)
+    private void SpinWheels(List<GameObject> wheels, Vector3 axis, float rotation)
     {
         foreach (GameObject wheel in wheels)
         {

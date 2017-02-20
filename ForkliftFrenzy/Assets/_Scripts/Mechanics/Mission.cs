@@ -10,11 +10,12 @@ public struct Spawn
     // Has this spawn been used/filled?
     public bool full;
 
-    // Constructor - set properties
-    public Spawn(Transform t)
+
+    public Spawn(Transform t, bool f)
+
     {
         location = t;
-        full = false;
+        full = f;
     }
 
     // Get method, returns location
@@ -56,18 +57,27 @@ public class Mission : MonoBehaviour {
             // add each child
             foreach (Transform tr in go.transform)
             {
-                // to the list!
-                spawnLoc.Add(new Spawn(tr));
+                spawnLoc.Add(new Spawn(tr, false));
             }
         }
     }
 
-    // Spawn number of boxes in random spawn locations
-    // Number determined by given difficulty (enum in GM)
+
+    public void ClearBoxes()
+    {
+        foreach (GameObject GO in GameObject.FindGameObjectsWithTag("Pick-Up"))
+        {
+            DestroyObject(GO);
+        }
+
+        // reset spawnlocations to empty
+        for (int i = 0; i < spawnLoc.Count; i++)
+            spawnLoc[i] = new Spawn(spawnLoc[i].GetTransform(), false);
+    }
+
     public void SpawnBoxes(Difficulty choice)
     {
-        Debug.Log("Spawning boxes...");
-        for (int i = 0; i < (int)choice; i++)
+        for (int i = 0; i < (int)choice * GameManager.boxMultiplier; i++)
         {
             // Instantiate crate prefab
             GameObject crate = Instantiate(cratePrefab) as GameObject;
@@ -83,8 +93,9 @@ public class Mission : MonoBehaviour {
             // Set crate transform to spawn it at location
             crate.transform.SetParent(spawnLoc[rng].GetTransform(), false);
 
-            // Add crate to list of mission crates
-            missionCrates.Add(crate);
+            // set spawnlocation to full to stop them spawning ontop of eachother
+            spawnLoc[rng] = new Spawn(spawnLoc[rng].GetTransform(), true);
+
         }
         Debug.Log(missionCrates.Count + " boxes spawned");
     }
