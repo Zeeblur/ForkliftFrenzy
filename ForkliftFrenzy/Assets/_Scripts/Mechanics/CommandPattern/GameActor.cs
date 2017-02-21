@@ -49,7 +49,7 @@ public class GameActor : MonoBehaviour
             DestroyImmediate(transform.GetChild(1).gameObject);
 
         GameObject forklift = Instantiate(forkModelPrefabs[(int)forkliftChoice]) as GameObject;
-        forklift.transform.SetParent(this.transform);
+        forklift.transform.SetParent(this.transform, false);
 
         // change target of camera to new fl
         Camera.main.gameObject.GetComponent<FollowCam>().target = forklift;

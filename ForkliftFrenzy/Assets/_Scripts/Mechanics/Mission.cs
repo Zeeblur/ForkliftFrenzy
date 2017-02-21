@@ -10,9 +10,7 @@ public struct Spawn
     // Has this spawn been used/filled?
     public bool full;
 
-
     public Spawn(Transform t, bool f)
-
     {
         location = t;
         full = f;
@@ -62,7 +60,6 @@ public class Mission : MonoBehaviour {
         }
     }
 
-
     public void ClearBoxes()
     {
         foreach (GameObject GO in GameObject.FindGameObjectsWithTag("Pick-Up"))
@@ -95,7 +92,6 @@ public class Mission : MonoBehaviour {
 
             // set spawnlocation to full to stop them spawning ontop of eachother
             spawnLoc[rng] = new Spawn(spawnLoc[rng].GetTransform(), true);
-
         }
         Debug.Log(missionCrates.Count + " boxes spawned");
     }
@@ -116,9 +112,4 @@ public class Mission : MonoBehaviour {
         }
     }
 
-    // Remove any crates left over from previous mission - called by GM
-    public void ClearBoxes()
-    {
-
-    }
 }
