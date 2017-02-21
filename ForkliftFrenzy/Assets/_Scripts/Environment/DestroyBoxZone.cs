@@ -14,6 +14,7 @@ public class DestroyBoxZone : MonoBehaviour {
 
             // Destroy box object
             Destroy(col.gameObject);
+
         }
     }
 }
