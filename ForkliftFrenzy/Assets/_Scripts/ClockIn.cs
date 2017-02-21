@@ -50,9 +50,9 @@ public class ClockIn : MonoBehaviour {
             clockCam.transform.position = Vector3.MoveTowards(clockCam.transform.position, camEndPos.position, Time.deltaTime / speed);
             // Gradually rotate to face towards clock in
             // NEEDS IMPROVING - CAMERA STUTTERS
-            targetDir = clockViewTarget.position - clockCam.transform.position;
-            newDir = Vector3.RotateTowards(clockCam.transform.forward, targetDir, Time.deltaTime / speed, 0.0f);
-            clockCam.transform.rotation = Quaternion.LookRotation(newDir);
+            //targetDir = clockViewTarget.position - clockCam.transform.position;
+            //newDir = Vector3.RotateTowards(clockCam.transform.forward, targetDir, Time.deltaTime / speed, 0.0f);
+            //clockCam.transform.rotation = Quaternion.LookRotation(newDir);
         }
     }
 

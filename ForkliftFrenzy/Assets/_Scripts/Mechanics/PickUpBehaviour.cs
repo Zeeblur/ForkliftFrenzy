@@ -13,7 +13,7 @@ public class PickUpBehaviour : MonoBehaviour
 
         if (transform.localPosition.y > 0.5f)
         {
-            //Debug.Log("pick me up");
+            Debug.Log("pick me up");
 
 
             //TODO try parenting object

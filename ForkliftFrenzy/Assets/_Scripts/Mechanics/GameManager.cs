@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public enum Difficulty { EASY = 1, MEDIUM, HARD };
+public enum Difficulty { EASY = 10, MEDIUM, HARD };
 public enum ForkLift { SPEEDY, ENGIE, TANK, TRICKSY };
 
 public class GameManager : MonoBehaviour {
@@ -48,17 +48,7 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (!inPlay && Input.GetKeyDown(KeyCode.P))
-        {
-            inPlay = true;
-            currentMission.ClearBoxes();
-            currentMission.SpawnBoxes(Difficulty.HARD);
-            totalBoxes = (int)Difficulty.HARD * boxMultiplier;
-
-            // TODO change to var depending on difficulty
-            timeLeft = 60;
-            Debug.Log("Start Mission");
-        }
+        
 	
         if (inPlay)
         {
@@ -81,6 +71,19 @@ public class GameManager : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.N))
             EndGame();
 	}
+
+    // Start le mission with given difficulty
+    public void StartMission(Difficulty choice)
+    {
+        inPlay = true;
+        currentMission.ClearBoxes();
+        currentMission.SpawnBoxes(choice);
+        totalBoxes = (int)choice * boxMultiplier;
+
+        // TODO change to var depending on difficulty
+        timeLeft = 60;
+        Debug.Log("Start Mission");
+    }
 
     private void UpdateUI()
     {
