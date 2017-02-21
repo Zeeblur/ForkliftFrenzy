@@ -49,6 +49,6 @@ public class ClipboardUI : MonoBehaviour {
     public void StartMission()
     {
         // GM to call start mission
-        GM.StartMission(choice);
+      //  GM.StartMission(choice);
     }
 }
