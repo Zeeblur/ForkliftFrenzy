@@ -5,7 +5,9 @@ using System.Collections.Generic;
 // spawn struct
 public struct Spawn
 {
+    // Game world transform of box spawn
     Transform location;
+    // Has this spawn been used/filled?
     public bool full;
 
     public Spawn(Transform t, bool f)
@@ -14,33 +16,37 @@ public struct Spawn
         full = f;
     }
 
+    // Get method, returns location
     public Transform GetTransform()
     {
         return location;
     }
 }
 
+// Mission class called by GM - spawns boxes in random spawn locatios based on mission difficulty
 public class Mission : MonoBehaviour {
 
+    // Assign crate prefab in inspector
     public GameObject cratePrefab;
+    // Hold list of all available spawn locations on map
     private List<Spawn> spawnLoc = new List<Spawn>();
+    // List to hold all created boxes
+    private List<GameObject> missionCrates = new List<GameObject>();
 
 	// Use this for initialization
 	void Start ()
     {
+        // Setup list of spawn points
         SpawnLocationInit();
-        Debug.Log("spawn" + spawnLoc.Count);
+        // Debugging - remove later
+        Debug.Log("spawn locations: " + spawnLoc.Count);
 	}
 	
-	// Update is called once per frame
-	void Update ()
-    {
-        
-	}
-
-    // retreive all possible spawn locations for crates
+	
+    // Add all possible spawn locations for crates to spawnLoc list
     void SpawnLocationInit()
     {
+        // Grab all game objects tagged as crateSpawn
         GameObject[] parents = GameObject.FindGameObjectsWithTag("crateSpawn");
 
         // for every shelf
@@ -70,8 +76,9 @@ public class Mission : MonoBehaviour {
     {
         for (int i = 0; i < (int)choice * GameManager.boxMultiplier; i++)
         {
+            // Instantiate crate prefab
             GameObject crate = Instantiate(cratePrefab) as GameObject;
-
+            // Pick a random spawn point
             int rng = Random.Range(0, spawnLoc.Count);
 
             // keep checking if space is full
@@ -80,11 +87,29 @@ public class Mission : MonoBehaviour {
                 rng = Random.Range(0, spawnLoc.Count);
             }
 
-
+            // Set crate transform to spawn it at location
             crate.transform.SetParent(spawnLoc[rng].GetTransform(), false);
 
             // set spawnlocation to full to stop them spawning ontop of eachother
             spawnLoc[rng] = new Spawn(spawnLoc[rng].GetTransform(), true);
         }
+        Debug.Log(missionCrates.Count + " boxes spawned");
     }
+
+
+    // Update missionCrates list after delivering box - called by GM.SendBox()
+    public void UpdateCratesList(GameObject crate)
+    {
+        // Remove given crate from list
+        missionCrates.Remove(crate);
+        Debug.Log(missionCrates.Count + " crates left in current mission");
+
+        // Check if all crates delivered
+        if(missionCrates.Count == 0)
+        {
+            // Mission success!
+            Debug.Log("Mission success! All crates delivered!");
+        }
+    }
+
 }
