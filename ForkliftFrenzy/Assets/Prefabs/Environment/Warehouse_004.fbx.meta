@@ -1,0 +1,1492 @@
+fileFormatVersion: 2
+guid: fa404624c68cc7f4d819ff3fe55f46bc
+timeCreated: 1487779780
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: back1
+    100002: back2
+    100004: Basement
+    100006: Cavity
+    100008: Cavity1
+    100010: Cavity2
+    100012: Central_Ramps
+    100014: Chain_1
+    100016: Chain_1 1
+    100018: Chain_1 2
+    100020: Chain_1 3
+    100022: Chain_1 4
+    100024: Chain_1 5
+    100026: Chain_1 6
+    100028: Chain_1 7
+    100030: Chain_2
+    100032: Chain_2 1
+    100034: Chain_2 2
+    100036: Chain_2 3
+    100038: Chain_2 4
+    100040: Chain_2 5
+    100042: Chain_2 6
+    100044: Chain_2 7
+    100046: Clips
+    100048: Conveyor_Belt_001
+    100050: Conveyor_Belt_002
+    100052: Crate_002
+    100054: Crate_003
+    100056: curve5
+    100058: Doors
+    100060: extractor1
+    100062: extractor2
+    100064: Grid
+    100066: Grid_MeshPart0
+    100068: Grid_MeshPart1
+    100070: Grid_MeshPart2
+    100072: Grid_MeshPart3
+    100074: Grid_MeshPart4
+    100076: Grid_MeshPart5
+    100078: Grid_MeshPart6
+    100080: Grid_MeshPart7
+    100082: Grid_MeshPart8
+    100084: Grid_MeshPart9
+    100086: Housing
+    100088: Housing 1
+    100090: Housing 2
+    100092: Housing 3
+    100094: Housing 4
+    100096: Housing 5
+    100098: Housing 6
+    100100: Housing 7
+    100102: Inner_Sleeve_Stage_001
+    100104: Inner_Sleeve_Stage_001 1
+    100106: Inner_Sleeve_Stage_001 2
+    100108: Inner_Sleeve_Stage_001 3
+    100110: Inner_Sleeve_Stage_001 4
+    100112: Inner_Sleeve_Stage_001 5
+    100114: Inner_Sleeve_Stage_002
+    100116: Inner_Sleeve_Stage_002 1
+    100118: Inner_Sleeve_Stage_002 2
+    100120: Inner_Sleeve_Stage_002 3
+    100122: Inner_Sleeve_Stage_002 4
+    100124: Inner_Sleeve_Stage_002 5
+    100126: Left_Leg
+    100128: Left_Leg 1
+    100130: Light
+    100132: Light 1
+    100134: Light 2
+    100136: Light 3
+    100138: Light 4
+    100140: Light 5
+    100142: Light 6
+    100144: Light 7
+    100146: Light_1
+    100148: Light_2
+    100150: Light_3
+    100152: Light_4
+    100154: Light_5
+    100156: Light_6
+    100158: Light_7
+    100160: Light_8
+    100162: Lights
+    100164: Lighttube_1
+    100166: Lighttube_1 1
+    100168: Lighttube_1 2
+    100170: Lighttube_1 3
+    100172: Lighttube_1 4
+    100174: Lighttube_1 5
+    100176: Lighttube_1 6
+    100178: Lighttube_1 7
+    100180: Lighttube_2
+    100182: Lighttube_2 1
+    100184: Lighttube_2 2
+    100186: Lighttube_2 3
+    100188: Lighttube_2 4
+    100190: Lighttube_2 5
+    100192: Lighttube_2 6
+    100194: Lighttube_2 7
+    100196: Main_Body
+    100198: Main_Body 1
+    100200: Main_Body_Inside_Exit_Hole
+    100202: Main_Body_Through_Hole
+    100204: Main_Central_Ramp_001
+    100206: Main_Central_Ramp_002
+    100208: Main_Crate
+    100210: Main_Crate 1
+    100212: Main_Stand
+    100214: Main_Stand 1
+    100216: Main_Stand 2
+    100218: Main_Stand 3
+    100220: Main_Stand 4
+    100222: Main_Stand 5
+    100224: pCube29
+    100226: pCube30
+    100228: pCube31
+    100230: pCube32
+    100232: pCube33
+    100234: pCube34
+    100236: pCube35
+    100238: pCylinder27
+    100240: pCylinder28
+    100242: pCylinder29
+    100244: pCylinder29 1
+    100246: Pipe_1
+    100248: Pipes
+    100250: pPipe12
+    100252: pPipe9
+    100254: pPipe9 1
+    100256: pTorus1
+    100258: pTorus1 1
+    100260: pTorus1 10
+    100262: pTorus1 11
+    100264: pTorus1 12
+    100266: pTorus1 13
+    100268: pTorus1 14
+    100270: pTorus1 15
+    100272: pTorus1 2
+    100274: pTorus1 3
+    100276: pTorus1 4
+    100278: pTorus1 5
+    100280: pTorus1 6
+    100282: pTorus1 7
+    100284: pTorus1 8
+    100286: pTorus1 9
+    100288: pTorus2
+    100290: pTorus2 1
+    100292: pTorus2 10
+    100294: pTorus2 11
+    100296: pTorus2 12
+    100298: pTorus2 13
+    100300: pTorus2 14
+    100302: pTorus2 15
+    100304: pTorus2 2
+    100306: pTorus2 3
+    100308: pTorus2 4
+    100310: pTorus2 5
+    100312: pTorus2 6
+    100314: pTorus2 7
+    100316: pTorus2 8
+    100318: pTorus2 9
+    100320: pTorus3
+    100322: pTorus3 1
+    100324: pTorus3 10
+    100326: pTorus3 11
+    100328: pTorus3 12
+    100330: pTorus3 13
+    100332: pTorus3 14
+    100334: pTorus3 15
+    100336: pTorus3 2
+    100338: pTorus3 3
+    100340: pTorus3 4
+    100342: pTorus3 5
+    100344: pTorus3 6
+    100346: pTorus3 7
+    100348: pTorus3 8
+    100350: pTorus3 9
+    100352: pTorus4
+    100354: pTorus4 1
+    100356: pTorus4 10
+    100358: pTorus4 11
+    100360: pTorus4 12
+    100362: pTorus4 13
+    100364: pTorus4 14
+    100366: pTorus4 15
+    100368: pTorus4 2
+    100370: pTorus4 3
+    100372: pTorus4 4
+    100374: pTorus4 5
+    100376: pTorus4 6
+    100378: pTorus4 7
+    100380: pTorus4 8
+    100382: pTorus4 9
+    100384: pTorus5
+    100386: pTorus5 1
+    100388: pTorus5 10
+    100390: pTorus5 11
+    100392: pTorus5 12
+    100394: pTorus5 13
+    100396: pTorus5 14
+    100398: pTorus5 15
+    100400: pTorus5 2
+    100402: pTorus5 3
+    100404: pTorus5 4
+    100406: pTorus5 5
+    100408: pTorus5 6
+    100410: pTorus5 7
+    100412: pTorus5 8
+    100414: pTorus5 9
+    100416: pTorus6
+    100418: pTorus6 1
+    100420: pTorus6 10
+    100422: pTorus6 11
+    100424: pTorus6 12
+    100426: pTorus6 13
+    100428: pTorus6 14
+    100430: pTorus6 15
+    100432: pTorus6 2
+    100434: pTorus6 3
+    100436: pTorus6 4
+    100438: pTorus6 5
+    100440: pTorus6 6
+    100442: pTorus6 7
+    100444: pTorus6 8
+    100446: pTorus6 9
+    100448: pTorus7
+    100450: pTorus7 1
+    100452: pTorus7 10
+    100454: pTorus7 11
+    100456: pTorus7 12
+    100458: pTorus7 13
+    100460: pTorus7 14
+    100462: pTorus7 15
+    100464: pTorus7 2
+    100466: pTorus7 3
+    100468: pTorus7 4
+    100470: pTorus7 5
+    100472: pTorus7 6
+    100474: pTorus7 7
+    100476: pTorus7 8
+    100478: pTorus7 9
+    100480: pTorus8
+    100482: pTorus8 1
+    100484: pTorus8 10
+    100486: pTorus8 11
+    100488: pTorus8 12
+    100490: pTorus8 13
+    100492: pTorus8 14
+    100494: pTorus8 15
+    100496: pTorus8 2
+    100498: pTorus8 3
+    100500: pTorus8 4
+    100502: pTorus8 5
+    100504: pTorus8 6
+    100506: pTorus8 7
+    100508: pTorus8 8
+    100510: pTorus8 9
+    100512: Right_Leg
+    100514: Right_Leg 1
+    100516: Shutter1
+    100518: Shutter2
+    100520: Shutter3
+    100522: Shutter4
+    100524: Small_Central_Ramp_001
+    100526: Small_Central_Ramp_002
+    100528: Stand_001
+    100530: Stand_001 1
+    100532: Stand_002
+    100534: Stand_002 1
+    100536: Stand_003
+    100538: Stand_003 1
+    100540: Stands
+    100542: Stands 1
+    100544: transform1
+    100546: //RootNode
+    100548: Warhouse
+    100550: Warhouse5
+    400000: back1
+    400002: back2
+    400004: Basement
+    400006: Cavity
+    400008: Cavity1
+    400010: Cavity2
+    400012: Central_Ramps
+    400014: Chain_1
+    400016: Chain_1 1
+    400018: Chain_1 2
+    400020: Chain_1 3
+    400022: Chain_1 4
+    400024: Chain_1 5
+    400026: Chain_1 6
+    400028: Chain_1 7
+    400030: Chain_2
+    400032: Chain_2 1
+    400034: Chain_2 2
+    400036: Chain_2 3
+    400038: Chain_2 4
+    400040: Chain_2 5
+    400042: Chain_2 6
+    400044: Chain_2 7
+    400046: Clips
+    400048: Conveyor_Belt_001
+    400050: Conveyor_Belt_002
+    400052: Crate_002
+    400054: Crate_003
+    400056: curve5
+    400058: Doors
+    400060: extractor1
+    400062: extractor2
+    400064: Grid
+    400066: Grid_MeshPart0
+    400068: Grid_MeshPart1
+    400070: Grid_MeshPart2
+    400072: Grid_MeshPart3
+    400074: Grid_MeshPart4
+    400076: Grid_MeshPart5
+    400078: Grid_MeshPart6
+    400080: Grid_MeshPart7
+    400082: Grid_MeshPart8
+    400084: Grid_MeshPart9
+    400086: Housing
+    400088: Housing 1
+    400090: Housing 2
+    400092: Housing 3
+    400094: Housing 4
+    400096: Housing 5
+    400098: Housing 6
+    400100: Housing 7
+    400102: Inner_Sleeve_Stage_001
+    400104: Inner_Sleeve_Stage_001 1
+    400106: Inner_Sleeve_Stage_001 2
+    400108: Inner_Sleeve_Stage_001 3
+    400110: Inner_Sleeve_Stage_001 4
+    400112: Inner_Sleeve_Stage_001 5
+    400114: Inner_Sleeve_Stage_002
+    400116: Inner_Sleeve_Stage_002 1
+    400118: Inner_Sleeve_Stage_002 2
+    400120: Inner_Sleeve_Stage_002 3
+    400122: Inner_Sleeve_Stage_002 4
+    400124: Inner_Sleeve_Stage_002 5
+    400126: Left_Leg
+    400128: Left_Leg 1
+    400130: Light
+    400132: Light 1
+    400134: Light 2
+    400136: Light 3
+    400138: Light 4
+    400140: Light 5
+    400142: Light 6
+    400144: Light 7
+    400146: Light_1
+    400148: Light_2
+    400150: Light_3
+    400152: Light_4
+    400154: Light_5
+    400156: Light_6
+    400158: Light_7
+    400160: Light_8
+    400162: Lights
+    400164: Lighttube_1
+    400166: Lighttube_1 1
+    400168: Lighttube_1 2
+    400170: Lighttube_1 3
+    400172: Lighttube_1 4
+    400174: Lighttube_1 5
+    400176: Lighttube_1 6
+    400178: Lighttube_1 7
+    400180: Lighttube_2
+    400182: Lighttube_2 1
+    400184: Lighttube_2 2
+    400186: Lighttube_2 3
+    400188: Lighttube_2 4
+    400190: Lighttube_2 5
+    400192: Lighttube_2 6
+    400194: Lighttube_2 7
+    400196: Main_Body
+    400198: Main_Body 1
+    400200: Main_Body_Inside_Exit_Hole
+    400202: Main_Body_Through_Hole
+    400204: Main_Central_Ramp_001
+    400206: Main_Central_Ramp_002
+    400208: Main_Crate
+    400210: Main_Crate 1
+    400212: Main_Stand
+    400214: Main_Stand 1
+    400216: Main_Stand 2
+    400218: Main_Stand 3
+    400220: Main_Stand 4
+    400222: Main_Stand 5
+    400224: pCube29
+    400226: pCube30
+    400228: pCube31
+    400230: pCube32
+    400232: pCube33
+    400234: pCube34
+    400236: pCube35
+    400238: pCylinder27
+    400240: pCylinder28
+    400242: pCylinder29
+    400244: pCylinder29 1
+    400246: Pipe_1
+    400248: Pipes
+    400250: pPipe12
+    400252: pPipe9
+    400254: pPipe9 1
+    400256: pTorus1
+    400258: pTorus1 1
+    400260: pTorus1 10
+    400262: pTorus1 11
+    400264: pTorus1 12
+    400266: pTorus1 13
+    400268: pTorus1 14
+    400270: pTorus1 15
+    400272: pTorus1 2
+    400274: pTorus1 3
+    400276: pTorus1 4
+    400278: pTorus1 5
+    400280: pTorus1 6
+    400282: pTorus1 7
+    400284: pTorus1 8
+    400286: pTorus1 9
+    400288: pTorus2
+    400290: pTorus2 1
+    400292: pTorus2 10
+    400294: pTorus2 11
+    400296: pTorus2 12
+    400298: pTorus2 13
+    400300: pTorus2 14
+    400302: pTorus2 15
+    400304: pTorus2 2
+    400306: pTorus2 3
+    400308: pTorus2 4
+    400310: pTorus2 5
+    400312: pTorus2 6
+    400314: pTorus2 7
+    400316: pTorus2 8
+    400318: pTorus2 9
+    400320: pTorus3
+    400322: pTorus3 1
+    400324: pTorus3 10
+    400326: pTorus3 11
+    400328: pTorus3 12
+    400330: pTorus3 13
+    400332: pTorus3 14
+    400334: pTorus3 15
+    400336: pTorus3 2
+    400338: pTorus3 3
+    400340: pTorus3 4
+    400342: pTorus3 5
+    400344: pTorus3 6
+    400346: pTorus3 7
+    400348: pTorus3 8
+    400350: pTorus3 9
+    400352: pTorus4
+    400354: pTorus4 1
+    400356: pTorus4 10
+    400358: pTorus4 11
+    400360: pTorus4 12
+    400362: pTorus4 13
+    400364: pTorus4 14
+    400366: pTorus4 15
+    400368: pTorus4 2
+    400370: pTorus4 3
+    400372: pTorus4 4
+    400374: pTorus4 5
+    400376: pTorus4 6
+    400378: pTorus4 7
+    400380: pTorus4 8
+    400382: pTorus4 9
+    400384: pTorus5
+    400386: pTorus5 1
+    400388: pTorus5 10
+    400390: pTorus5 11
+    400392: pTorus5 12
+    400394: pTorus5 13
+    400396: pTorus5 14
+    400398: pTorus5 15
+    400400: pTorus5 2
+    400402: pTorus5 3
+    400404: pTorus5 4
+    400406: pTorus5 5
+    400408: pTorus5 6
+    400410: pTorus5 7
+    400412: pTorus5 8
+    400414: pTorus5 9
+    400416: pTorus6
+    400418: pTorus6 1
+    400420: pTorus6 10
+    400422: pTorus6 11
+    400424: pTorus6 12
+    400426: pTorus6 13
+    400428: pTorus6 14
+    400430: pTorus6 15
+    400432: pTorus6 2
+    400434: pTorus6 3
+    400436: pTorus6 4
+    400438: pTorus6 5
+    400440: pTorus6 6
+    400442: pTorus6 7
+    400444: pTorus6 8
+    400446: pTorus6 9
+    400448: pTorus7
+    400450: pTorus7 1
+    400452: pTorus7 10
+    400454: pTorus7 11
+    400456: pTorus7 12
+    400458: pTorus7 13
+    400460: pTorus7 14
+    400462: pTorus7 15
+    400464: pTorus7 2
+    400466: pTorus7 3
+    400468: pTorus7 4
+    400470: pTorus7 5
+    400472: pTorus7 6
+    400474: pTorus7 7
+    400476: pTorus7 8
+    400478: pTorus7 9
+    400480: pTorus8
+    400482: pTorus8 1
+    400484: pTorus8 10
+    400486: pTorus8 11
+    400488: pTorus8 12
+    400490: pTorus8 13
+    400492: pTorus8 14
+    400494: pTorus8 15
+    400496: pTorus8 2
+    400498: pTorus8 3
+    400500: pTorus8 4
+    400502: pTorus8 5
+    400504: pTorus8 6
+    400506: pTorus8 7
+    400508: pTorus8 8
+    400510: pTorus8 9
+    400512: Right_Leg
+    400514: Right_Leg 1
+    400516: Shutter1
+    400518: Shutter2
+    400520: Shutter3
+    400522: Shutter4
+    400524: Small_Central_Ramp_001
+    400526: Small_Central_Ramp_002
+    400528: Stand_001
+    400530: Stand_001 1
+    400532: Stand_002
+    400534: Stand_002 1
+    400536: Stand_003
+    400538: Stand_003 1
+    400540: Stands
+    400542: Stands 1
+    400544: transform1
+    400546: //RootNode
+    400548: Warhouse
+    400550: Warhouse5
+    2300000: Basement
+    2300002: Cavity
+    2300004: Cavity1
+    2300006: Cavity2
+    2300008: Grid_MeshPart0
+    2300010: Grid_MeshPart1
+    2300012: Grid_MeshPart2
+    2300014: Grid_MeshPart3
+    2300016: Grid_MeshPart4
+    2300018: Grid_MeshPart5
+    2300020: Grid_MeshPart6
+    2300022: Grid_MeshPart7
+    2300024: Grid_MeshPart8
+    2300026: Grid_MeshPart9
+    2300028: Inner_Sleeve_Stage_001
+    2300030: Inner_Sleeve_Stage_001 1
+    2300032: Inner_Sleeve_Stage_001 2
+    2300034: Inner_Sleeve_Stage_001 3
+    2300036: Inner_Sleeve_Stage_001 4
+    2300038: Inner_Sleeve_Stage_001 5
+    2300040: Inner_Sleeve_Stage_002
+    2300042: Inner_Sleeve_Stage_002 1
+    2300044: Inner_Sleeve_Stage_002 2
+    2300046: Inner_Sleeve_Stage_002 3
+    2300048: Inner_Sleeve_Stage_002 4
+    2300050: Inner_Sleeve_Stage_002 5
+    2300052: Left_Leg
+    2300054: Left_Leg 1
+    2300056: Light
+    2300058: Light 1
+    2300060: Light 2
+    2300062: Light 3
+    2300064: Light 4
+    2300066: Light 5
+    2300068: Light 6
+    2300070: Light 7
+    2300072: Lighttube_1
+    2300074: Lighttube_1 1
+    2300076: Lighttube_1 2
+    2300078: Lighttube_1 3
+    2300080: Lighttube_1 4
+    2300082: Lighttube_1 5
+    2300084: Lighttube_1 6
+    2300086: Lighttube_1 7
+    2300088: Lighttube_2
+    2300090: Lighttube_2 1
+    2300092: Lighttube_2 2
+    2300094: Lighttube_2 3
+    2300096: Lighttube_2 4
+    2300098: Lighttube_2 5
+    2300100: Lighttube_2 6
+    2300102: Lighttube_2 7
+    2300104: Main_Body
+    2300106: Main_Body 1
+    2300108: Main_Body_Inside_Exit_Hole
+    2300110: Main_Body_Through_Hole
+    2300112: Main_Central_Ramp_001
+    2300114: Main_Central_Ramp_002
+    2300116: Main_Crate
+    2300118: Main_Crate 1
+    2300120: Main_Stand
+    2300122: Main_Stand 1
+    2300124: Main_Stand 2
+    2300126: Main_Stand 3
+    2300128: Main_Stand 4
+    2300130: Main_Stand 5
+    2300132: pCube29
+    2300134: pCube30
+    2300136: pCube31
+    2300138: pCube32
+    2300140: pCube33
+    2300142: pCube34
+    2300144: pCube35
+    2300146: pCylinder27
+    2300148: pCylinder28
+    2300150: pCylinder29
+    2300152: pCylinder29 1
+    2300154: Pipe_1
+    2300156: pPipe9
+    2300158: pPipe9 1
+    2300160: pTorus1
+    2300162: pTorus1 1
+    2300164: pTorus1 10
+    2300166: pTorus1 11
+    2300168: pTorus1 12
+    2300170: pTorus1 13
+    2300172: pTorus1 14
+    2300174: pTorus1 15
+    2300176: pTorus1 2
+    2300178: pTorus1 3
+    2300180: pTorus1 4
+    2300182: pTorus1 5
+    2300184: pTorus1 6
+    2300186: pTorus1 7
+    2300188: pTorus1 8
+    2300190: pTorus1 9
+    2300192: pTorus2
+    2300194: pTorus2 1
+    2300196: pTorus2 10
+    2300198: pTorus2 11
+    2300200: pTorus2 12
+    2300202: pTorus2 13
+    2300204: pTorus2 14
+    2300206: pTorus2 15
+    2300208: pTorus2 2
+    2300210: pTorus2 3
+    2300212: pTorus2 4
+    2300214: pTorus2 5
+    2300216: pTorus2 6
+    2300218: pTorus2 7
+    2300220: pTorus2 8
+    2300222: pTorus2 9
+    2300224: pTorus3
+    2300226: pTorus3 1
+    2300228: pTorus3 10
+    2300230: pTorus3 11
+    2300232: pTorus3 12
+    2300234: pTorus3 13
+    2300236: pTorus3 14
+    2300238: pTorus3 15
+    2300240: pTorus3 2
+    2300242: pTorus3 3
+    2300244: pTorus3 4
+    2300246: pTorus3 5
+    2300248: pTorus3 6
+    2300250: pTorus3 7
+    2300252: pTorus3 8
+    2300254: pTorus3 9
+    2300256: pTorus4
+    2300258: pTorus4 1
+    2300260: pTorus4 10
+    2300262: pTorus4 11
+    2300264: pTorus4 12
+    2300266: pTorus4 13
+    2300268: pTorus4 14
+    2300270: pTorus4 15
+    2300272: pTorus4 2
+    2300274: pTorus4 3
+    2300276: pTorus4 4
+    2300278: pTorus4 5
+    2300280: pTorus4 6
+    2300282: pTorus4 7
+    2300284: pTorus4 8
+    2300286: pTorus4 9
+    2300288: pTorus5
+    2300290: pTorus5 1
+    2300292: pTorus5 10
+    2300294: pTorus5 11
+    2300296: pTorus5 12
+    2300298: pTorus5 13
+    2300300: pTorus5 14
+    2300302: pTorus5 15
+    2300304: pTorus5 2
+    2300306: pTorus5 3
+    2300308: pTorus5 4
+    2300310: pTorus5 5
+    2300312: pTorus5 6
+    2300314: pTorus5 7
+    2300316: pTorus5 8
+    2300318: pTorus5 9
+    2300320: pTorus6
+    2300322: pTorus6 1
+    2300324: pTorus6 10
+    2300326: pTorus6 11
+    2300328: pTorus6 12
+    2300330: pTorus6 13
+    2300332: pTorus6 14
+    2300334: pTorus6 15
+    2300336: pTorus6 2
+    2300338: pTorus6 3
+    2300340: pTorus6 4
+    2300342: pTorus6 5
+    2300344: pTorus6 6
+    2300346: pTorus6 7
+    2300348: pTorus6 8
+    2300350: pTorus6 9
+    2300352: pTorus7
+    2300354: pTorus7 1
+    2300356: pTorus7 10
+    2300358: pTorus7 11
+    2300360: pTorus7 12
+    2300362: pTorus7 13
+    2300364: pTorus7 14
+    2300366: pTorus7 15
+    2300368: pTorus7 2
+    2300370: pTorus7 3
+    2300372: pTorus7 4
+    2300374: pTorus7 5
+    2300376: pTorus7 6
+    2300378: pTorus7 7
+    2300380: pTorus7 8
+    2300382: pTorus7 9
+    2300384: pTorus8
+    2300386: pTorus8 1
+    2300388: pTorus8 10
+    2300390: pTorus8 11
+    2300392: pTorus8 12
+    2300394: pTorus8 13
+    2300396: pTorus8 14
+    2300398: pTorus8 15
+    2300400: pTorus8 2
+    2300402: pTorus8 3
+    2300404: pTorus8 4
+    2300406: pTorus8 5
+    2300408: pTorus8 6
+    2300410: pTorus8 7
+    2300412: pTorus8 8
+    2300414: pTorus8 9
+    2300416: Right_Leg
+    2300418: Right_Leg 1
+    2300420: Shutter1
+    2300422: Shutter2
+    2300424: Shutter3
+    2300426: Shutter4
+    2300428: Small_Central_Ramp_001
+    2300430: Small_Central_Ramp_002
+    2300432: Warhouse5
+    3300000: Basement
+    3300002: Cavity
+    3300004: Cavity1
+    3300006: Cavity2
+    3300008: Grid_MeshPart0
+    3300010: Grid_MeshPart1
+    3300012: Grid_MeshPart2
+    3300014: Grid_MeshPart3
+    3300016: Grid_MeshPart4
+    3300018: Grid_MeshPart5
+    3300020: Grid_MeshPart6
+    3300022: Grid_MeshPart7
+    3300024: Grid_MeshPart8
+    3300026: Grid_MeshPart9
+    3300028: Inner_Sleeve_Stage_001
+    3300030: Inner_Sleeve_Stage_001 1
+    3300032: Inner_Sleeve_Stage_001 2
+    3300034: Inner_Sleeve_Stage_001 3
+    3300036: Inner_Sleeve_Stage_001 4
+    3300038: Inner_Sleeve_Stage_001 5
+    3300040: Inner_Sleeve_Stage_002
+    3300042: Inner_Sleeve_Stage_002 1
+    3300044: Inner_Sleeve_Stage_002 2
+    3300046: Inner_Sleeve_Stage_002 3
+    3300048: Inner_Sleeve_Stage_002 4
+    3300050: Inner_Sleeve_Stage_002 5
+    3300052: Left_Leg
+    3300054: Left_Leg 1
+    3300056: Light
+    3300058: Light 1
+    3300060: Light 2
+    3300062: Light 3
+    3300064: Light 4
+    3300066: Light 5
+    3300068: Light 6
+    3300070: Light 7
+    3300072: Lighttube_1
+    3300074: Lighttube_1 1
+    3300076: Lighttube_1 2
+    3300078: Lighttube_1 3
+    3300080: Lighttube_1 4
+    3300082: Lighttube_1 5
+    3300084: Lighttube_1 6
+    3300086: Lighttube_1 7
+    3300088: Lighttube_2
+    3300090: Lighttube_2 1
+    3300092: Lighttube_2 2
+    3300094: Lighttube_2 3
+    3300096: Lighttube_2 4
+    3300098: Lighttube_2 5
+    3300100: Lighttube_2 6
+    3300102: Lighttube_2 7
+    3300104: Main_Body
+    3300106: Main_Body 1
+    3300108: Main_Body_Inside_Exit_Hole
+    3300110: Main_Body_Through_Hole
+    3300112: Main_Central_Ramp_001
+    3300114: Main_Central_Ramp_002
+    3300116: Main_Crate
+    3300118: Main_Crate 1
+    3300120: Main_Stand
+    3300122: Main_Stand 1
+    3300124: Main_Stand 2
+    3300126: Main_Stand 3
+    3300128: Main_Stand 4
+    3300130: Main_Stand 5
+    3300132: pCube29
+    3300134: pCube30
+    3300136: pCube31
+    3300138: pCube32
+    3300140: pCube33
+    3300142: pCube34
+    3300144: pCube35
+    3300146: pCylinder27
+    3300148: pCylinder28
+    3300150: pCylinder29
+    3300152: pCylinder29 1
+    3300154: Pipe_1
+    3300156: pPipe9
+    3300158: pPipe9 1
+    3300160: pTorus1
+    3300162: pTorus1 1
+    3300164: pTorus1 10
+    3300166: pTorus1 11
+    3300168: pTorus1 12
+    3300170: pTorus1 13
+    3300172: pTorus1 14
+    3300174: pTorus1 15
+    3300176: pTorus1 2
+    3300178: pTorus1 3
+    3300180: pTorus1 4
+    3300182: pTorus1 5
+    3300184: pTorus1 6
+    3300186: pTorus1 7
+    3300188: pTorus1 8
+    3300190: pTorus1 9
+    3300192: pTorus2
+    3300194: pTorus2 1
+    3300196: pTorus2 10
+    3300198: pTorus2 11
+    3300200: pTorus2 12
+    3300202: pTorus2 13
+    3300204: pTorus2 14
+    3300206: pTorus2 15
+    3300208: pTorus2 2
+    3300210: pTorus2 3
+    3300212: pTorus2 4
+    3300214: pTorus2 5
+    3300216: pTorus2 6
+    3300218: pTorus2 7
+    3300220: pTorus2 8
+    3300222: pTorus2 9
+    3300224: pTorus3
+    3300226: pTorus3 1
+    3300228: pTorus3 10
+    3300230: pTorus3 11
+    3300232: pTorus3 12
+    3300234: pTorus3 13
+    3300236: pTorus3 14
+    3300238: pTorus3 15
+    3300240: pTorus3 2
+    3300242: pTorus3 3
+    3300244: pTorus3 4
+    3300246: pTorus3 5
+    3300248: pTorus3 6
+    3300250: pTorus3 7
+    3300252: pTorus3 8
+    3300254: pTorus3 9
+    3300256: pTorus4
+    3300258: pTorus4 1
+    3300260: pTorus4 10
+    3300262: pTorus4 11
+    3300264: pTorus4 12
+    3300266: pTorus4 13
+    3300268: pTorus4 14
+    3300270: pTorus4 15
+    3300272: pTorus4 2
+    3300274: pTorus4 3
+    3300276: pTorus4 4
+    3300278: pTorus4 5
+    3300280: pTorus4 6
+    3300282: pTorus4 7
+    3300284: pTorus4 8
+    3300286: pTorus4 9
+    3300288: pTorus5
+    3300290: pTorus5 1
+    3300292: pTorus5 10
+    3300294: pTorus5 11
+    3300296: pTorus5 12
+    3300298: pTorus5 13
+    3300300: pTorus5 14
+    3300302: pTorus5 15
+    3300304: pTorus5 2
+    3300306: pTorus5 3
+    3300308: pTorus5 4
+    3300310: pTorus5 5
+    3300312: pTorus5 6
+    3300314: pTorus5 7
+    3300316: pTorus5 8
+    3300318: pTorus5 9
+    3300320: pTorus6
+    3300322: pTorus6 1
+    3300324: pTorus6 10
+    3300326: pTorus6 11
+    3300328: pTorus6 12
+    3300330: pTorus6 13
+    3300332: pTorus6 14
+    3300334: pTorus6 15
+    3300336: pTorus6 2
+    3300338: pTorus6 3
+    3300340: pTorus6 4
+    3300342: pTorus6 5
+    3300344: pTorus6 6
+    3300346: pTorus6 7
+    3300348: pTorus6 8
+    3300350: pTorus6 9
+    3300352: pTorus7
+    3300354: pTorus7 1
+    3300356: pTorus7 10
+    3300358: pTorus7 11
+    3300360: pTorus7 12
+    3300362: pTorus7 13
+    3300364: pTorus7 14
+    3300366: pTorus7 15
+    3300368: pTorus7 2
+    3300370: pTorus7 3
+    3300372: pTorus7 4
+    3300374: pTorus7 5
+    3300376: pTorus7 6
+    3300378: pTorus7 7
+    3300380: pTorus7 8
+    3300382: pTorus7 9
+    3300384: pTorus8
+    3300386: pTorus8 1
+    3300388: pTorus8 10
+    3300390: pTorus8 11
+    3300392: pTorus8 12
+    3300394: pTorus8 13
+    3300396: pTorus8 14
+    3300398: pTorus8 15
+    3300400: pTorus8 2
+    3300402: pTorus8 3
+    3300404: pTorus8 4
+    3300406: pTorus8 5
+    3300408: pTorus8 6
+    3300410: pTorus8 7
+    3300412: pTorus8 8
+    3300414: pTorus8 9
+    3300416: Right_Leg
+    3300418: Right_Leg 1
+    3300420: Shutter1
+    3300422: Shutter2
+    3300424: Shutter3
+    3300426: Shutter4
+    3300428: Small_Central_Ramp_001
+    3300430: Small_Central_Ramp_002
+    3300432: Warhouse5
+    4300000: Basement
+    4300002: Cavity
+    4300004: Cavity1
+    4300006: Cavity2
+    4300008: Warhouse5
+    4300010: Shutter4
+    4300012: Shutter3
+    4300014: Shutter2
+    4300016: Shutter1
+    4300018: Light
+    4300020: Lighttube_2
+    4300022: Lighttube_1
+    4300024: pTorus2
+    4300026: pTorus3
+    4300028: pTorus4
+    4300030: pTorus5
+    4300032: pTorus6
+    4300034: pTorus7
+    4300036: pTorus8
+    4300038: pTorus1
+    4300040: pTorus2
+    4300042: pTorus3
+    4300044: pTorus4
+    4300046: pTorus5
+    4300048: pTorus6
+    4300050: pTorus7
+    4300052: pTorus8
+    4300054: pTorus1
+    4300056: Light
+    4300058: Lighttube_2
+    4300060: Lighttube_1
+    4300062: pTorus2
+    4300064: pTorus3
+    4300066: pTorus4
+    4300068: pTorus5
+    4300070: pTorus6
+    4300072: pTorus7
+    4300074: pTorus8
+    4300076: pTorus1
+    4300078: pTorus2
+    4300080: pTorus3
+    4300082: pTorus4
+    4300084: pTorus5
+    4300086: pTorus6
+    4300088: pTorus7
+    4300090: pTorus8
+    4300092: pTorus1
+    4300094: Light
+    4300096: Lighttube_2
+    4300098: Lighttube_1
+    4300100: pTorus2
+    4300102: pTorus3
+    4300104: pTorus4
+    4300106: pTorus5
+    4300108: pTorus6
+    4300110: pTorus7
+    4300112: pTorus8
+    4300114: pTorus1
+    4300116: pTorus2
+    4300118: pTorus3
+    4300120: pTorus4
+    4300122: pTorus5
+    4300124: pTorus6
+    4300126: pTorus7
+    4300128: pTorus8
+    4300130: pTorus1
+    4300132: Light
+    4300134: Lighttube_2
+    4300136: Lighttube_1
+    4300138: pTorus2
+    4300140: pTorus3
+    4300142: pTorus4
+    4300144: pTorus5
+    4300146: pTorus6
+    4300148: pTorus7
+    4300150: pTorus8
+    4300152: pTorus1
+    4300154: pTorus2
+    4300156: pTorus3
+    4300158: pTorus4
+    4300160: pTorus5
+    4300162: pTorus6
+    4300164: pTorus7
+    4300166: pTorus8
+    4300168: pTorus1
+    4300170: Light
+    4300172: Lighttube_2
+    4300174: Lighttube_1
+    4300176: pTorus2
+    4300178: pTorus3
+    4300180: pTorus4
+    4300182: pTorus5
+    4300184: pTorus6
+    4300186: pTorus7
+    4300188: pTorus8
+    4300190: pTorus1
+    4300192: pTorus2
+    4300194: pTorus3
+    4300196: pTorus4
+    4300198: pTorus5
+    4300200: pTorus6
+    4300202: pTorus7
+    4300204: pTorus8
+    4300206: pTorus1
+    4300208: Light
+    4300210: Lighttube_2
+    4300212: Lighttube_1
+    4300214: pTorus2
+    4300216: pTorus3
+    4300218: pTorus4
+    4300220: pTorus5
+    4300222: pTorus6
+    4300224: pTorus7
+    4300226: pTorus8
+    4300228: pTorus1
+    4300230: pTorus2
+    4300232: pTorus3
+    4300234: pTorus4
+    4300236: pTorus5
+    4300238: pTorus6
+    4300240: pTorus7
+    4300242: pTorus8
+    4300244: pTorus1
+    4300246: Light
+    4300248: Lighttube_2
+    4300250: Lighttube_1
+    4300252: pTorus2
+    4300254: pTorus3
+    4300256: pTorus4
+    4300258: pTorus5
+    4300260: pTorus6
+    4300262: pTorus7
+    4300264: pTorus8
+    4300266: pTorus1
+    4300268: pTorus2
+    4300270: pTorus3
+    4300272: pTorus4
+    4300274: pTorus5
+    4300276: pTorus6
+    4300278: pTorus7
+    4300280: pTorus8
+    4300282: pTorus1
+    4300284: Light
+    4300286: Lighttube_2
+    4300288: Lighttube_1
+    4300290: pTorus2
+    4300292: pTorus3
+    4300294: pTorus4
+    4300296: pTorus5
+    4300298: pTorus6
+    4300300: pTorus7
+    4300302: pTorus8
+    4300304: pTorus1
+    4300306: pTorus2
+    4300308: pTorus3
+    4300310: pTorus4
+    4300312: pTorus5
+    4300314: pTorus6
+    4300316: pTorus7
+    4300318: pTorus8
+    4300320: pTorus1
+    4300322: pCube29
+    4300324: pCube30
+    4300326: pCube31
+    4300328: pCube32
+    4300330: pCube33
+    4300332: pCube34
+    4300334: pCube35
+    4300336: pCylinder29
+    4300338: pPipe9
+    4300340: pCylinder29
+    4300342: pPipe9
+    4300344: Pipe_1
+    4300346: pCylinder28
+    4300348: pCylinder27
+    4300350: Grid_MeshPart0
+    4300352: Grid_MeshPart1
+    4300354: Grid_MeshPart2
+    4300356: Grid_MeshPart3
+    4300358: Grid_MeshPart4
+    4300360: Grid_MeshPart5
+    4300362: Grid_MeshPart6
+    4300364: Grid_MeshPart7
+    4300366: Grid_MeshPart8
+    4300368: Grid_MeshPart9
+    4300370: Main_Body
+    4300372: Main_Stand
+    4300374: Inner_Sleeve_Stage_001
+    4300376: Inner_Sleeve_Stage_002
+    4300378: Main_Stand
+    4300380: Inner_Sleeve_Stage_001
+    4300382: Inner_Sleeve_Stage_002
+    4300384: Main_Stand
+    4300386: Inner_Sleeve_Stage_001
+    4300388: Inner_Sleeve_Stage_002
+    4300390: Main_Body_Through_Hole
+    4300392: Main_Crate
+    4300394: Right_Leg
+    4300396: Left_Leg
+    4300398: Main_Body
+    4300400: Main_Stand
+    4300402: Inner_Sleeve_Stage_001
+    4300404: Inner_Sleeve_Stage_002
+    4300406: Main_Stand
+    4300408: Inner_Sleeve_Stage_001
+    4300410: Inner_Sleeve_Stage_002
+    4300412: Main_Stand
+    4300414: Inner_Sleeve_Stage_001
+    4300416: Inner_Sleeve_Stage_002
+    4300418: Main_Body_Inside_Exit_Hole
+    4300420: Main_Crate
+    4300422: Right_Leg
+    4300424: Left_Leg
+    4300426: Small_Central_Ramp_002
+    4300428: Small_Central_Ramp_001
+    4300430: Main_Central_Ramp_002
+    4300432: Main_Central_Ramp_001
+    6400000: Basement
+    6400002: Cavity
+    6400004: Cavity1
+    6400006: Cavity2
+    6400008: Grid_MeshPart0
+    6400010: Grid_MeshPart1
+    6400012: Grid_MeshPart2
+    6400014: Grid_MeshPart3
+    6400016: Grid_MeshPart4
+    6400018: Grid_MeshPart5
+    6400020: Grid_MeshPart6
+    6400022: Grid_MeshPart7
+    6400024: Grid_MeshPart8
+    6400026: Grid_MeshPart9
+    6400028: Inner_Sleeve_Stage_001
+    6400030: Inner_Sleeve_Stage_001 1
+    6400032: Inner_Sleeve_Stage_001 2
+    6400034: Inner_Sleeve_Stage_001 3
+    6400036: Inner_Sleeve_Stage_001 4
+    6400038: Inner_Sleeve_Stage_001 5
+    6400040: Inner_Sleeve_Stage_002
+    6400042: Inner_Sleeve_Stage_002 1
+    6400044: Inner_Sleeve_Stage_002 2
+    6400046: Inner_Sleeve_Stage_002 3
+    6400048: Inner_Sleeve_Stage_002 4
+    6400050: Inner_Sleeve_Stage_002 5
+    6400052: Left_Leg
+    6400054: Left_Leg 1
+    6400056: Light
+    6400058: Light 1
+    6400060: Light 2
+    6400062: Light 3
+    6400064: Light 4
+    6400066: Light 5
+    6400068: Light 6
+    6400070: Light 7
+    6400072: Lighttube_1
+    6400074: Lighttube_1 1
+    6400076: Lighttube_1 2
+    6400078: Lighttube_1 3
+    6400080: Lighttube_1 4
+    6400082: Lighttube_1 5
+    6400084: Lighttube_1 6
+    6400086: Lighttube_1 7
+    6400088: Lighttube_2
+    6400090: Lighttube_2 1
+    6400092: Lighttube_2 2
+    6400094: Lighttube_2 3
+    6400096: Lighttube_2 4
+    6400098: Lighttube_2 5
+    6400100: Lighttube_2 6
+    6400102: Lighttube_2 7
+    6400104: Main_Body
+    6400106: Main_Body 1
+    6400108: Main_Body_Inside_Exit_Hole
+    6400110: Main_Body_Through_Hole
+    6400112: Main_Central_Ramp_001
+    6400114: Main_Central_Ramp_002
+    6400116: Main_Crate
+    6400118: Main_Crate 1
+    6400120: Main_Stand
+    6400122: Main_Stand 1
+    6400124: Main_Stand 2
+    6400126: Main_Stand 3
+    6400128: Main_Stand 4
+    6400130: Main_Stand 5
+    6400132: pCube29
+    6400134: pCube30
+    6400136: pCube31
+    6400138: pCube32
+    6400140: pCube33
+    6400142: pCube34
+    6400144: pCube35
+    6400146: pCylinder27
+    6400148: pCylinder28
+    6400150: pCylinder29
+    6400152: pCylinder29 1
+    6400154: Pipe_1
+    6400156: pPipe9
+    6400158: pPipe9 1
+    6400160: pTorus1
+    6400162: pTorus1 1
+    6400164: pTorus1 10
+    6400166: pTorus1 11
+    6400168: pTorus1 12
+    6400170: pTorus1 13
+    6400172: pTorus1 14
+    6400174: pTorus1 15
+    6400176: pTorus1 2
+    6400178: pTorus1 3
+    6400180: pTorus1 4
+    6400182: pTorus1 5
+    6400184: pTorus1 6
+    6400186: pTorus1 7
+    6400188: pTorus1 8
+    6400190: pTorus1 9
+    6400192: pTorus2
+    6400194: pTorus2 1
+    6400196: pTorus2 10
+    6400198: pTorus2 11
+    6400200: pTorus2 12
+    6400202: pTorus2 13
+    6400204: pTorus2 14
+    6400206: pTorus2 15
+    6400208: pTorus2 2
+    6400210: pTorus2 3
+    6400212: pTorus2 4
+    6400214: pTorus2 5
+    6400216: pTorus2 6
+    6400218: pTorus2 7
+    6400220: pTorus2 8
+    6400222: pTorus2 9
+    6400224: pTorus3
+    6400226: pTorus3 1
+    6400228: pTorus3 10
+    6400230: pTorus3 11
+    6400232: pTorus3 12
+    6400234: pTorus3 13
+    6400236: pTorus3 14
+    6400238: pTorus3 15
+    6400240: pTorus3 2
+    6400242: pTorus3 3
+    6400244: pTorus3 4
+    6400246: pTorus3 5
+    6400248: pTorus3 6
+    6400250: pTorus3 7
+    6400252: pTorus3 8
+    6400254: pTorus3 9
+    6400256: pTorus4
+    6400258: pTorus4 1
+    6400260: pTorus4 10
+    6400262: pTorus4 11
+    6400264: pTorus4 12
+    6400266: pTorus4 13
+    6400268: pTorus4 14
+    6400270: pTorus4 15
+    6400272: pTorus4 2
+    6400274: pTorus4 3
+    6400276: pTorus4 4
+    6400278: pTorus4 5
+    6400280: pTorus4 6
+    6400282: pTorus4 7
+    6400284: pTorus4 8
+    6400286: pTorus4 9
+    6400288: pTorus5
+    6400290: pTorus5 1
+    6400292: pTorus5 10
+    6400294: pTorus5 11
+    6400296: pTorus5 12
+    6400298: pTorus5 13
+    6400300: pTorus5 14
+    6400302: pTorus5 15
+    6400304: pTorus5 2
+    6400306: pTorus5 3
+    6400308: pTorus5 4
+    6400310: pTorus5 5
+    6400312: pTorus5 6
+    6400314: pTorus5 7
+    6400316: pTorus5 8
+    6400318: pTorus5 9
+    6400320: pTorus6
+    6400322: pTorus6 1
+    6400324: pTorus6 10
+    6400326: pTorus6 11
+    6400328: pTorus6 12
+    6400330: pTorus6 13
+    6400332: pTorus6 14
+    6400334: pTorus6 15
+    6400336: pTorus6 2
+    6400338: pTorus6 3
+    6400340: pTorus6 4
+    6400342: pTorus6 5
+    6400344: pTorus6 6
+    6400346: pTorus6 7
+    6400348: pTorus6 8
+    6400350: pTorus6 9
+    6400352: pTorus7
+    6400354: pTorus7 1
+    6400356: pTorus7 10
+    6400358: pTorus7 11
+    6400360: pTorus7 12
+    6400362: pTorus7 13
+    6400364: pTorus7 14
+    6400366: pTorus7 15
+    6400368: pTorus7 2
+    6400370: pTorus7 3
+    6400372: pTorus7 4
+    6400374: pTorus7 5
+    6400376: pTorus7 6
+    6400378: pTorus7 7
+    6400380: pTorus7 8
+    6400382: pTorus7 9
+    6400384: pTorus8
+    6400386: pTorus8 1
+    6400388: pTorus8 10
+    6400390: pTorus8 11
+    6400392: pTorus8 12
+    6400394: pTorus8 13
+    6400396: pTorus8 14
+    6400398: pTorus8 15
+    6400400: pTorus8 2
+    6400402: pTorus8 3
+    6400404: pTorus8 4
+    6400406: pTorus8 5
+    6400408: pTorus8 6
+    6400410: pTorus8 7
+    6400412: pTorus8 8
+    6400414: pTorus8 9
+    6400416: Right_Leg
+    6400418: Right_Leg 1
+    6400420: Shutter1
+    6400422: Shutter2
+    6400424: Shutter3
+    6400426: Shutter4
+    6400428: Small_Central_Ramp_001
+    6400430: Small_Central_Ramp_002
+    6400432: Warhouse5
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

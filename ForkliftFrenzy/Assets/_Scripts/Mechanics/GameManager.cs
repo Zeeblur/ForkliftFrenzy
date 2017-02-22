@@ -6,15 +6,15 @@ public enum Difficulty { EASY = 10, MEDIUM, HARD };
 public enum ForkLift { SPEEDY, ENGIE, TANK, TRICKSY };
 
 public class GameManager : MonoBehaviour {
-
+    // Mission in progress already?
     private bool inPlay = false;
     private float timeLeft = 60;
-
+    // Mission should be component attached to Warehouse
     public Mission currentMission;
-
+    // For HUD canvas
     private Text timer;
     private Text score;
-
+    // Updates to be shown on HUD
     private int currentScore = 0;
 
     // var for persistence
@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour {
 
     // multiplier for difficulty
     public const int boxMultiplier = 3;
-
+    // Shown on mission finish
     public GameObject endGameUI;
     private string endGameMessage;
     private bool gameOver = false;
@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour {
     public void StartMission(Difficulty choice)
     {
         inPlay = true;
-        currentMission.ClearBoxes();
+       // currentMission.ClearBoxes();
         currentMission.SpawnBoxes(choice);
         totalBoxes = (int)choice * boxMultiplier;
 
