@@ -1500,34 +1500,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4000011079283616, guid: 16feece727ce48740bc38556f827c4a1,
     type: 2}
   m_PrefabInternal: {fileID: 283847899}
---- !u!1 &293730958
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 293730959}
-  m_Layer: 0
-  m_Name: ClockCamEndPos
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &293730959
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 293730958}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -70, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 986095032}
-  m_RootOrder: 5
 --- !u!1 &298402917
 GameObject:
   m_ObjectHideFlags: 0
@@ -6576,7 +6548,6 @@ Transform:
   - {fileID: 115564170}
   - {fileID: 1885854405}
   - {fileID: 2090009787}
-  - {fileID: 293730959}
   m_Father: {fileID: 0}
   m_RootOrder: 5
 --- !u!1001 &999377505
@@ -10946,10 +10917,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1678470060}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.0940695, y: -1.7419796, z: 40.363785}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -0.18, y: 5.31, z: 49}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -12781,7 +12752,7 @@ GameObject:
   - 65: {fileID: 2090009788}
   - 114: {fileID: 2090009789}
   m_Layer: 0
-  m_Name: TriggerArea
+  m_Name: TriggerArea(Script Here)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12820,15 +12791,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2090009786}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f619ef26ae9a6c1409dcecb74a8679af, type: 3}
+  m_Script: {fileID: 11500000, guid: 506cf392515d5b94e844dd11fb3d2bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mainCam: {fileID: 1134620409}
   clockCam: {fileID: 1678470064}
-  camEndPos: {fileID: 293730959}
-  clockViewTarget: {fileID: 1252075181}
-  speed: 5
-  targetFOV: 30
 --- !u!1 &2095291286
 GameObject:
   m_ObjectHideFlags: 0
