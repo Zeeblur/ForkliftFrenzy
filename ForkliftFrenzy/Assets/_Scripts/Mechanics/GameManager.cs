@@ -75,8 +75,12 @@ public class GameManager : MonoBehaviour {
     // Start le mission with given difficulty
     public void StartMission(Difficulty choice)
     {
+        // Inplay check
+        if (inPlay)
+            return;
+
         inPlay = true;
-       // currentMission.ClearBoxes();
+        currentMission.ClearBoxes();
         currentMission.SpawnBoxes(choice);
         totalBoxes = (int)choice * boxMultiplier;
 
