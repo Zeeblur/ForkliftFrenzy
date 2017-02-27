@@ -30,8 +30,6 @@ public class Mission : MonoBehaviour {
     public GameObject cratePrefab;
     // Hold list of all available spawn locations on map
     private List<Spawn> spawnLoc = new List<Spawn>();
-    // List to hold all created boxes
-    private List<GameObject> missionCrates = new List<GameObject>();
 
 	// Use this for initialization
 	void Start ()
@@ -93,23 +91,6 @@ public class Mission : MonoBehaviour {
             // set spawnlocation to full to stop them spawning ontop of eachother
             spawnLoc[rng] = new Spawn(spawnLoc[rng].GetTransform(), true);
         }
-        Debug.Log(missionCrates.Count + " boxes spawned");
+
     }
-
-
-    // Update missionCrates list after delivering box - called by GM.SendBox()
-    public void UpdateCratesList(GameObject crate)
-    {
-        // Remove given crate from list
-        missionCrates.Remove(crate);
-        Debug.Log(missionCrates.Count + " crates left in current mission");
-
-        // Check if all crates delivered
-        if(missionCrates.Count == 0)
-        {
-            // Mission success!
-            Debug.Log("Mission success! All crates delivered!");
-        }
-    }
-
 }
