@@ -5,7 +5,7 @@ public class PickUpBehaviour : MonoBehaviour
 {
     void OnTriggerStay(Collider other)
     {
-
+        // This might be called if the crate collides with the conveyor belt trigger area? 
         if (other.gameObject.tag != "Fork")
         {
             return;

@@ -65,6 +65,16 @@ ModelImporter:
     4300014: Main_Stand
     4300016: Inner_Sleeve_Stage_001
     4300018: Inner_Sleeve_Stage_002
+    6400000: Inner_Sleeve_Stage_001
+    6400002: Inner_Sleeve_Stage_001 1
+    6400004: Inner_Sleeve_Stage_001 2
+    6400006: Inner_Sleeve_Stage_002
+    6400008: Inner_Sleeve_Stage_002 1
+    6400010: Inner_Sleeve_Stage_002 2
+    6400012: Main_Body
+    6400014: Main_Stand
+    6400016: Main_Stand 1
+    6400018: Main_Stand 2
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -92,7 +102,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
