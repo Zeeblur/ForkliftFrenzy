@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public enum Difficulty { EASY = 10, MEDIUM, HARD };
+public enum Difficulty { EASY = 1, MEDIUM, HARD };
 public enum ForkLift { SPEEDY, ENGIE, TANK, TRICKSY };
 
 public class GameManager : MonoBehaviour {
