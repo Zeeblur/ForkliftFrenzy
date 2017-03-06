@@ -11,6 +11,8 @@ public class ClipboardUI : MonoBehaviour {
     public Button easyBtn, medBtn, hardBtn, startBtn;
     // Public for debugging, make private later
     public Difficulty choice;
+    // Has choice been made to allow mission start
+    private bool chosen = false;
     // Access GM
     public GameManager GM;
 
@@ -32,23 +34,30 @@ public class ClipboardUI : MonoBehaviour {
     // If easy button pressed - set difficulty to easy
     public void EasyDiff()
     {
-        choice = Difficulty.EASY;   
+        choice = Difficulty.EASY;
+        chosen = true;
     }
     // If med button pressed - set diff to medium
     public void MedDiff()
     {
         choice = Difficulty.MEDIUM;
+        chosen = true;
     }
     // If hard button pressed = set diff to hard
     public void HardDiff()
     {
         choice = Difficulty.HARD;
+        chosen = true;
     }
         
     // If start button pressed - ask GM to start mission
     public void StartMission()
     {
-        // GM to call start mission
-      //  GM.StartMission(choice);
+        if (chosen)
+        {
+            // GM to call start mission
+            GM.StartMission(choice);
+            Debug.Log("GM to call start mission");
+        }
     }
 }
