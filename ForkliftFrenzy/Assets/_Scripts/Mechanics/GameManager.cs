@@ -74,6 +74,7 @@ public class GameManager : MonoBehaviour {
         }
 
 
+
         // gamehacks to add score and end game quickly
         if (Input.GetKeyDown(KeyCode.I))
             currentScore += 200;
