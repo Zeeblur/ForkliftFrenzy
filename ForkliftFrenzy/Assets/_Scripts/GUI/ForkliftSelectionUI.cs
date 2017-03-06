@@ -72,6 +72,7 @@ public class ForkliftSelectionUI : MonoBehaviour {
         buySelect.GetComponentInChildren<Text>().text = forkAvalible ? "SELECT" : "BUY";
     }
 
+    //  Buy/select button handler
     public void BuySelect()
     {
         if (forkAvalible)
@@ -87,18 +88,22 @@ public class ForkliftSelectionUI : MonoBehaviour {
         }
     }
 
+    // Switch to next model
     public void Next()
     {
         currentSelection = (currentSelection == loader.forkliftList.Count -1) ? 0 : currentSelection + 1;
         UpdateForkliftShown(currentSelection);
     }
 
+    // Switch to last model
     public void Back()
     {
         currentSelection = (currentSelection == 0) ? loader.forkliftList.Count -1 : currentSelection - 1;
         UpdateForkliftShown(currentSelection);
     }
 
+
+    // Rotate the model
     private void Update()
     {
         playerImage.Rotate(new Vector3(0, 1.0f, 0), 1);

@@ -31,6 +31,9 @@ public class GameManager : MonoBehaviour {
     private string endGameMessage;
     private bool gameOver = false;
 
+    public GameObject ForkliftSelection;
+    public GameObject Scene;
+
 	// Use this for initialization
 	void Start () {
         timer = GameObject.Find("Timer").GetComponent<Text>();
@@ -57,6 +60,18 @@ public class GameManager : MonoBehaviour {
             if (timeLeft <= 0 || totalBoxes == 0)
                 EndGame();
         }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                ShowForkliftSelection(true);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                ShowForkliftSelection(false);
+            }
+        }
 
         if (gameOver && Input.anyKeyDown)
         {
@@ -72,6 +87,14 @@ public class GameManager : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.N))
             EndGame();
 	}
+
+    // show forklift selection screen
+    public void ShowForkliftSelection(bool show)
+    {
+        Debug.Log("Show Screen");
+        ForkliftSelection.SetActive(show);
+        Scene.SetActive(!show);
+    }
 
     // Start le mission with given difficulty
     public void StartMission(Difficulty choice)
@@ -107,7 +130,9 @@ public class GameManager : MonoBehaviour {
 
     private void ResetGame()
     {
+        Debug.Log("Reset");
         gameOver = false;
+        inPlay = false;
 
         // hide UI
         endGameUI.SetActive(false);
@@ -167,6 +192,7 @@ public class GameManager : MonoBehaviour {
         playerData.AddMoney(earnings + timeBonus);
 
         endGameUI.GetComponentInChildren<Text>().text = newText;
+        Debug.Log("Show UI END");
         endGameUI.SetActive(true);
     }
 
