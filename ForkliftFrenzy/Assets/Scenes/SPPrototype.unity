@@ -10072,7 +10072,6 @@ GameObject:
   - 114: {fileID: 815997231}
   - 114: {fileID: 815997230}
   - 114: {fileID: 815997234}
-  - 114: {fileID: 815997235}
   m_Layer: 5
   m_Name: ForkliftSelect
   m_TagString: Untagged
@@ -10182,17 +10181,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e7f1aaf253c5b7345beac6951a9618e3, type: 3}
   - {fileID: 21300000, guid: e0ad489f50ec3ba4788f87602a9f047f, type: 3}
   - {fileID: 21300000, guid: d9de9e00d786df54f80e30aaec900c85, type: 3}
---- !u!114 &815997235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 815997229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04158f5095d3dcc49ac4d5b582b79727, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  gameMan: {fileID: 119495311}
 --- !u!1 &817895366
 GameObject:
   m_ObjectHideFlags: 0

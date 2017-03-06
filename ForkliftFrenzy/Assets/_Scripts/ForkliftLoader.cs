@@ -12,8 +12,7 @@ public struct ForkliftData
 
 // Hard coded values for forklift. Possibly need to find a way to serialise this
 
-public class ForkliftLoader : MonoBehaviour {
-
+public class ForkliftLoader {
 
     private PlayerData playerData;
 
@@ -21,19 +20,25 @@ public class ForkliftLoader : MonoBehaviour {
 
     private Object[] prefabs;
 
-	// Use this for initialization
-	void Awake ()
+    // contstructor with reference to player's data
+    public ForkliftLoader(PlayerData pd)
     {
-        // load models into prefabs
-        prefabs = Resources.LoadAll("");//as GameObject[];
+        playerData = pd;
 
-        // init redneck 
+        // load models into prefabs
+        prefabs = Resources.LoadAll("");
+
+        LoadForklifts();
+    }
+
+    void LoadForklifts()
+    { 
         ForkliftData speedy = new ForkliftData();
         speedy.speed = 10;
         speedy.carryCap = 20;
         speedy.price = 10000;
         speedy.forkModel = prefabs[(int)ForkLift.SPEEDY];
-        speedy.unlocked = true;
+        speedy.unlocked = playerData.IsForkUnlocked(ForkLift.SPEEDY);
 
         forkliftList.Add(speedy);
 
@@ -42,7 +47,7 @@ public class ForkliftLoader : MonoBehaviour {
         redneck.carryCap = 50;
         redneck.price = 10000;
         redneck.forkModel = prefabs[(int)ForkLift.ENGIE];
-        redneck.unlocked = true;
+        redneck.unlocked = playerData.IsForkUnlocked(ForkLift.ENGIE);
 
         forkliftList.Add(redneck);
 
@@ -51,7 +56,7 @@ public class ForkliftLoader : MonoBehaviour {
         tank.carryCap = 100;
         tank.price = 10000;
         tank.forkModel = prefabs[(int)ForkLift.TANK];
-        tank.unlocked = true;
+        tank.unlocked = playerData.IsForkUnlocked(ForkLift.TANK);
 
         forkliftList.Add(tank);
 
@@ -60,7 +65,7 @@ public class ForkliftLoader : MonoBehaviour {
         tricksy.carryCap = 50;
         tricksy.price = 10000;
         tricksy.forkModel = prefabs[(int)ForkLift.TRICKSY];
-        tricksy.unlocked = true;
+        tricksy.unlocked = playerData.IsForkUnlocked(ForkLift.TRICKSY);
 
         forkliftList.Add(tricksy);
 

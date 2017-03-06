@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
+using System.Collections.Generic;
 
 
 public class ForkliftSelectionUI : MonoBehaviour {
@@ -13,8 +13,6 @@ public class ForkliftSelectionUI : MonoBehaviour {
 
     private bool forkAvalible = false;
 
-    private ForkliftLoader loader;
-
     private Transform playerImage;
 
     private int currentSelection;
@@ -25,11 +23,12 @@ public class ForkliftSelectionUI : MonoBehaviour {
 
     private string statsInit;
 
+    public GameManager gameMan;
+
+    private ForkliftData[] forkData;
+
 	void Awake ()
     {
-        // On awake load in resource files and data for images of forklifts.
-        loader = GetComponent<ForkliftLoader>();
-
         // add event handler for button
         buySelect.onClick.AddListener(BuySelect);
         next.onClick.AddListener(Next);
@@ -38,6 +37,9 @@ public class ForkliftSelectionUI : MonoBehaviour {
         playerImage = GameObject.FindGameObjectWithTag("forkliftSelect").transform;
 
         statsInit = stats.text;
+
+        // populate current forklift data
+        forkData = gameMan.GetForklifts().ToArray();
 	}
 
     private void Start()
@@ -55,20 +57,20 @@ public class ForkliftSelectionUI : MonoBehaviour {
         stats.text = statsInit;
 
          // update text and image
-        stats.text = stats.text.Replace("dolla", loader.forkliftList[choice].price.ToString());
-        stats.text = stats.text.Replace("flspeed", loader.forkliftList[choice].speed.ToString());
-        stats.text = stats.text.Replace("cc", loader.forkliftList[choice].carryCap.ToString());
+        stats.text = stats.text.Replace("dolla", forkData[choice].price.ToString());
+        stats.text = stats.text.Replace("flspeed", forkData[choice].speed.ToString());
+        stats.text = stats.text.Replace("cc", forkData[choice].carryCap.ToString());
 
         // update imagefork
         // get player pref see if avalible to update bool
-        GameObject forkPref = Instantiate(loader.forkliftList[choice].forkModel) as GameObject;
+        GameObject forkPref = Instantiate(forkData[choice].forkModel) as GameObject;
 
         forkPref.transform.SetParent(playerImage, false);
 
         logo.sprite = forkliftLogos[choice];
         currentSelection = choice;
 
-        forkAvalible = loader.forkliftList[currentSelection].unlocked;
+        forkAvalible = forkData[currentSelection].unlocked;
         buySelect.GetComponentInChildren<Text>().text = forkAvalible ? "SELECT" : "BUY";
     }
 
@@ -79,26 +81,41 @@ public class ForkliftSelectionUI : MonoBehaviour {
         {
             // allow user to select on click
             //GM change forklift to current choice
-
+            gameMan.NewForkliftSelection(currentSelection);
         }
         else
         {
             // buy forklift
             // update player pref and UI
+
+            // bool if true. forklift has been purchased
+            if (gameMan.BuyForklift(currentSelection))
+            {
+                // change local forklist data
+                forkData[currentSelection].unlocked = true;
+
+                // update with buy/select and new player cash
+                UpdateForkliftShown(currentSelection);
+            }
+            
+            // Pop-up spending cash? noise?
+            // Or insufficent funds
+
+
         }
     }
 
     // Switch to next model
     public void Next()
     {
-        currentSelection = (currentSelection == loader.forkliftList.Count -1) ? 0 : currentSelection + 1;
+        currentSelection = (currentSelection == forkData.Length -1) ? 0 : currentSelection + 1;
         UpdateForkliftShown(currentSelection);
     }
 
     // Switch to last model
     public void Back()
     {
-        currentSelection = (currentSelection == 0) ? loader.forkliftList.Count -1 : currentSelection - 1;
+        currentSelection = (currentSelection == 0) ? forkData.Length -1 : currentSelection - 1;
         UpdateForkliftShown(currentSelection);
     }
 

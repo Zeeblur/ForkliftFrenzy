@@ -33,6 +33,8 @@ public class PlayerData : MonoBehaviour
 
     public bool dirty = false; // flag to see if player needs saving
 
+    private int totalMoney;
+
     void Awake()
     {
         forkKey = Enum.GetNames(typeof(ForkLift));
@@ -66,6 +68,8 @@ public class PlayerData : MonoBehaviour
             }
         }
 
+        totalMoney = PlayerPrefs.GetInt(moneyKey);
+
     }
 
     private void UpdateData()
@@ -92,10 +96,19 @@ public class PlayerData : MonoBehaviour
         else { return false; }
     }
 
-    public void AddMoney(int money)
+    // return false if not enough money left
+    public bool AddMoney(int moneyIN)
     {
-        money += PlayerPrefs.GetInt(moneyKey);
-        PlayerPrefs.SetInt(moneyKey, money);
+
+        // if subtracting moneys - check if funds are ok if not return false
+        if (moneyIN < 0 && totalMoney < moneyIN)
+            return false;
+
+        // update money
+        totalMoney += moneyIN;
+        PlayerPrefs.SetInt(moneyKey, totalMoney);
+
+        return true;
     }
 
     public void UnlockForklift(ForkLift choice)
