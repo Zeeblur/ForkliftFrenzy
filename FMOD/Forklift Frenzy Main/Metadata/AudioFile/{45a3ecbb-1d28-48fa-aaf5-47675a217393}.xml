@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="AudioFile" id="{45a3ecbb-1d28-48fa-aaf5-47675a217393}">
+        <property name="assetPath">
+            <value>ClockCard_mono_1.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>0.78947845804988659</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{cbede0c7-5647-4f61-b1af-6def16313692}</destination>
+        </relationship>
+    </object>
+</objects>

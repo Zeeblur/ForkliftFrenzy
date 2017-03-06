@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="Bank" id="{b201e9a8-894f-48a4-b70e-9880a7c140f2}">
+        <property name="name">
+            <value>Forklift_Engines</value>
+        </property>
+        <relationship name="folder">
+            <destination>{62d0302a-ee94-444d-a24f-acd8213fb491}</destination>
+        </relationship>
+    </object>
+</objects>
