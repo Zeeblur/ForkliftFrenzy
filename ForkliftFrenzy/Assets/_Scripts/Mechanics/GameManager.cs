@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour {
     public int totalBoxes = 0;
 
     // multiplier for difficulty
-    public const int boxMultiplier = 1;
+    public const int boxMultiplier = 10;
     // Shown on mission finish
     public GameObject endGameUI;
     private string endGameMessage;

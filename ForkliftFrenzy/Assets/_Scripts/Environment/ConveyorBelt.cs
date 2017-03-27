@@ -14,14 +14,20 @@ public class ConveyorBelt : MonoBehaviour {
     // Moves pick-ups along belt at speed
     void OnTriggerStay(Collider col)
     {
-      
-        // Only want to move box
-        if (col.gameObject.tag == "Pick-Up" && col.transform.parent.tag != "Fork")
+
+        if (col.isTrigger)
+        {
+            col.transform.position =  Vector3.MoveTowards(col.transform.position, beltEnd.position, speed * Time.deltaTime);
+        }
+
+
+        // Only want to move 
+        //if (col.transform.parent.tag == "Pick-up")// && col.transform.parent.tag != "Fork")
         {
            // Debug.Log(col.transform.parent.tag);
 
             // Move pick-up towards end point       
-            col.gameObject.transform.position = Vector3.MoveTowards(col.gameObject.transform.position, beltEnd.position, speed * Time.deltaTime);
+         //   col.gameObject.transform.position = Vector3.MoveTowards(col.gameObject.transform.position, beltEnd.position, speed * Time.deltaTime);
         }
     }
        
