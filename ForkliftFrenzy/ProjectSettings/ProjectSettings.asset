@@ -530,7 +530,7 @@ PlayerSettings:
   XboxOne::VR::enabledDevices: []
   iOS::VR::enabledDevices: []
   tvOS::VR::enabledDevices: []
-  cloudProjectId: 
-  projectName: 
-  organizationId: 
+  cloudProjectId: 80e731e1-9ad6-4791-b0d6-d465cdd5fb6e
+  projectName: ForkliftFrenzy
+  organizationId: zoeoehbear
   cloudEnabled: 0

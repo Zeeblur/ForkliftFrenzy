@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
+using System.Collections.Generic;
 
 public enum Difficulty { EASY = 1, MEDIUM, HARD };
 public enum ForkLift { SPEEDY, ENGIE, TANK, TRICKSY };
@@ -25,11 +25,16 @@ public class GameManager : MonoBehaviour {
     public int totalBoxes = 0;
 
     // multiplier for difficulty
-    public const int boxMultiplier = 1;
+    public const int boxMultiplier = 10;
     // Shown on mission finish
     public GameObject endGameUI;
     private string endGameMessage;
     private bool gameOver = false;
+
+    public GameObject ForkliftSelection;
+    public GameObject Scene;
+
+    private ForkliftLoader forkliftLoader;
 
 	// Use this for initialization
 	void Start () {
@@ -43,6 +48,8 @@ public class GameManager : MonoBehaviour {
 
         // initial forklift unlock for player
         playerData.UnlockForklift(ForkLift.ENGIE);
+
+        forkliftLoader = new ForkliftLoader(playerData);
 	}
 	
 	// Update is called once per frame
@@ -57,12 +64,23 @@ public class GameManager : MonoBehaviour {
             if (timeLeft <= 0 || totalBoxes == 0)
                 EndGame();
         }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                ShowForkliftSelection(true);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                ShowForkliftSelection(false);
+            }
+        }
 
         if (gameOver && Input.anyKeyDown)
         {
             ResetGame();
         }
-
 
         // gamehacks to add score and end game quickly
         if (Input.GetKeyDown(KeyCode.I))
@@ -71,6 +89,14 @@ public class GameManager : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.N))
             EndGame();
 	}
+
+    // show forklift selection screen
+    public void ShowForkliftSelection(bool show)
+    {
+        Debug.Log("Show Screen");
+        ForkliftSelection.SetActive(show);
+        Scene.SetActive(!show);
+    }
 
     // Start le mission with given difficulty
     public void StartMission(Difficulty choice)
@@ -106,7 +132,9 @@ public class GameManager : MonoBehaviour {
 
     private void ResetGame()
     {
+        Debug.Log("Reset");
         gameOver = false;
+        inPlay = false;
 
         // hide UI
         endGameUI.SetActive(false);
@@ -166,6 +194,7 @@ public class GameManager : MonoBehaviour {
         playerData.AddMoney(earnings + timeBonus);
 
         endGameUI.GetComponentInChildren<Text>().text = newText;
+        Debug.Log("Show UI END");
         endGameUI.SetActive(true);
     }
 
@@ -183,16 +212,39 @@ public class GameManager : MonoBehaviour {
         if (other.tag == "backWheels" || other.tag == "frontWheels")
         {
             // TODO will need to change this to UI, just for testing 1234 keys for forklift select
-            
-            if (Input.GetKeyDown(KeyCode.Alpha1) && playerData.IsForkUnlocked(ForkLift.ENGIE))
-                playerScript.ChangeFork(ForkLift.ENGIE);
-            else if (Input.GetKeyDown(KeyCode.Alpha2) && playerData.IsForkUnlocked(ForkLift.SPEEDY))
-                playerScript.ChangeFork(ForkLift.SPEEDY);
-            else if (Input.GetKeyDown(KeyCode.Alpha3) && playerData.IsForkUnlocked(ForkLift.TANK))
-                playerScript.ChangeFork(ForkLift.TANK);
-            else if (Input.GetKeyDown(KeyCode.Alpha4) && playerData.IsForkUnlocked(ForkLift.TRICKSY))
-                playerScript.ChangeFork(ForkLift.TRICKSY);
-
         }
+    }
+
+
+    // returns forklift data
+    public List<ForkliftData> GetForklifts()
+    {
+        return forkliftLoader.forkliftList;
+    }
+    
+    public void NewForkliftSelection(int choice)
+    {
+        // hide forklift ui and change fork
+        ShowForkliftSelection(false);
+        playerScript.ChangeFork((ForkLift)choice);
+    }
+
+    public bool BuyForklift(int choice)
+    {
+        // update player pref.
+
+        // remove money from player
+        if (!playerData.AddMoney(forkliftLoader.forkliftList[choice].price))
+        {
+            // if cannot remove money then return false, forklift is not bought
+            Debug.Log("Cannot buy forklift");
+            return false;
+        }
+
+        // else unlock fork
+        playerData.UnlockForklift((ForkLift)choice);
+
+        // able to be bought
+        return true;
     }
 }

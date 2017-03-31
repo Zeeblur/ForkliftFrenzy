@@ -1,0 +1,431 @@
+fileFormatVersion: 2
+guid: 97f3d98cfad3f3b4ea797fc48c2f8e90
+timeCreated: 1490377024
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: BackWindow
+    100002: Breaklight_L
+    100004: Breaklight_R
+    100006: Breaklights
+    100008: Chassis
+    100010: Chassis 1
+    100012: curve1
+    100014: curve4
+    100016: Door
+    100018: Door 1
+    100020: Door_L
+    100022: Door_R
+    100024: Engine
+    100026: Exhaust
+    100028: Exhaust1
+    100030: Exhaust2
+    100032: FAN
+    100034: Fork
+    100036: Forks
+    100038: Handle
+    100040: Handle 1
+    100042: Handle_L
+    100044: Handle_R
+    100046: Hinge1
+    100048: Hinge1 1
+    100050: Hinge2
+    100052: Hinge2 1
+    100054: Hinges_L
+    100056: Hinges_R
+    100058: Hub
+    100060: Hub 1
+    100062: Hub 2
+    100064: Hub 3
+    100066: Hydraulic
+    100068: Hydraulic 1
+    100070: Light
+    100072: Light 1
+    100074: Light1
+    100076: Light2
+    100078: Lights
+    100080: Main_Body
+    100082: Maint_housing
+    100084: pCube21
+    100086: pCylinder22
+    100088: pCylinder26
+    100090: pCylinder27
+    100092: pCylinder28
+    100094: pCylinder29
+    100096: pCylinder30
+    100098: pCylinder31
+    100100: pCylinder32
+    100102: pCylinder33
+    100104: pCylinder34
+    100106: pPipe10
+    100108: pPipe11
+    100110: pPipe12
+    100112: pPipe13
+    100114: pPipe5
+    100116: pPipe9
+    100118: //RootNode
+    100120: Reg_Plate
+    100122: Reg_Plate 1
+    100124: RollBar
+    100126: Rollbar
+    100128: RubberSeal
+    100130: RubberSeal 1
+    100132: Shell
+    100134: Shell 1
+    100136: Shell 2
+    100138: Shell 3
+    100140: Shell1
+    100142: Shell2
+    100144: SideWindow
+    100146: Sidewindow
+    100148: Spotlight_Left
+    100150: Spotlight_Mid
+    100152: Spotlight_Right
+    100154: Spotlights
+    100156: Top_Alarm
+    100158: Wheel
+    100160: Wheel 1
+    100162: Wheel 2
+    100164: Wheel 3
+    100166: Wheel_Back_Left
+    100168: Wheel_Back_Right
+    100170: Wheel_Front_Left
+    100172: Wheel_Front_Right
+    100174: Wheels
+    100176: Window
+    100178: WindScreen
+    100180: WindScreen 1
+    400000: BackWindow
+    400002: Breaklight_L
+    400004: Breaklight_R
+    400006: Breaklights
+    400008: Chassis
+    400010: Chassis 1
+    400012: curve1
+    400014: curve4
+    400016: Door
+    400018: Door 1
+    400020: Door_L
+    400022: Door_R
+    400024: Engine
+    400026: Exhaust
+    400028: Exhaust1
+    400030: Exhaust2
+    400032: FAN
+    400034: Fork
+    400036: Forks
+    400038: Handle
+    400040: Handle 1
+    400042: Handle_L
+    400044: Handle_R
+    400046: Hinge1
+    400048: Hinge1 1
+    400050: Hinge2
+    400052: Hinge2 1
+    400054: Hinges_L
+    400056: Hinges_R
+    400058: Hub
+    400060: Hub 1
+    400062: Hub 2
+    400064: Hub 3
+    400066: Hydraulic
+    400068: Hydraulic 1
+    400070: Light
+    400072: Light 1
+    400074: Light1
+    400076: Light2
+    400078: Lights
+    400080: Main_Body
+    400082: Maint_housing
+    400084: pCube21
+    400086: pCylinder22
+    400088: pCylinder26
+    400090: pCylinder27
+    400092: pCylinder28
+    400094: pCylinder29
+    400096: pCylinder30
+    400098: pCylinder31
+    400100: pCylinder32
+    400102: pCylinder33
+    400104: pCylinder34
+    400106: pPipe10
+    400108: pPipe11
+    400110: pPipe12
+    400112: pPipe13
+    400114: pPipe5
+    400116: pPipe9
+    400118: //RootNode
+    400120: Reg_Plate
+    400122: Reg_Plate 1
+    400124: RollBar
+    400126: Rollbar
+    400128: RubberSeal
+    400130: RubberSeal 1
+    400132: Shell
+    400134: Shell 1
+    400136: Shell 2
+    400138: Shell 3
+    400140: Shell1
+    400142: Shell2
+    400144: SideWindow
+    400146: Sidewindow
+    400148: Spotlight_Left
+    400150: Spotlight_Mid
+    400152: Spotlight_Right
+    400154: Spotlights
+    400156: Top_Alarm
+    400158: Wheel
+    400160: Wheel 1
+    400162: Wheel 2
+    400164: Wheel 3
+    400166: Wheel_Back_Left
+    400168: Wheel_Back_Right
+    400170: Wheel_Front_Left
+    400172: Wheel_Front_Right
+    400174: Wheels
+    400176: Window
+    400178: WindScreen
+    400180: WindScreen 1
+    2300000: Breaklight_L
+    2300002: Breaklight_R
+    2300004: Chassis 1
+    2300006: Door
+    2300008: Door 1
+    2300010: Exhaust1
+    2300012: Exhaust2
+    2300014: FAN
+    2300016: Forks
+    2300018: Handle
+    2300020: Handle 1
+    2300022: Hinge1
+    2300024: Hinge1 1
+    2300026: Hinge2
+    2300028: Hinge2 1
+    2300030: Hub
+    2300032: Hub 1
+    2300034: Hub 2
+    2300036: Hub 3
+    2300038: Hydraulic 1
+    2300040: Light
+    2300042: Light 1
+    2300044: Light1
+    2300046: Light2
+    2300048: Maint_housing
+    2300050: pCube21
+    2300052: pCylinder22
+    2300054: pCylinder26
+    2300056: pCylinder27
+    2300058: pCylinder28
+    2300060: pCylinder29
+    2300062: pCylinder30
+    2300064: pCylinder31
+    2300066: pCylinder32
+    2300068: pCylinder33
+    2300070: pCylinder34
+    2300072: pPipe10
+    2300074: pPipe11
+    2300076: pPipe12
+    2300078: pPipe13
+    2300080: pPipe5
+    2300082: pPipe9
+    2300084: Reg_Plate 1
+    2300086: Rollbar
+    2300088: RubberSeal
+    2300090: RubberSeal 1
+    2300092: Shell 1
+    2300094: Shell 2
+    2300096: Shell 3
+    2300098: Shell1
+    2300100: Shell2
+    2300102: SideWindow
+    2300104: Sidewindow
+    2300106: Wheel
+    2300108: Wheel 1
+    2300110: Wheel 2
+    2300112: Wheel 3
+    2300114: Window
+    2300116: WindScreen 1
+    3300000: Breaklight_L
+    3300002: Breaklight_R
+    3300004: Chassis 1
+    3300006: Door
+    3300008: Door 1
+    3300010: Exhaust1
+    3300012: Exhaust2
+    3300014: FAN
+    3300016: Forks
+    3300018: Handle
+    3300020: Handle 1
+    3300022: Hinge1
+    3300024: Hinge1 1
+    3300026: Hinge2
+    3300028: Hinge2 1
+    3300030: Hub
+    3300032: Hub 1
+    3300034: Hub 2
+    3300036: Hub 3
+    3300038: Hydraulic 1
+    3300040: Light
+    3300042: Light 1
+    3300044: Light1
+    3300046: Light2
+    3300048: Maint_housing
+    3300050: pCube21
+    3300052: pCylinder22
+    3300054: pCylinder26
+    3300056: pCylinder27
+    3300058: pCylinder28
+    3300060: pCylinder29
+    3300062: pCylinder30
+    3300064: pCylinder31
+    3300066: pCylinder32
+    3300068: pCylinder33
+    3300070: pCylinder34
+    3300072: pPipe10
+    3300074: pPipe11
+    3300076: pPipe12
+    3300078: pPipe13
+    3300080: pPipe5
+    3300082: pPipe9
+    3300084: Reg_Plate 1
+    3300086: Rollbar
+    3300088: RubberSeal
+    3300090: RubberSeal 1
+    3300092: Shell 1
+    3300094: Shell 2
+    3300096: Shell 3
+    3300098: Shell1
+    3300100: Shell2
+    3300102: SideWindow
+    3300104: Sidewindow
+    3300106: Wheel
+    3300108: Wheel 1
+    3300110: Wheel 2
+    3300112: Wheel 3
+    3300114: Window
+    3300116: WindScreen 1
+    4300000: Shell
+    4300002: Light
+    4300004: Breaklight_L
+    4300006: Breaklight_R
+    4300008: Light
+    4300010: Shell
+    4300012: Light2
+    4300014: Shell2
+    4300016: Shell1
+    4300018: Light1
+    4300020: RubberSeal
+    4300022: Window
+    4300024: Hydraulic
+    4300026: WindScreen
+    4300028: RubberSeal
+    4300030: Chassis
+    4300032: Door
+    4300034: SideWindow
+    4300036: Hinge1
+    4300038: Hinge2
+    4300040: Handle
+    4300042: Exhaust1
+    4300044: Exhaust2
+    4300046: Maint_housing
+    4300048: pPipe5
+    4300050: FAN
+    4300052: pCylinder22
+    4300054: pCylinder26
+    4300056: pCube21
+    4300058: pCylinder27
+    4300060: pCylinder28
+    4300062: pCylinder29
+    4300064: pCylinder30
+    4300066: pCylinder31
+    4300068: pCylinder32
+    4300070: pCylinder33
+    4300072: pPipe9
+    4300074: pPipe10
+    4300076: pPipe11
+    4300078: pPipe12
+    4300080: pPipe13
+    4300082: pCylinder34
+    4300084: Reg_Plate
+    4300086: Rollbar
+    4300088: Hinge1
+    4300090: Hinge2
+    4300092: Handle
+    4300094: Sidewindow
+    4300096: Door
+    4300098: Shell
+    4300100: Wheel
+    4300102: Hub
+    4300104: Wheel
+    4300106: Hub
+    4300108: Wheel
+    4300110: Hub
+    4300112: Wheel
+    4300114: Hub
+    4300116: Forks
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
