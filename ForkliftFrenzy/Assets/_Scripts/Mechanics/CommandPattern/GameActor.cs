@@ -74,29 +74,26 @@ public class GameActor : MonoBehaviour
 
     public void Turn(float rotation, bool moving)
     {
-        // spin wheels
-        if (frontWheels[0] == null)
-            Debug.Log("EEEE");
+
 
         // stopp spin at 45 degress
-        //if (frontWheels[0].transform.rotation.eulerAngles.y > 0.0f && rotation == 0.0f)
+        //if (frontWheels[0].transform.rotation.eulerAngles.y > 0.0f && rotation == 0.0f && moving)
+
+        //if (rotation == 0.0f && moving)
         //{
-        //    foreach(GameObject frontWheel in frontWheels)
+        //    // reset wheels
+        //    foreach (GameObject frontWheel in frontWheels)
         //    {
         //        frontWheel.transform.localRotation = Quaternion.identity;
         //    }
         //}
 
-        if (rotation == 0.0f)
-        {
-            // SpinWheels(rightWheels, new Vector3(0.0f, 1.0f, 0.0f), rotation);
-        }
-        else
-        {
-            SpinWheels(frontWheels, new Vector3(0.0f, 1.0f, 0.0f), rotation);
-        }
 
-        // translation of fork
+        // rotate wheel
+       // SpinWheels(frontWheels, new Vector3(0.0f, 1.0f, 0.0f), rotation);
+
+
+        // do not turn when not moving forwards
         if (!moving)
             return;
 

@@ -4951,7 +4951,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Convex: 1
-  m_Mesh: {fileID: 4300108, guid: 6ad4db5cf4740e247a4382a2d1c0f5a8, type: 3}
+  m_Mesh: {fileID: 4300104, guid: 97f3d98cfad3f3b4ea797fc48c2f8e90, type: 3}
 --- !u!64 &64000013631561818
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -4963,7 +4963,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Convex: 1
-  m_Mesh: {fileID: 4300124, guid: ae3022d1a5f81ad4a92429ed121ef8d1, type: 3}
+  m_Mesh: {fileID: 4300100, guid: 97f3d98cfad3f3b4ea797fc48c2f8e90, type: 3}
 --- !u!64 &64000014283519704
 MeshCollider:
   m_ObjectHideFlags: 1
