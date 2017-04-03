@@ -27,6 +27,8 @@ public class ForkliftSelectionUI : MonoBehaviour {
 
     private ForkliftData[] forkData;
 
+    public Transform listenerPos;
+
 	void Awake ()
     {
         // add event handler for button
@@ -77,6 +79,9 @@ public class ForkliftSelectionUI : MonoBehaviour {
     //  Buy/select button handler
     public void BuySelect()
     {
+        // Play sound effect for button selection
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Mouse_Click", listenerPos.position);
+
         if (forkAvalible)
         {
             // allow user to select on click
@@ -108,6 +113,9 @@ public class ForkliftSelectionUI : MonoBehaviour {
     // Switch to next model
     public void Next()
     {
+        // Play sound effect for button selection
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Mouse_Click", listenerPos.position);
+
         currentSelection = (currentSelection == forkData.Length -1) ? 0 : currentSelection + 1;
         UpdateForkliftShown(currentSelection);
     }
@@ -115,6 +123,10 @@ public class ForkliftSelectionUI : MonoBehaviour {
     // Switch to last model
     public void Back()
     {
+        // Play sound effect for button selection
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Mouse_Click", listenerPos.position);
+
+
         currentSelection = (currentSelection == 0) ? forkData.Length -1 : currentSelection - 1;
         UpdateForkliftShown(currentSelection);
     }
@@ -124,5 +136,12 @@ public class ForkliftSelectionUI : MonoBehaviour {
     private void Update()
     {
         playerImage.Rotate(new Vector3(0, 1.0f, 0), 1);
+    }
+
+    // Necessary to play hover sfx
+    public void HoverSFX()
+    {
+        // Play sound effect for button hover
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Mouse_Hover", listenerPos.position);
     }
 }

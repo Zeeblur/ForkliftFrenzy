@@ -15,6 +15,8 @@ public class ClipboardUI : MonoBehaviour {
     private bool chosen = false;
     // Access GM
     public GameManager GM;
+    // To be heard
+    public Transform listenerPos;
 
     // Assign buttons and listeners
     void Start()
@@ -36,18 +38,24 @@ public class ClipboardUI : MonoBehaviour {
     {
         choice = Difficulty.EASY;
         chosen = true;
+        // Play sound effect for button selection
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Mouse_Click", listenerPos.position);
     }
     // If med button pressed - set diff to medium
     public void MedDiff()
     {
         choice = Difficulty.MEDIUM;
         chosen = true;
+        // Play sound effect for button selection
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Mouse_Click", listenerPos.position);
     }
     // If hard button pressed = set diff to hard
     public void HardDiff()
     {
         choice = Difficulty.HARD;
         chosen = true;
+        // Play sound effect for button selection
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Mouse_Click", listenerPos.position);
     }
         
     // If start button pressed - ask GM to start mission

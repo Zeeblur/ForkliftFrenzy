@@ -8,13 +8,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: eef8d824ea7b63742966aaa0e94ac383, type: 3}
   m_Name: FMODStudioSettings
-  m_EditorClassIdentifier: Assembly-CSharp-firstpass:FMODUnity:Settings
+  m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  SourceProjectPath: ' ..\FMOD\Forklift Frenzy Main\Forklift Frenzy Main.fspro'
-  SourceBankPath: ' ..\FMOD\Forklift Frenzy Main\Build'
+  SourceProjectPath: ..\FMOD\Forklift Frenzy Main\Forklift Frenzy Main.fspro
+  SourceBankPath: ..\FMOD\Forklift Frenzy Main\Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
@@ -40,7 +40,9 @@ MonoBehaviour:
     Value: 1
   - Platform: 2
     Value: 0
-  BankDirectorySettings: []
+  BankDirectorySettings:
+  - Platform: 2
+    Value: Desktop
   VirtualChannelSettings:
   - Platform: 1
     Value: 1024
@@ -52,5 +54,10 @@ MonoBehaviour:
   - Platform: 2
     Value: 32
   Plugins: []
-  MasterBank: 
-  Banks: []
+  MasterBank: Master Bank
+  Banks:
+  - UI
+  - Impacts
+  - Forklift_Other
+  - Forklift_Engines
+  - Misc
