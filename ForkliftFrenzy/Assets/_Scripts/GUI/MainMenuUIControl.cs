@@ -1,40 +1,77 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 
 public class MainMenuUIControl : MonoBehaviour {
 
-    public Button SPBtn, MPBtn, OpBtn, ExBtn, YBtn, Nbtn;
-    public Canvas quitPrompt;
+    public Texture quitBackg, yesIm, noIm;
     private bool displayQuitPrompt = false;
 
+    private MovieTexture movie;
 
+    private GUIStyle buttonTexture;
+    public Font myFont;
+
+    bool interaction = false;
+    bool quit = false;
 
     void Awake()
     {
-        // Ensure popup canvas is hidden on start
-        quitPrompt.gameObject.SetActive(displayQuitPrompt);
+        movie = (MovieTexture)this.GetComponent<Renderer>().material.mainTexture;
+
+        buttonTexture = GUIStyle.none;
+        buttonTexture.font = myFont;
+        buttonTexture.alignment = TextAnchor.MiddleCenter;
+        buttonTexture.fontSize = 30;
+        
     }
 
-
-    void Start()
+    private void OnGUI()
     {
-        SPBtn = SPBtn.GetComponent<Button>();
-        MPBtn = MPBtn.GetComponent<Button>();
-        OpBtn = OpBtn.GetComponent<Button>();
-        ExBtn = ExBtn.GetComponent<Button>();
-        YBtn = YBtn.GetComponent<Button>();
-        Nbtn = Nbtn.GetComponent<Button>();
-        quitPrompt = quitPrompt.GetComponent<Canvas>();
-        SPBtn.onClick.AddListener(StartSinglePlayer);
-        MPBtn.onClick.AddListener(StartMultiplayer);
-        OpBtn.onClick.AddListener(ShowOptions);
-        ExBtn.onClick.AddListener(ShowQuitPrompt);
-        YBtn.onClick.AddListener(ExitGame);
-        Nbtn.onClick.AddListener(HideQuitPrompt);
+        GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), movie, ScaleMode.StretchToFill);
+        movie.Play();
+
+        // wait for film to play
+        StartCoroutine(Wait(movie.duration));
+
+        if (!interaction)
+            return;
+
+        float buttonWidthStart = 330;
+        float buttonHeightStart = 150;
+
+        // initialise buttons
+        bool singleBtn = GUI.Button(new Rect(buttonWidthStart, buttonHeightStart, 200, 100), "Single Player", GUIStyle.none);
+        bool exitBtn = GUI.Button(new Rect(buttonWidthStart, buttonHeightStart + 410, 200, 100), "Exit", GUIStyle.none);
+
+        if (singleBtn)
+            StartSinglePlayer();
+
+        if (exitBtn)
+            ShowQuitPrompt();
+
+        if (quit)
+        {
+            GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), quitBackg, ScaleMode.ScaleToFit);
+
+            bool yes = GUI.Button(new Rect(buttonWidthStart + 420, buttonHeightStart + 300, 100, 100), yesIm, GUIStyle.none);
+            bool no = GUI.Button(new Rect(buttonWidthStart - 150, buttonHeightStart + 300, 100, 100), noIm, GUIStyle.none);
+
+            if (yes)
+                ExitGame();
+
+            if (no)
+                HideQuitPrompt();
+        }
     }
 
 
+    private IEnumerator Wait(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        interaction = true;
+    }
 
 
     private void StartSinglePlayer()
@@ -42,51 +79,19 @@ public class MainMenuUIControl : MonoBehaviour {
         // Load sp scene
 
         Debug.Log("Clicked SP button.");
-    }
-
-    private void StartMultiplayer()
-    {
-        // Load mp scene
-
-        Debug.Log("Clicked MP button.");
-    }
-
-    private void ShowOptions()
-    {
-        // Show options scene
-
-        Debug.Log("Clicked options button");
+        SceneManager.LoadScene("SPPrototype");
     }
 
     private void ShowQuitPrompt()
     {
-        Debug.Log("Clicked exit game");
-
-        // Reverse bool
-        displayQuitPrompt = !displayQuitPrompt;
-
-        if (displayQuitPrompt)
-        {
-            quitPrompt.gameObject.SetActive(displayQuitPrompt);
-        }
-
-        // Disable other buttons
-        SPBtn.enabled = false;
-        MPBtn.enabled = false;
-        OpBtn.enabled = false;
-
+        // show prompt 
+        quit = true;
     }
 
     private void HideQuitPrompt()
     {
-        // Re-enable main menu buttons
-        SPBtn.enabled = true;
-        MPBtn.enabled = true;
-        OpBtn.enabled = true;
-
         // Hide quit prompt canvas
-        displayQuitPrompt = !displayQuitPrompt;
-        quitPrompt.gameObject.SetActive(displayQuitPrompt);
+        quit = false;
     }
    
     private void ExitGame()
