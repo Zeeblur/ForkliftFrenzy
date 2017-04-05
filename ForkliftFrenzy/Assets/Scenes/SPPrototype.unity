@@ -4283,6 +4283,12 @@ Prefab:
       value: 
       objectReference: {fileID: 1000011986016536, guid: 089506b578b6afa469b5de92655e9d6e,
         type: 2}
+    - target: {fileID: 114000013941219706, guid: 4e01991f8673f7e40977425cc61333cc,
+        type: 2}
+      propertyPath: forkModelPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 1000012012406412, guid: 6a340ca2c3030444fa1a1cb17c0e1ee9,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e01991f8673f7e40977425cc61333cc, type: 2}
   m_IsPrefabParent: 0
