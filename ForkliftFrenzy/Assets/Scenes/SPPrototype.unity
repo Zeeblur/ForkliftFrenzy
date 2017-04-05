@@ -6994,6 +6994,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c68400ddb11aad74697069861f98559a, type: 3}
   - {fileID: 21300000, guid: a2bf25e2fc9716548bf1e1b23eaf86a0, type: 3}
   - {fileID: 21300000, guid: cdaa8a9991523a74993a61168a51206d, type: 3}
+  gameMan: {fileID: 119495311}
 --- !u!1001 &825660402
 Prefab:
   m_ObjectHideFlags: 0

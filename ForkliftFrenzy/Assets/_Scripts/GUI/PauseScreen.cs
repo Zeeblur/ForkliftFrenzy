@@ -13,41 +13,53 @@ public class PauseScreen : MonoBehaviour {
 
     public Sprite[] sprites;
 
+    public GameManager gameMan;
+
 	// Use this for initialization
 	void Start ()
     {
         // add handlers
-        resumeBtn.onClick.AddListener(resume);
-        restartBtn.onClick.AddListener(restart);
-        resetCharBtn.onClick.AddListener(resetChar);
-        quitBtn.onClick.AddListener(quit);
+        resumeBtn.onClick.AddListener(Resume);
+        restartBtn.onClick.AddListener(Restart);
+        resetCharBtn.onClick.AddListener(ResetChar);
+        quitBtn.onClick.AddListener(Quit);
 
 
         // chose random image for sticker
-        randomiseSticker();
+        RandomiseSticker();
     }
 
-    public void resume()
+    public void Resume()
     {
         // handler for resuming game, closes window unpauses play
+        gameMan.ShowPauseScreen(false);
     }
 
-    public void restart()
+    public void Restart()
     {
         // refreshes mission quits early
+        gameMan.ShowPauseScreen(false);
+        gameMan.EndGame();
     }
 
-    public void resetChar()
+    public void ResetChar()
     {
         // clears player data pref
+        gameMan.ClearPlayer();
+        gameMan.ShowPauseScreen(false);
     }
 
-    public void quit()
+    public void Quit()
     {
         // closes game
+
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+        Application.Quit();
     }
 
-    public void randomiseSticker()
+    public void RandomiseSticker()
     {
         int choice = Random.Range(0, 9);
 
@@ -57,9 +69,15 @@ public class PauseScreen : MonoBehaviour {
     // handler for enabling
     private void OnEnable()
     {
-        randomiseSticker();
+        RandomiseSticker();
 
         // pause game
+        gameMan.inPlay = false;
+    }
 
+    private void OnDisable()
+    {
+        // restart play
+        gameMan.inPlay = true;
     }
 }

@@ -123,4 +123,27 @@ public class PlayerData : MonoBehaviour
     {
         return unlockedForks[(int)choice];
     }
+
+    public void ResetPlayerData()
+    {
+        // Lock all forklifts
+        for (int i = 0; i < unlockedForks.Length; i++)
+        {
+            PlayerPrefs.SetInt(forkKey[i], 0);
+            unlockedForks[i] = false;
+        }
+
+        // reset highscore
+        PlayerPrefs.SetInt(highKey, 0);
+
+        // reset money
+        PlayerPrefs.SetInt(moneyKey, 0);
+        totalMoney = 0;
+
+        // starter forklift unlock
+        UnlockForklift(ForkLift.ENGIE);
+
+        //update data
+        UpdateData();
+    }
 }
