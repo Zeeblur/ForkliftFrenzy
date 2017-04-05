@@ -53,4 +53,13 @@ public class PauseScreen : MonoBehaviour {
 
         sticker.sprite = sprites[choice];
     }
+
+    // handler for enabling
+    private void OnEnable()
+    {
+        randomiseSticker();
+
+        // pause game
+
+    }
 }

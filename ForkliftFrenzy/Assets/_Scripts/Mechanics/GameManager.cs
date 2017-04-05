@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour {
 
     public GameObject ForkliftSelection;
     public GameObject Scene;
+    public GameObject PauseScreen;
 
     private ForkliftLoader forkliftLoader;
 
@@ -73,7 +74,13 @@ public class GameManager : MonoBehaviour {
 
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                ShowForkliftSelection(false);
+                if (ForkliftSelection.activeSelf)
+                {
+                    ShowForkliftSelection(false);
+                    return;
+                }
+
+                ShowPauseScreen(!PauseScreen.activeSelf);
             }
         }
 
@@ -95,6 +102,13 @@ public class GameManager : MonoBehaviour {
     {
         Debug.Log("Show Screen");
         ForkliftSelection.SetActive(show);
+        Scene.SetActive(!show);
+    }
+
+    public void ShowPauseScreen(bool show)
+    {
+        Debug.Log("Show Pause Screen");
+        PauseScreen.SetActive(show);
         Scene.SetActive(!show);
     }
 
