@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class ForkliftSelectionUI : MonoBehaviour {
 
     public Text stats;
+    public Text funds;
 
     public Button buySelect; // reference to buttons
     public Button next;
@@ -27,6 +28,8 @@ public class ForkliftSelectionUI : MonoBehaviour {
 
     private ForkliftData[] forkData;
 
+    private Vector3 originalPosition;
+
 	void Awake ()
     {
         // add event handler for button
@@ -40,6 +43,8 @@ public class ForkliftSelectionUI : MonoBehaviour {
 
         // populate current forklift data
         forkData = gameMan.GetForklifts().ToArray();
+
+        originalPosition = playerImage.position;
 	}
 
     private void Start()
@@ -53,13 +58,25 @@ public class ForkliftSelectionUI : MonoBehaviour {
         if (playerImage.childCount > 0)
            DestroyImmediate(playerImage.GetChild(0).gameObject);
 
-        // reset to unparsed string
-        stats.text = statsInit;
+        // adjust for larger forklift
+        Vector3 adjustment = new Vector3(0.0f, 1.2f, 0.0f);
+
+        if (choice == (int)ForkLift.TANK)
+            playerImage.position = originalPosition - adjustment;
+        else if (choice == (int)ForkLift.SPEEDY)
+            playerImage.position = originalPosition - (adjustment * 1.2f);
+        else
+            playerImage.position = originalPosition;
+
+            // reset to unparsed string
+            stats.text = statsInit;
 
          // update text and image
         stats.text = stats.text.Replace("dolla", forkData[choice].price.ToString());
         stats.text = stats.text.Replace("flspeed", forkData[choice].speed.ToString());
         stats.text = stats.text.Replace("cc", forkData[choice].carryCap.ToString());
+
+        funds.text = "Funds £" + PlayerPrefs.GetInt("Money");
 
         // update imagefork
         // get player pref see if avalible to update bool
@@ -97,7 +114,10 @@ public class ForkliftSelectionUI : MonoBehaviour {
                 // update with buy/select and new player cash
                 UpdateForkliftShown(currentSelection);
             }
-            
+            else
+            {
+                funds.text = "Insufficient funds";
+            }
             // Pop-up spending cash? noise?
             // Or insufficent funds
 

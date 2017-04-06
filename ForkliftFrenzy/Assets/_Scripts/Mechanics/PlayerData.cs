@@ -17,9 +17,6 @@ public class PlayerData : MonoBehaviour
      * 
      */
 
-    // keys for access
-    private string userKey = "Username";
-
     // key for unlocked forks
     private string[] forkKey;
     private bool[] unlockedForks = { false, false, false, false };
@@ -101,7 +98,7 @@ public class PlayerData : MonoBehaviour
     {
 
         // if subtracting moneys - check if funds are ok if not return false
-        if (moneyIN < 0 && totalMoney < moneyIN)
+        if (totalMoney + moneyIN < 0)
             return false;
 
         // update money

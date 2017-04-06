@@ -203,7 +203,7 @@ public class GameManager : MonoBehaviour
         newText = newText.Replace("%", "" + currentScore);
 
         // replace money with earnings
-        int earnings = currentScore / 10;
+        int earnings = currentScore;
 
         newText = newText.Replace("$", "" + earnings);
 
@@ -267,7 +267,7 @@ public class GameManager : MonoBehaviour
         // update player pref.
 
         // remove money from player
-        if (!playerData.AddMoney(forkliftLoader.forkliftList[choice].price))
+        if (!playerData.AddMoney(-forkliftLoader.forkliftList[choice].price))
         {
             // if cannot remove money then return false, forklift is not bought
             Debug.Log("Cannot buy forklift");
