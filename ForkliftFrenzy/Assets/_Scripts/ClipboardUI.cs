@@ -31,6 +31,8 @@ public class ClipboardUI : MonoBehaviour {
         medBtn.onClick.AddListener(MedDiff);
         hardBtn.onClick.AddListener(HardDiff);
         startBtn.onClick.AddListener(StartMission);
+
+        listenerPos = GameObject.FindWithTag("MainCamera").transform;
     }
 
     // If easy button pressed - set difficulty to easy
@@ -65,7 +67,19 @@ public class ClipboardUI : MonoBehaviour {
         {
             // GM to call start mission
             GM.StartMission(choice);
+
+            // Play sound effect for button selection
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Misc/Clock_Card", listenerPos.position);
+
+            // Debug
             Debug.Log("GM to call start mission");
         }
+    }
+
+    // Play sound effect on mouse hover over buttons
+    public void HoverSFX()
+    {
+        // Play sound effect for button hover
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Mouse_Hover", listenerPos.position);
     }
 }

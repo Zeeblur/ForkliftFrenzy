@@ -6,11 +6,20 @@ public class InputHandler : MonoBehaviour
 {
     GameActor player;
 
-	// Use this for initialization
-	void Start ()
+    FMOD.Studio.EventInstance forksUpSFX;
+    FMOD.Studio.EventInstance forksDownSFX;
+
+    // Use this for initialization
+    void Start ()
     {
         player = gameObject.GetComponent<GameActor>();
-	}
+        // Assign events to instances
+        forksUpSFX = FMODUnity.RuntimeManager.CreateInstance("event:/Forklift_Forks/Forks_up");
+        forksDownSFX = FMODUnity.RuntimeManager.CreateInstance("event:/Forklift_Forks/Forks_down");
+        // Attach to rigidbody
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(forksUpSFX, GetComponent<Transform>(), GetComponent<Rigidbody>());
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(forksDownSFX, GetComponent<Transform>(), GetComponent<Rigidbody>());
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -50,6 +59,19 @@ public class InputHandler : MonoBehaviour
 
         if (Input.GetKey(KeyCode.E))
             commands.Add(new LowerCommand());
+
+        // SFX
+        if (Input.GetKeyDown(KeyCode.Q))
+            forksUpSFX.start();
+
+        if (Input.GetKeyDown(KeyCode.E))
+            forksDownSFX.start();
+
+        if(Input.GetKeyUp(KeyCode.Q))
+            forksUpSFX.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+
+        if(Input.GetKeyUp(KeyCode.E))
+            forksDownSFX.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 
         return commands;
     }

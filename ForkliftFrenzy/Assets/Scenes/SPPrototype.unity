@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692492, g: 0.4967869, b: 0.57508546, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692504, g: 0.4967869, b: 0.57508504, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -172,6 +172,7 @@ GameObject:
   - 222: {fileID: 18087400}
   - 114: {fileID: 18087399}
   - 114: {fileID: 18087398}
+  - 114: {fileID: 18087401}
   m_Layer: 5
   m_Name: Hard Button
   m_TagString: Untagged
@@ -276,6 +277,36 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 18087396}
+--- !u!114 &18087401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 18087396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 698362438}
+          m_MethodName: HoverSFX
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &34364965 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000011669436532, guid: 550ad206fa1593a488811ac70df1f9c2,
@@ -1533,6 +1564,7 @@ GameObject:
   - 222: {fileID: 298122482}
   - 114: {fileID: 298122481}
   - 114: {fileID: 298122480}
+  - 114: {fileID: 298122483}
   m_Layer: 5
   m_Name: Med Button
   m_TagString: Untagged
@@ -1637,6 +1669,36 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 298122478}
+--- !u!114 &298122483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 298122478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 698362438}
+          m_MethodName: HoverSFX
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &306485563 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100176, guid: e9993beea48bd414dadd6e819ed90d59, type: 3}
@@ -4068,6 +4130,7 @@ MonoBehaviour:
   startBtn: {fileID: 1969997670}
   choice: 0
   GM: {fileID: 119495311}
+  listenerPos: {fileID: 0}
 --- !u!114 &698362439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4960,6 +5023,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e0ad489f50ec3ba4788f87602a9f047f, type: 3}
   - {fileID: 21300000, guid: d9de9e00d786df54f80e30aaec900c85, type: 3}
   gameMan: {fileID: 119495311}
+  listenerPos: {fileID: 0}
 --- !u!1001 &825660402
 Prefab:
   m_ObjectHideFlags: 0
@@ -6226,6 +6290,23 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300402, guid: e9993beea48bd414dadd6e819ed90d59, type: 3}
+--- !u!1 &1161345946 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011676329418, guid: 4e01991f8673f7e40977425cc61333cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 574553070}
+--- !u!114 &1161345948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1161345946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
 --- !u!1 &1165591281
 GameObject:
   m_ObjectHideFlags: 0
@@ -9631,6 +9712,7 @@ GameObject:
   - 222: {fileID: 1774118345}
   - 114: {fileID: 1774118344}
   - 114: {fileID: 1774118343}
+  - 114: {fileID: 1774118346}
   m_Layer: 5
   m_Name: Easy Button
   m_TagString: Untagged
@@ -9735,6 +9817,36 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1774118341}
+--- !u!114 &1774118346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1774118341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 698362438}
+          m_MethodName: HoverSFX
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1001 &1792719533
 Prefab:
   m_ObjectHideFlags: 0
@@ -10611,6 +10723,7 @@ GameObject:
   - 222: {fileID: 1969997672}
   - 114: {fileID: 1969997671}
   - 114: {fileID: 1969997670}
+  - 114: {fileID: 1969997673}
   m_Layer: 5
   m_Name: Start Button
   m_TagString: Untagged
@@ -10715,6 +10828,36 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1969997668}
+--- !u!114 &1969997673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1969997668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 698362438}
+          m_MethodName: HoverSFX
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1975224704
 GameObject:
   m_ObjectHideFlags: 0
