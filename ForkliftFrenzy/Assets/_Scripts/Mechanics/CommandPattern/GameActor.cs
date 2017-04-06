@@ -20,6 +20,8 @@ public class GameActor : MonoBehaviour
     // reference to models to instantiate forklift at runtime
     public GameObject[] forkModelPrefabs;
 
+    private ForkLift currentFork = ForkLift.ENGIE;
+
     // Initialise fork object
     void Awake()
     {
@@ -54,18 +56,26 @@ public class GameActor : MonoBehaviour
         // change target of camera to new fl
         Camera.main.gameObject.GetComponent<FollowCam>().target = forklift;
         AttachForkliftModel();
+        currentFork = forkliftChoice;
     }
 
     public void Drive(float direction)
     {
+        
+
         Vector3 translation = this.transform.forward;
 
         translation *= direction * speed * Time.deltaTime;
 
         this.transform.position += translation;
 
+        if (currentFork == ForkLift.TANK || currentFork == ForkLift.SPEEDY)
+            return;
+
         float rotation = 10;
         rotation *= direction;
+
+
 
         // spin wheels according to direction
         SpinWheels(backWheels, new Vector3(1.0f, 0.0f, 0.0f), rotation);
@@ -74,29 +84,26 @@ public class GameActor : MonoBehaviour
 
     public void Turn(float rotation, bool moving)
     {
-        // spin wheels
-        if (frontWheels[0] == null)
-            Debug.Log("EEEE");
+
 
         // stopp spin at 45 degress
-        //if (frontWheels[0].transform.rotation.eulerAngles.y > 0.0f && rotation == 0.0f)
+        //if (frontWheels[0].transform.rotation.eulerAngles.y > 0.0f && rotation == 0.0f && moving)
+
+        //if (rotation == 0.0f && moving)
         //{
-        //    foreach(GameObject frontWheel in frontWheels)
+        //    // reset wheels
+        //    foreach (GameObject frontWheel in frontWheels)
         //    {
         //        frontWheel.transform.localRotation = Quaternion.identity;
         //    }
         //}
 
-        if (rotation == 0.0f)
-        {
-            // SpinWheels(rightWheels, new Vector3(0.0f, 1.0f, 0.0f), rotation);
-        }
-        else
-        {
-            SpinWheels(frontWheels, new Vector3(0.0f, 1.0f, 0.0f), rotation);
-        }
 
-        // translation of fork
+        // rotate wheel
+       // SpinWheels(frontWheels, new Vector3(0.0f, 1.0f, 0.0f), rotation);
+
+
+        // do not turn when not moving forwards
         if (!moving)
             return;
 
@@ -117,6 +124,19 @@ public class GameActor : MonoBehaviour
 
     public void LowerForks()
     {
+        if (currentFork == ForkLift.SPEEDY)
+        {
+            GameObject[] pistons = GameObject.FindGameObjectsWithTag("Piston");
+            Vector3 trans = new Vector3(0.0f, -0.1f, -0.1f);
+            trans *= forkSpeed * Time.deltaTime;
+
+            foreach(GameObject go in pistons)
+            {
+                go.transform.Translate(trans);
+            }
+            return;
+        }
+
         // constraint
         if (fork.transform.localPosition.y < 0.0f)
             return;
@@ -128,6 +148,19 @@ public class GameActor : MonoBehaviour
 
     public void RaiseForks()
     {
+        if (currentFork == ForkLift.SPEEDY)
+        {
+            GameObject[] pistons = GameObject.FindGameObjectsWithTag("Piston");
+            Vector3 trans = new Vector3(0.0f, +0.1f, +0.1f);
+            trans *= forkSpeed * Time.deltaTime;
+
+            foreach (GameObject go in pistons)
+            {
+                go.transform.Translate(trans);
+            }
+            return;
+        }
+
         // constraint
         if (fork.transform.localPosition.y > upperBound.transform.localPosition.y)
             return;

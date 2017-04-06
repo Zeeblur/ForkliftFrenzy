@@ -6,7 +6,7 @@ public class ConveyorBelt : MonoBehaviour {
     // Assign position to head towards
     public Transform beltEnd;
     // Belt speed
-    public float speed = 2.0f;
+    private float speed = 2.0f;
 
 
     
@@ -15,6 +15,7 @@ public class ConveyorBelt : MonoBehaviour {
     void OnTriggerStay(Collider col)
     {
         // added new trigger. Need 
+
 
         if (col.isTrigger)
         {
