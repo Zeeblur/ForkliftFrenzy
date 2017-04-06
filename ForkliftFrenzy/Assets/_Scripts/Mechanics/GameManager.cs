@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections.Generic;
 
-public enum Difficulty { EASY = 1, MEDIUM, HARD };
+public enum Difficulty { HARD = 1, MEDIUM, EASY };
 public enum ForkLift { SPEEDY, ENGIE, TANK, TRICKSY };
 
 public class GameManager : MonoBehaviour
@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     public int totalBoxes = 0;
 
     // multiplier for difficulty
-    public const int boxMultiplier = 10;
+    public const int boxMultiplier = 100;
     // Shown on mission finish
     public GameObject endGameUI;
     private string endGameMessage;
@@ -132,11 +132,12 @@ public class GameManager : MonoBehaviour
 
         inPlay = true;
         currentMission.ClearBoxes();
+        currentScore = 0;
         currentMission.SpawnBoxes(choice);
         totalBoxes = (int)choice * boxMultiplier;
 
         // TODO change to var depending on difficulty
-        timeLeft = 60;
+        timeLeft = 180;
         gameStarted = true;
         Debug.Log("Start Mission");
     }
