@@ -22,10 +22,11 @@ public class GameActor : MonoBehaviour
 
     private ForkLift currentFork = ForkLift.ENGIE;
 
+
     // Initialise fork object
     void Awake()
     {
-        ChangeFork(ForkLift.ENGIE);
+        ChangeFork(ForkLift.ENGIE);  
     }
 
     private void AttachForkliftModel()
@@ -144,8 +145,11 @@ public class GameActor : MonoBehaviour
         Vector3 translation = new Vector3(0.0f, -0.1f, 0.0f);
         translation *= forkSpeed * Time.deltaTime;
         fork.transform.Translate(translation);
+
+        
     }
 
+   
     public void RaiseForks()
     {
         if (currentFork == ForkLift.SPEEDY)
@@ -168,7 +172,10 @@ public class GameActor : MonoBehaviour
         Vector3 translation = new Vector3(0.0f, 0.1f, 0.0f);
         translation *= forkSpeed * Time.deltaTime;
         fork.transform.Translate(translation);
+
+        
     }
+
 
     public void Ability()
     {

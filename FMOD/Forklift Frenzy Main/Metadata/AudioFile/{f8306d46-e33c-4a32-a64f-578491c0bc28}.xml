@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="AudioFile" id="{f8306d46-e33c-4a32-a64f-578491c0bc28}">
+        <property name="assetPath">
+            <value>Wood Crate Break Hard_5.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>2.4380952380952383</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{cbede0c7-5647-4f61-b1af-6def16313692}</destination>
+        </relationship>
+    </object>
+</objects>

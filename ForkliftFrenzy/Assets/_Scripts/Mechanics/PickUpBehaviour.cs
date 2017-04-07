@@ -3,8 +3,15 @@ using System.Collections;
 
 public class PickUpBehaviour : MonoBehaviour
 {
+
+
+    void OnTriggerEnter(Collider other)
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Impacts/WoodCrate_Normal_Impact", GetComponent<Transform>().position);
+    }
     void OnTriggerStay(Collider other)
     {
+        
         // This might be called if the crate collides with the conveyor belt trigger area? 
         if (other.gameObject.tag != "Fork")
         {

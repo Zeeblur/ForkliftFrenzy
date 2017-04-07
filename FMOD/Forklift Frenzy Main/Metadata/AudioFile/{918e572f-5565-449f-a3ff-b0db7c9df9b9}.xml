@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="AudioFile" id="{918e572f-5565-449f-a3ff-b0db7c9df9b9}">
+        <property name="assetPath">
+            <value>Menu_Mouse_Hover_1.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>0.055147392290249432</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{cbede0c7-5647-4f61-b1af-6def16313692}</destination>
+        </relationship>
+    </object>
+</objects>
