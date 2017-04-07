@@ -17,9 +17,6 @@ public class PlayerData : MonoBehaviour
      * 
      */
 
-    // keys for access
-    private string userKey = "Username";
-
     // key for unlocked forks
     private string[] forkKey;
     private bool[] unlockedForks = { false, false, false, false };
@@ -101,7 +98,7 @@ public class PlayerData : MonoBehaviour
     {
 
         // if subtracting moneys - check if funds are ok if not return false
-        if (moneyIN < 0 && totalMoney < moneyIN)
+        if (totalMoney + moneyIN < 0)
             return false;
 
         // update money
@@ -122,5 +119,28 @@ public class PlayerData : MonoBehaviour
     public bool IsForkUnlocked(ForkLift choice)
     {
         return unlockedForks[(int)choice];
+    }
+
+    public void ResetPlayerData()
+    {
+        // Lock all forklifts
+        for (int i = 0; i < unlockedForks.Length; i++)
+        {
+            PlayerPrefs.SetInt(forkKey[i], 0);
+            unlockedForks[i] = false;
+        }
+
+        // reset highscore
+        PlayerPrefs.SetInt(highKey, 0);
+
+        // reset money
+        PlayerPrefs.SetInt(moneyKey, 0);
+        totalMoney = 0;
+
+        // starter forklift unlock
+        UnlockForklift(ForkLift.ENGIE);
+
+        //update data
+        UpdateData();
     }
 }

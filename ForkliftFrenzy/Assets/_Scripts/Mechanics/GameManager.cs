@@ -2,12 +2,13 @@
 using UnityEngine.UI;
 using System.Collections.Generic;
 
-public enum Difficulty { EASY = 1, MEDIUM, HARD };
+public enum Difficulty { HARD = 1, MEDIUM, EASY };
 public enum ForkLift { SPEEDY, ENGIE, TANK, TRICKSY };
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour
+{
     // Mission in progress already?
-    private bool inPlay = false;
+    public bool inPlay = false;
     private float timeLeft = 60;
     // Mission should be component attached to Warehouse
     public Mission currentMission;
@@ -25,7 +26,7 @@ public class GameManager : MonoBehaviour {
     public int totalBoxes = 0;
 
     // multiplier for difficulty
-    public const int boxMultiplier = 10;
+    public const int boxMultiplier = 100;
     // Shown on mission finish
     public GameObject endGameUI;
     private string endGameMessage;
@@ -33,11 +34,15 @@ public class GameManager : MonoBehaviour {
 
     public GameObject ForkliftSelection;
     public GameObject Scene;
+    public GameObject PauseScreen;
 
     private ForkliftLoader forkliftLoader;
 
-	// Use this for initialization
-	void Start () {
+    private bool gameStarted = false;
+
+    // Use this for initialization
+    void Start()
+    {
         timer = GameObject.Find("Timer").GetComponent<Text>();
         score = GameObject.Find("Score").GetComponent<Text>();
         playerData = GetComponent<PlayerData>();
@@ -50,15 +55,22 @@ public class GameManager : MonoBehaviour {
         playerData.UnlockForklift(ForkLift.ENGIE);
 
         forkliftLoader = new ForkliftLoader(playerData);
-	}
-	
-	// Update is called once per frame
-	void Update ()
+    }
+
+    // Update is called once per frame
+    void Update()
     {
-        
-	
+
+
         if (inPlay)
         {
+            // change inplay to false if game hasn't started
+            if (!gameStarted)
+            {
+                inPlay = false;
+                return;
+            }
+
             UpdateUI();
 
             if (timeLeft <= 0 || totalBoxes == 0)
@@ -70,11 +82,17 @@ public class GameManager : MonoBehaviour {
             {
                 ShowForkliftSelection(true);
             }
+        }
 
-            if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (ForkliftSelection.activeSelf)
             {
                 ShowForkliftSelection(false);
+                return;
             }
+
+            ShowPauseScreen(!PauseScreen.activeSelf);
         }
 
         if (gameOver && Input.anyKeyDown)
@@ -88,13 +106,20 @@ public class GameManager : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.N))
             EndGame();
-	}
+    }
 
     // show forklift selection screen
     public void ShowForkliftSelection(bool show)
     {
         Debug.Log("Show Screen");
         ForkliftSelection.SetActive(show);
+        Scene.SetActive(!show);
+    }
+
+    public void ShowPauseScreen(bool show)
+    {
+        Debug.Log("Show Pause Screen");
+        PauseScreen.SetActive(show);
         Scene.SetActive(!show);
     }
 
@@ -107,11 +132,13 @@ public class GameManager : MonoBehaviour {
 
         inPlay = true;
         currentMission.ClearBoxes();
+        currentScore = 0;
         currentMission.SpawnBoxes(choice);
         totalBoxes = (int)choice * boxMultiplier;
 
         // TODO change to var depending on difficulty
-        timeLeft = 60;
+        timeLeft = 180;
+        gameStarted = true;
         Debug.Log("Start Mission");
     }
 
@@ -145,10 +172,16 @@ public class GameManager : MonoBehaviour {
 
     }
 
-    private void EndGame()
+    public void EndGame()
     {
+        // ensure game actually exists
+        if (!gameStarted)
+            return;
+
+
         inPlay = false;
         gameOver = true;
+        gameStarted = false;
 
         // update player data
         bool highbeat = playerData.HasBeatenHighscore(currentScore);
@@ -170,7 +203,7 @@ public class GameManager : MonoBehaviour {
         newText = newText.Replace("%", "" + currentScore);
 
         // replace money with earnings
-        int earnings = currentScore / 10;
+        int earnings = currentScore;
 
         newText = newText.Replace("$", "" + earnings);
 
@@ -183,7 +216,7 @@ public class GameManager : MonoBehaviour {
             timeBonus = (int)timeLeft / 10;
 
             timeBonus *= 10;
-            
+
             newText = newText.Replace("tb", "+ Time Bonus " + timeBonus);
         }
         else
@@ -221,7 +254,7 @@ public class GameManager : MonoBehaviour {
     {
         return forkliftLoader.forkliftList;
     }
-    
+
     public void NewForkliftSelection(int choice)
     {
         // hide forklift ui and change fork
@@ -234,7 +267,7 @@ public class GameManager : MonoBehaviour {
         // update player pref.
 
         // remove money from player
-        if (!playerData.AddMoney(forkliftLoader.forkliftList[choice].price))
+        if (!playerData.AddMoney(-forkliftLoader.forkliftList[choice].price))
         {
             // if cannot remove money then return false, forklift is not bought
             Debug.Log("Cannot buy forklift");
@@ -246,5 +279,10 @@ public class GameManager : MonoBehaviour {
 
         // able to be bought
         return true;
+    }
+
+    public void ClearPlayer()
+    {
+        playerData.ResetPlayerData();
     }
 }

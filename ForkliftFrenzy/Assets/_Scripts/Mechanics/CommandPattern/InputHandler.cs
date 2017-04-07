@@ -54,6 +54,7 @@ public class InputHandler : MonoBehaviour
         // always send turn command for resetting wheels if no input
         commands.Add(new TurnCommand(horz, move));
 
+
         if (Input.GetKey(KeyCode.Q))
             commands.Add(new RaiseCommand());
 

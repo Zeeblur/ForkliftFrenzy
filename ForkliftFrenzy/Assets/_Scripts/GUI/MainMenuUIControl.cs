@@ -1,38 +1,33 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 
 
-public class MainMenuUIControl : MonoBehaviour {
+public class MainMenuUIControl : MonoBehaviour
+{
 
-    public Button SPBtn, OpBtn, ExBtn, YBtn, Nbtn;
-    public Canvas quitPrompt;
-    private bool displayQuitPrompt = false;
     public Transform listenerPos;
 
+    public Texture quitBackg, yesIm, noIm;
+
+    private MovieTexture movie;
+
+    private GUIStyle buttonTexture;
+    public Font myFont;
+
+    bool interaction = false;
+    bool quit = false;
 
     void Awake()
     {
-        // Ensure popup canvas is hidden on start
-        quitPrompt.gameObject.SetActive(displayQuitPrompt);
-    }
+        movie = (MovieTexture)this.GetComponent<Renderer>().material.mainTexture;
 
-
-    void Start()
-    {
-        SPBtn = SPBtn.GetComponent<Button>();     
-        OpBtn = OpBtn.GetComponent<Button>();
-        ExBtn = ExBtn.GetComponent<Button>();
-        YBtn = YBtn.GetComponent<Button>();
-        Nbtn = Nbtn.GetComponent<Button>();
-        quitPrompt = quitPrompt.GetComponent<Canvas>();
-        SPBtn.onClick.AddListener(StartSinglePlayer);
-        OpBtn.onClick.AddListener(ShowOptions);
-        ExBtn.onClick.AddListener(ShowQuitPrompt);
-        YBtn.onClick.AddListener(ExitGame);
-        Nbtn.onClick.AddListener(HideQuitPrompt);
-
-
+        buttonTexture = GUIStyle.none;
+        buttonTexture.font = myFont;
+        buttonTexture.alignment = TextAnchor.MiddleCenter;
+        buttonTexture.fontSize = 30;
+        
     }
 
     public void HoverSFX()
@@ -41,51 +36,76 @@ public class MainMenuUIControl : MonoBehaviour {
         FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Mouse_Hover", listenerPos.position);
     }
 
+    private void OnGUI()
+    {
+
+        GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), movie, ScaleMode.StretchToFill);
+        movie.Play();
+
+
+        // wait for film to play
+        StartCoroutine(Wait(movie.duration));
+
+        if (!interaction)
+            return;
+
+
+        float buttonWidthStart = 330;
+        float buttonHeightStart = 150;
+
+        // initialise buttons
+        bool singleBtn = GUI.Button(new Rect(buttonWidthStart, buttonHeightStart, 200, 100), "Single Player", GUIStyle.none);
+        bool exitBtn = GUI.Button(new Rect(buttonWidthStart, buttonHeightStart + 410, 200, 100), "Exit", GUIStyle.none);
+
+        if (singleBtn)
+            StartSinglePlayer();
+
+        if (exitBtn)
+            ShowQuitPrompt();
+
+        if (quit)
+        {
+            GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), quitBackg, ScaleMode.ScaleToFit);
+
+            bool yes = GUI.Button(new Rect(buttonWidthStart + 420, buttonHeightStart + 300, 100, 100), yesIm, GUIStyle.none);
+            bool no = GUI.Button(new Rect(buttonWidthStart - 150, buttonHeightStart + 300, 100, 100), noIm, GUIStyle.none);
+
+            if (yes)
+                ExitGame();
+
+            if (no)
+                HideQuitPrompt();
+        }
+
+    }
+
+
+    private IEnumerator Wait(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        interaction = true;
+    }
 
     private void StartSinglePlayer()
     {
+
+        // Play sound effect for button selection
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Mouse_Click", listenerPos.position);
+
         // Load sp scene
 
-        
-
-        // Play sound effect for button selection
-        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Mouse_Click", listenerPos.position);
-
-        // Debug
         Debug.Log("Clicked SP button.");
+        SceneManager.LoadScene("SPPrototype");
     }
 
-
-    private void ShowOptions()
-    {
-        // Show options scene
-
-        
-        // Play sound effect for button selection
-        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Mouse_Click", listenerPos.position);
-
-        // Debug
-        Debug.Log("Clicked options button");
-    }
 
     private void ShowQuitPrompt()
     {
-        Debug.Log("Clicked exit game");
+        // Play sound effect for button selection
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Mouse_Click", listenerPos.position);
 
-        // Reverse bool
-        displayQuitPrompt = !displayQuitPrompt;
-
-        if (displayQuitPrompt)
-        {
-            quitPrompt.gameObject.SetActive(displayQuitPrompt);
-            // Play sound effect for button selection
-            FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Mouse_Click", listenerPos.position);
-        }
-
-        // Disable other buttons
-        SPBtn.enabled = false;
-        OpBtn.enabled = false;
-
+        // show prompt 
+        quit = true;
     }
 
     private void HideQuitPrompt()
@@ -93,13 +113,8 @@ public class MainMenuUIControl : MonoBehaviour {
         // Play sound effect for button selection
         FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Mouse_Click", listenerPos.position);
 
-        // Re-enable main menu buttons
-        SPBtn.enabled = true;
-        OpBtn.enabled = true;
-
         // Hide quit prompt canvas
-        displayQuitPrompt = !displayQuitPrompt;
-        quitPrompt.gameObject.SetActive(displayQuitPrompt);
+        quit = false;
     }
    
     private void ExitGame()
