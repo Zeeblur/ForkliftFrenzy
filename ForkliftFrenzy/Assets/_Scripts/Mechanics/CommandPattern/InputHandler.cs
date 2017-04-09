@@ -21,8 +21,8 @@ public class InputHandler : MonoBehaviour
         // Assign events to instances
         forksUpSFX = RuntimeManager.CreateInstance("event:/Forklift_Forks/Forks_up");
         forksDownSFX = RuntimeManager.CreateInstance("event:/Forklift_Forks/Forks_down");
-        driveUnloaded = RuntimeManager.CreateInstance("event:/Forklift_1_Redneck/Engine_Full");
-        engineIdle = RuntimeManager.CreateInstance("event:/Forklift_1_Redneck/Engine_Full");
+        driveUnloaded = RuntimeManager.CreateInstance("event:/Forklift_1_Redneck/FF_engine_onloadoffload");
+        engineIdle = RuntimeManager.CreateInstance("event:/Forklift_1_Redneck/FF_engine_onloadoffload");
         // Attach to this rigidbody
         RuntimeManager.AttachInstanceToGameObject(forksUpSFX, GetComponent<Transform>(), GetComponent<Rigidbody>());
         RuntimeManager.AttachInstanceToGameObject(forksDownSFX, GetComponent<Transform>(), GetComponent<Rigidbody>());
@@ -33,7 +33,7 @@ public class InputHandler : MonoBehaviour
         forksDownSFX.setVolume(2.0f);
         forksUpSFX.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject, GetComponent<Rigidbody>()));
         forksDownSFX.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject, GetComponent<Rigidbody>()));
-        driveUnloaded.setParameterValue("RPM", 2000);
+        driveUnloaded.setParameterValue("RPM", 2700);
         driveUnloaded.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject, GetComponent<Rigidbody>()));
         engineIdle.setParameterValue("RPM", 1000);
         engineIdle.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject, GetComponent<Rigidbody>()));

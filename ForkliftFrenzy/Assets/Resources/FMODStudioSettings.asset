@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eef8d824ea7b63742966aaa0e94ac383, type: 3}
-  m_Name: FMODStudioSettings
+  m_Name: 
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
@@ -18,10 +18,9 @@ MonoBehaviour:
   SourceBankPath: C:\Users\mrnew\Documents\Uni\GroupProject\ForkliftFrenzy\FMOD\Forklift
     Frenzy Main\Build
   AutomaticEventLoading: 1
-  AutomaticSampleLoading: 1
-  ImportType: 1
-  TargetAssetPath: C:\Users\mrnew\Documents\Uni\GroupProject\ForkliftFrenzy\FMOD\Forklift
-    Frenzy Main\Assets
+  AutomaticSampleLoading: 0
+  ImportType: 0
+  TargetAssetPath: 
   SpeakerModeSettings:
   - Platform: 2
     Value: 3
@@ -64,3 +63,4 @@ MonoBehaviour:
   - Forklift_Other
   - Forklift_Engines
   - Misc
+  - Music

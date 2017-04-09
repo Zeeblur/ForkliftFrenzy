@@ -26,7 +26,8 @@ public class GameActor : MonoBehaviour
     // Initialise fork object
     void Awake()
     {
-        ChangeFork(ForkLift.ENGIE);  
+        ChangeFork(ForkLift.ENGIE);
+        this.gameObject.AddComponent<MetalImpactSFX>();
     }
 
     private void AttachForkliftModel()

@@ -19,6 +19,7 @@ public class MainMenuUIControl : MonoBehaviour
     bool interaction = false;
     bool quit = false;
 
+    FMOD.Studio.EventInstance music;
     void Awake()
     {
         movie = (MovieTexture)this.GetComponent<Renderer>().material.mainTexture;
@@ -27,7 +28,10 @@ public class MainMenuUIControl : MonoBehaviour
         buttonTexture.font = myFont;
         buttonTexture.alignment = TextAnchor.MiddleCenter;
         buttonTexture.fontSize = 30;
-        
+
+        listenerPos = GameObject.FindGameObjectWithTag("MainCamera").transform;
+        music = FMODUnity.RuntimeManager.CreateInstance("event:/Music/Opening_Menu");
+        music.start();
     }
 
     public void HoverSFX()
@@ -91,11 +95,10 @@ public class MainMenuUIControl : MonoBehaviour
 
         // Play sound effect for button selection
         FMODUnity.RuntimeManager.PlayOneShot("event:/UI/Mouse_Click", listenerPos.position);
-
+        // Stop  bg music
+        music.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         // Load sp scene
-
-        Debug.Log("Clicked SP button.");
-        SceneManager.LoadScene("SPPrototype");
+        SceneManager.LoadScene("SoundProto");
     }
 
 

@@ -39,7 +39,7 @@ public class ForkliftSelectionUI : MonoBehaviour {
         back.onClick.AddListener(Back);
 
         playerImage = GameObject.FindGameObjectWithTag("forkliftSelect").transform;
-
+        listenerPos = GameObject.FindGameObjectWithTag("MainCamera").transform;
         statsInit = stats.text;
 
         // populate current forklift data

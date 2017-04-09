@@ -14,6 +14,7 @@ TagManager:
   - crateSpawn
   - forkliftSelect
   - Piston
+  - Shelf
   layers:
   - Default
   - TransparentFX
