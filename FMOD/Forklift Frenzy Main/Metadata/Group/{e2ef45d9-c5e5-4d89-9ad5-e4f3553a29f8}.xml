@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="MixerGroup" id="{e2ef45d9-c5e5-4d89-9ad5-e4f3553a29f8}">
+        <property name="name">
+            <value>AirconConveyor</value>
+        </property>
+        <relationship name="effectChain">
+            <destination>{2f480dc1-5f8a-4191-bd1a-b2898c7a0cca}</destination>
+        </relationship>
+        <relationship name="panner">
+            <destination>{4ed59438-6914-48a7-b5c7-7f940257c3cb}</destination>
+        </relationship>
+        <relationship name="output">
+            <destination>{6b0b0ad2-e680-4fd0-a676-15e6e452805a}</destination>
+        </relationship>
+    </object>
+    <object class="MixerBusEffectChain" id="{2f480dc1-5f8a-4191-bd1a-b2898c7a0cca}">
+        <relationship name="effects">
+            <destination>{1d4757a6-3d7d-4991-826a-57041baeb24d}</destination>
+            <destination>{7a62c73b-ccdb-47f1-b8e5-53364bf8c7ef}</destination>
+            <destination>{91e60505-f143-4434-8ea7-25ff3228eb4e}</destination>
+        </relationship>
+    </object>
+    <object class="MixerBusPanner" id="{4ed59438-6914-48a7-b5c7-7f940257c3cb}"/>
+    <object class="MixerBusFader" id="{1d4757a6-3d7d-4991-826a-57041baeb24d}"/>
+    <object class="MixerSend" id="{7a62c73b-ccdb-47f1-b8e5-53364bf8c7ef}">
+        <property name="level">
+            <value>0</value>
+        </property>
+        <property name="inputFormat">
+            <value>2</value>
+        </property>
+        <relationship name="mixerReturn">
+            <destination>{e08facd5-04a3-4277-b323-08144fe53480}</destination>
+        </relationship>
+    </object>
+    <object class="MixerSend" id="{91e60505-f143-4434-8ea7-25ff3228eb4e}">
+        <property name="inputFormat">
+            <value>2</value>
+        </property>
+        <relationship name="mixerReturn">
+            <destination>{f947ef80-1fee-4eef-8fee-efdb47c78c79}</destination>
+        </relationship>
+    </object>
+</objects>

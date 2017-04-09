@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.01.08.00">
     <object class="MixerReturn" id="{e08facd5-04a3-4277-b323-08144fe53480}">
+        <property name="volume">
+            <value>-62</value>
+        </property>
         <property name="overridingInputFormat">
             <value>2</value>
         </property>
@@ -28,6 +31,9 @@
     </object>
     <object class="MixerBusPanner" id="{56b6ca8d-ec29-4099-85f7-c797f3030d8a}"/>
     <object class="SFXReverbEffect" id="{5167e5e7-b1b0-40d8-9ab7-4b0564168d31}">
+        <property name="bypass">
+            <value>true</value>
+        </property>
         <property name="wetLevel">
             <value>0</value>
         </property>

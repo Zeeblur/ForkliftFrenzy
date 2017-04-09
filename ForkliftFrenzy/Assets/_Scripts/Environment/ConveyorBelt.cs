@@ -6,7 +6,7 @@ public class ConveyorBelt : MonoBehaviour {
     // Assign position to head towards
     public Transform beltEnd;
     // Belt speed
-    private float speed = 2.0f;
+    private float speed = 1.0f;
 
     FMOD.Studio.EventInstance conveyorSFX;
     
@@ -16,8 +16,9 @@ public class ConveyorBelt : MonoBehaviour {
         conveyorSFX = FMODUnity.RuntimeManager.CreateInstance("event:/Misc/Conveyor_Belt");
         // Attach it to conveyor rigidbody
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(conveyorSFX, GetComponent<Transform>(), GetComponent<Rigidbody>() );
+        conveyorSFX.setVolume(0.1f);
         // Plays constantly
-        //conveyorSFX.start();
+        conveyorSFX.start();
     }
     // Moves pick-ups along belt at speed
     void OnTriggerStay(Collider col)

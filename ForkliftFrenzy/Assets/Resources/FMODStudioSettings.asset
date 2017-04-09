@@ -13,12 +13,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  SourceProjectPath: ..\FMOD\Forklift Frenzy Main\Forklift Frenzy Main.fspro
-  SourceBankPath: ..\FMOD\Forklift Frenzy Main\Build
+  SourceProjectPath: C:\Users\mrnew\Documents\Uni\GroupProject\ForkliftFrenzy\FMOD\Forklift
+    Frenzy Main\Forklift Frenzy Main.fspro
+  SourceBankPath: C:\Users\mrnew\Documents\Uni\GroupProject\ForkliftFrenzy\FMOD\Forklift
+    Frenzy Main\Build
   AutomaticEventLoading: 1
-  AutomaticSampleLoading: 0
-  ImportType: 0
-  TargetAssetPath: 
+  AutomaticSampleLoading: 1
+  ImportType: 1
+  TargetAssetPath: C:\Users\mrnew\Documents\Uni\GroupProject\ForkliftFrenzy\FMOD\Forklift
+    Frenzy Main\Assets
   SpeakerModeSettings:
   - Platform: 2
     Value: 3

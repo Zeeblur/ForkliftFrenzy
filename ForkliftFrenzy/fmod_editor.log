@@ -23,28 +23,14 @@
 [LOG] Thread::initThread                       : - Stacksize 65536.  Stack pointer 0000000000000000 : usesemaphore = 0 : sleeptime = 1
 [LOG] Thread::callback                         : * FMOD Studio bank load thread started
 [LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
 [LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
-[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
-[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
-[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
-[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
-[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {6b0b0ad2-e680-4fd0-a676-15e6e452805a}
-[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {6b0b0ad2-e680-4fd0-a676-15e6e452805a}
-[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
-[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {6b0b0ad2-e680-4fd0-a676-15e6e452805a}
-[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {6b0b0ad2-e680-4fd0-a676-15e6e452805a}
-[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {6b0b0ad2-e680-4fd0-a676-15e6e452805a}
-[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
-[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {6b0b0ad2-e680-4fd0-a676-15e6e452805a}
-[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {6b0b0ad2-e680-4fd0-a676-15e6e452805a}
-[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {6b0b0ad2-e680-4fd0-a676-15e6e452805a}
-[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
-[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {6b0b0ad2-e680-4fd0-a676-15e6e452805a}
-[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {6b0b0ad2-e680-4fd0-a676-15e6e452805a}
-[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {6b0b0ad2-e680-4fd0-a676-15e6e452805a}
 [LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
 [LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
-[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {6b0b0ad2-e680-4fd0-a676-15e6e452805a}
-[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {6b0b0ad2-e680-4fd0-a676-15e6e452805a}
-[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {6b0b0ad2-e680-4fd0-a676-15e6e452805a}
+[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
+[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
+[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
+[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
