@@ -22,6 +22,38 @@
 [LOG] Thread::initThread                       : Initializing FMOD Studio bank load thread.  priority 0
 [LOG] Thread::initThread                       : - Stacksize 65536.  Stack pointer 0000000000000000 : usesemaphore = 0 : sleeptime = 1
 [LOG] Thread::callback                         : * FMOD Studio bank load thread started
+[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
+[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
+[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
+[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
+[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
+[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {6b0b0ad2-e680-4fd0-a676-15e6e452805a}
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {6b0b0ad2-e680-4fd0-a676-15e6e452805a}
+[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {ba1c7f5c-f7a4-42ac-9240-fa6feac62d54}
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {ed0569b9-6bfc-401b-b90d-431a24ca023a}
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {ed0569b9-6bfc-401b-b90d-431a24ca023a}
+[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {22e8ae30-171c-40ea-80ee-8884cd615af0}
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {6b0b0ad2-e680-4fd0-a676-15e6e452805a}
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {ba1c7f5c-f7a4-42ac-9240-fa6feac62d54}
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {6b0b0ad2-e680-4fd0-a676-15e6e452805a}
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {22e8ae30-171c-40ea-80ee-8884cd615af0}
+[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {6b0b0ad2-e680-4fd0-a676-15e6e452805a}
+[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {6b0b0ad2-e680-4fd0-a676-15e6e452805a}
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {017b3d71-1917-4275-9602-7897839104b6}
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {6b0b0ad2-e680-4fd0-a676-15e6e452805a}
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {6b0b0ad2-e680-4fd0-a676-15e6e452805a}
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {017b3d71-1917-4275-9602-7897839104b6}
+[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
+[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {e2ef45d9-c5e5-4d89-9ad5-e4f3553a29f8}
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {e2ef45d9-c5e5-4d89-9ad5-e4f3553a29f8}
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {e2ef45d9-c5e5-4d89-9ad5-e4f3553a29f8}
 [LOG] Thread::callback                         : * FMOD Studio bank load thread finished
 [LOG] Thread::close                            : FMOD Studio bank load thread thread destroyed
 [LOG] Thread::callback                         : * FMOD Studio sample load thread finished
