@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="MixerGroup" id="{22e8ae30-171c-40ea-80ee-8884cd615af0}">
+        <property name="name">
+            <value>Forklift</value>
+        </property>
+        <relationship name="effectChain">
+            <destination>{126352a7-12d8-4948-ba78-51738059faf8}</destination>
+        </relationship>
+        <relationship name="panner">
+            <destination>{fb01eec3-3870-4b28-ba8a-5388c13c964a}</destination>
+        </relationship>
+        <relationship name="output">
+            <destination>{6b0b0ad2-e680-4fd0-a676-15e6e452805a}</destination>
+        </relationship>
+    </object>
+    <object class="MixerBusEffectChain" id="{126352a7-12d8-4948-ba78-51738059faf8}">
+        <relationship name="effects">
+            <destination>{d8c2e354-3ea9-4f7e-8321-b26b2041ec56}</destination>
+            <destination>{66ee07c7-389d-4fca-8bbb-c3313571ab17}</destination>
+            <destination>{0202d92d-d184-47ac-8e0d-5c8f57c3a4cb}</destination>
+        </relationship>
+    </object>
+    <object class="MixerBusPanner" id="{fb01eec3-3870-4b28-ba8a-5388c13c964a}"/>
+    <object class="MixerBusFader" id="{d8c2e354-3ea9-4f7e-8321-b26b2041ec56}"/>
+    <object class="MixerSend" id="{66ee07c7-389d-4fca-8bbb-c3313571ab17}">
+        <property name="level">
+            <value>0</value>
+        </property>
+        <property name="inputFormat">
+            <value>2</value>
+        </property>
+        <relationship name="mixerReturn">
+            <destination>{e08facd5-04a3-4277-b323-08144fe53480}</destination>
+        </relationship>
+    </object>
+    <object class="MixerSend" id="{0202d92d-d184-47ac-8e0d-5c8f57c3a4cb}">
+        <property name="inputFormat">
+            <value>2</value>
+        </property>
+        <relationship name="mixerReturn">
+            <destination>{f947ef80-1fee-4eef-8fee-efdb47c78c79}</destination>
+        </relationship>
+    </object>
+</objects>
