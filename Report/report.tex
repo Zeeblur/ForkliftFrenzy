@@ -1,16 +1,32 @@
 \documentclass[12pt]{article}
 \title{Forklift Frenzy Group Report}
-\author{Matthew Newbigging 09004805}
+\author{Alexander Haining 40283659\\David MacGruer 40172073\\Matias Nilla Matias Rafael Malmivaara 40286188\\Matthew Newbigging 09004805\\Marie Pearson 40181382\\Zoe Wall 40182161}
 \date{\today}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{pdfpages}
 \usepackage{titlesec}
+\usepackage[a4paper,outer=1.5cm,inner=1.5cm,top=1.75cm,bottom=1.5cm]{geometry}
 \setcounter{secnumdepth}{2}
+
+\newcommand{\figuremacro}[5]{
+	\begin{figure}[#1]
+		\centering
+		\includegraphics[width=#5\columnwidth]{images/#2}
+		\caption[#3]{\textbf{#3}#4}
+		\label{fig:#2}
+	\end{figure}
+}
 
 \begin{document}
 \maketitle
+
+\pagenumbering{gobble}
+
 \newpage
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
 
 \section{Abstract}
 	This report details the progress made in completing the Forklift Frenzy group project, illustrates the various learning outcomes achieved and compares original aims with resulting deliverables.
@@ -151,16 +167,25 @@ The above shows the other two forklift classes made for the game; DinkyDink and 
 \subsection{Pipeline}
 % Describe our working pipeline
 
-After collaboratively working out a plan for features the implementation phase of the project could start. The working pipeline consisted of a similar structure to games development within the industry from concept design, pre-production and onto production. Unfortunately due to the limitations faced during the project, the post-production stage of the development was not completed.
+After collaboratively working out a plan for features the implementation phase of the project could start. The working pipeline consisted of a similar structure to games development within the industry from concept design, pre-production and onto production. Unfortunately due to the limitations faced during the project, the post-production stage of the development was not fully completed.
 
-\subsection{Concept Design}
+\paragraph{Concept Design}
 
 The original concept of the forklift game was conceived before the start of the Group Project in January. This gave the team plenty of time to iron out the designs.
 
-\subsection{Pre-Production}
+\paragraph{Pre-Production}
 
-During the initial stages of the project, the team had many group meetings for collaborative idea generation. This proved to be a very useful and productive stage of the process. A lot of documentation was created 
+During the initial stages of the project, the team had many group meetings for collaborative idea generation. This proved to be a very useful and productive stage of the process. Documentation was created that can be seen in figures \ref{fig:conceptForkSelect}- within Appendix D, this detailed such things as level design, user interface design, mechanics and character design. Code design documentation was also created detailing the classes needed and the required relationships between them.
 
+\paragraph{Production}
+
+Once the design documentation was completed, the production stage could begin. Due to the nature of the tasks, the group could be split into three separate sub-teams to develop artwork, implementation, and sound separately. This model for working although suiting the project proved to be difficult as times as each members work flow relied on each other during the final stages of the project. This seemed to lead into more complex technical issues that were not foreseen in the projects output.
+
+\subsubsection{Artwork}
+
+\subsubsection{Code}
+
+\subsubsection{Sound}
 
 \subsection{Testing}
 Types of testing undertaken throughout the project include mostly acceptance criteria testing, with some explorative testing. Testing sessions were planned from project start; aimed to coincide with the completion of major development tasks. However, due to the uncertain nature of the duration of some tasks, testing took on a more ad-hoc nature as the project matured. 
@@ -219,7 +244,18 @@ As is evident by comparing the above images of the teams predicted and actual pr
 
 \section{Conclusion}
 
-\begin{appendix}
-	
-\end{appendix}
+\newpage
+\clearpage
+
+\section{Appendix A}
+
+\section{Appendix B}
+
+\section{Appendix C}
+\section{Appendix D}
+
+\figuremacro{h}{conceptForkSelect}{Pre-production }{- concept design for forklift selection scene.}{1.0}
+\figuremacro{h}{overheadMapLayout}{Pre-production }{- original multiplayer map design.}{1.0}
+
+
 \end{document}

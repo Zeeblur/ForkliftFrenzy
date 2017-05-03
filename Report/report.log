@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.5.3)  3 MAY 2017 14:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.5.3)  3 MAY 2017 14:52
 entering extended mode
 **./report.tex
 (report.tex
@@ -130,34 +130,58 @@ Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
 \titlewidthlast=\dimen112
 \titlewidthfirst=\dimen113
 )
-No file report.aux.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count93
+\Gm@cntv=\count94
+\c@Gm@tempcnt=\count95
+\Gm@bindingoffset=\dimen114
+\Gm@wd@mp=\dimen115
+\Gm@odd@mp=\dimen116
+\Gm@even@mp=\dimen117
+\Gm@layoutwidth=\dimen118
+\Gm@layoutheight=\dimen119
+\Gm@layouthoffset=\dimen120
+\Gm@layoutvoffset=\dimen121
+\Gm@dimlist=\toks20
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+(report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count93
-\scratchdimen=\dimen114
+\scratchcounter=\count96
+\scratchdimen=\dimen122
 \scratchbox=\box31
-\nofMPsegments=\count94
-\nofMParguments=\count95
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count96
-\MPscratchDim=\dimen115
-\MPnumerator=\count97
-\makeMPintoPDFobject=\count98
-\everyMPtoPDFconversion=\toks21
+\nofMPsegments=\count97
+\nofMParguments=\count98
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count99
+\MPscratchDim=\dimen123
+\MPnumerator=\count100
+\makeMPintoPDFobject=\count101
+\everyMPtoPDFconversion=\toks22
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -209,230 +233,206 @@ Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(42.67912pt, 512.14963pt, 42.67912pt)
+* v-part:(T,H,B)=(49.79231pt, 752.57541pt, 42.67912pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=512.14963pt
+* \textheight=752.57541pt
+* \oddsidemargin=-29.59087pt
+* \evensidemargin=-29.59087pt
+* \topmargin=-59.47768pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
-Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 12.
+(Font)              <14.4> on input line 22.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 12.
- [1
+(Font)              <7> on input line 22.
+[1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 22.
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] (report.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 3.
+)
+\tf@toc=\write3
+\openout3 = `report.toc'.
+
+ [2]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 38.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ™ in font cmr12!
- [2]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 38.
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
- [3]
-Overfull \hbox (13.3472pt too wide) in paragraph at lines 64--65
-\OT1/cmr/m/n/12 al-lows play-ers to con-tinue from where they left of in pre-vi
--ous playthroughs,
- []
+ [1]
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ™ in font cmr12!
+ [2] [3]
+<images/sp.png, id=21, 1129.21875pt x 634.62094pt>
+File: images/sp.png Graphic file (type png)
+ <use images/sp.png>
+Package pdftex.def Info: images/sp.png used on input line 111.
+(pdftex.def)             Requested size: 512.14963pt x 287.83304pt.
 
-[4] [5]
+<images/clockInApproach.png, id=23, 1156.32pt x 650.43pt>
+File: images/clockInApproach.png Graphic file (type png)
 
-! LaTeX Error: File `images/sp' not found.
+<use images/clockInApproach.png>
+Package pdftex.def Info: images/clockInApproach.png used on input line 117.
+(pdftex.def)             Requested size: 512.14963pt x 288.07578pt.
+ [4 <./images/sp.png>]
+<images/clockInClose.png, id=28, 1156.32pt x 650.43pt>
+File: images/clockInClose.png Graphic file (type png)
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.95 ...cludegraphics[width=\textwidth]{images/sp}
-                                                  
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+<use images/clockInClose.png>
+Package pdftex.def Info: images/clockInClose.png used on input line 123.
+(pdftex.def)             Requested size: 512.14963pt x 288.07578pt.
 
-[6]
+<images/pauseScreen.png, id=29, 576.65437pt x 426.09187pt>
+File: images/pauseScreen.png Graphic file (type png)
 
-! LaTeX Error: File `images/clockInApproach' not found.
+<use images/pauseScreen.png>
+Package pdftex.def Info: images/pauseScreen.png used on input line 130.
+(pdftex.def)             Requested size: 512.14963pt x 378.44687pt.
+ [5 <./images/clockInApproach.png> <./images/clockInClose.png>] <images/mainMen
+u.png, id=34, 602.25pt x 551.05875pt>
+File: images/mainMenu.png Graphic file (type png)
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.101 ...width=\textwidth]{images/clockInApproach}
-                                                  
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+<use images/mainMenu.png>
+Package pdftex.def Info: images/mainMenu.png used on input line 136.
+(pdftex.def)             Requested size: 512.14963pt x 468.6628pt.
+ [6 <./images/pauseScreen.png>]
+<images/forkliftSelect.png, id=39, 1156.32pt x 650.43pt>
+File: images/forkliftSelect.png Graphic file (type png)
 
+<use images/forkliftSelect.png>
+Package pdftex.def Info: images/forkliftSelect.png used on input line 142.
+(pdftex.def)             Requested size: 512.14963pt x 288.07578pt.
+ [7 <./images/mainMenu.png>]
+<images/score.png, id=44, 1156.32pt x 650.43pt>
+File: images/score.png Graphic file (type png)
+ <use images/score.png>
+Package pdftex.def Info: images/score.png used on input line 149.
+(pdftex.def)             Requested size: 512.14963pt x 288.07578pt.
+ [8 <./images/forkliftSelect.png> <./images/score.png>]
+<images/redneckEZ.png, id=48, 647.41875pt x 328.8285pt>
+File: images/redneckEZ.png Graphic file (type png)
 
-! LaTeX Error: File `images/clockInClose' not found.
+<use images/redneckEZ.png>
+Package pdftex.def Info: images/redneckEZ.png used on input line 156.
+(pdftex.def)             Requested size: 512.14963pt x 260.13794pt.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.107 ...cs[width=\textwidth]{images/clockInClose}
-                                                  
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+<images/dinkyRobo.png, id=49, 577.55775pt x 257.16075pt>
+File: images/dinkyRobo.png Graphic file (type png)
 
-
-! LaTeX Error: File `images/pauseScreen' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.114 ...ics[width=\textwidth]{images/pauseScreen}
-                                                  
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: File `images/mainMenu' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.120 ...aphics[width=\textwidth]{images/mainMenu}
-                                                  
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[7]
-
-! LaTeX Error: File `images/forkliftSelect' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.126 ...[width=\textwidth]{images/forkliftSelect}
-                                                  
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: File `images/score' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.133 ...egraphics[width=\textwidth]{images/score}
-                                                  
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: File `images/redneckEZ' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.140 ...phics[width=\textwidth]{images/redneckEZ}
-                                                  
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: File `images/dinkyRobo' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.146 ...phics[width=\textwidth]{images/dinkyRobo}
-                                                  
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 182--192
+<use images/dinkyRobo.png>
+Package pdftex.def Info: images/dinkyRobo.png used on input line 162.
+(pdftex.def)             Requested size: 512.14963pt x 228.05615pt.
+ [9 <./images/redneckEZ.png> <./images/dinkyRobo.png>] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 207--217
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 182--192
+Underfull \hbox (badness 10000) in paragraph at lines 207--217
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 182--192
+Underfull \hbox (badness 10000) in paragraph at lines 207--217
 
  []
 
-[10] [11]
+[11] <images/ganttChart.png, id=62, 496.85625pt x 547.44525pt>
+File: images/ganttChart.png Graphic file (type png)
 
-! LaTeX Error: File `images/ganttChart' not found.
+<use images/ganttChart.png>
+Package pdftex.def Info: images/ganttChart.png used on input line 234.
+(pdftex.def)             Requested size: 512.14963pt x 564.3427pt.
+ [12]
+<images/livingTimeline.png, id=66, 1135.8435pt x 216.81pt>
+File: images/livingTimeline.png Graphic file (type png)
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.209 ...hics[width=\textwidth]{images/ganttChart}
-                                                  
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+<use images/livingTimeline.png>
+Package pdftex.def Info: images/livingTimeline.png used on input line 239.
+(pdftex.def)             Requested size: 454.32936pt x 86.72246pt.
+ [13 <./images/ganttChart.png>] [14 <./images/livingTimeline.png>]
+<images/conceptForkSelect.jpg, id=74, 2457.18pt x 3276.24pt>
+File: images/conceptForkSelect.jpg Graphic file (type jpg)
+
+<use images/conceptForkSelect.jpg>
+Package pdftex.def Info: images/conceptForkSelect.jpg used on input line 257.
+(pdftex.def)             Requested size: 512.14963pt x 682.83162pt.
 
 
-! LaTeX Error: File `images/livingTimeline' not found.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.214 ...raphics[scale=0.4]{images/livingTimeline}
-                                                  
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+<images/overheadMapLayout.jpg, id=75, 3276.24pt x 2457.18pt>
+File: images/overheadMapLayout.jpg Graphic file (type jpg)
 
-[12] [13] (report.aux) ) 
+<use images/overheadMapLayout.jpg>
+Package pdftex.def Info: images/overheadMapLayout.jpg used on input line 258.
+(pdftex.def)             Requested size: 512.14963pt x 384.0834pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[15
+
+] [16 <./images/conceptForkSelect.jpg>] [17 <./images/overheadMapLayout.jpg>] (
+report.aux) ) 
 Here is how much of TeX's memory you used:
- 3161 strings out of 493335
- 44907 string characters out of 3136672
- 116225 words of memory out of 3000000
- 6638 multiletter control sequences out of 15000+200000
- 6627 words of font info for 24 fonts, out of 3000000 for 9000
+ 3697 strings out of 493335
+ 53508 string characters out of 3136672
+ 130067 words of memory out of 3000000
+ 7163 multiletter control sequences out of 15000+200000
+ 8808 words of font info for 31 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,7n,39p,932b,189s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmsy10.pfb>
-Output written on report.pdf (13 pages, 81957 bytes).
+ 40i,8n,39p,914b,240s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+r12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb>
+Output written on report.pdf (19 pages, 12836207 bytes).
 PDF statistics:
- 61 PDF objects out of 1000 (max. 8388607)
+ 100 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
