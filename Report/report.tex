@@ -6,6 +6,7 @@
 \usepackage{float}
 \usepackage{pdfpages}
 \usepackage{titlesec}
+\usepackage{pdfpages}
 \usepackage[a4paper,outer=1.5cm,inner=1.5cm,top=1.75cm,bottom=1.5cm]{geometry}
 \setcounter{secnumdepth}{2}
 
@@ -36,7 +37,7 @@
 	The Group Project module provides the perfect opportunity to allow a group of students keen to work on games in their future careers to create a portfolio piece, whilst gaining some insight and experience in working in a small team to publish a game created from scratch. As such, Forklift Frenzy is a student led project, with the project manager acting as client. The roles and outcomes carried out by group members include:
 	\begin{itemize}
 		\item Project Manager, client and programmer - successful management of the software project; documentation, risk mitigation, feature definition, minor development tasks
-		\item Lead Programmer - all major development tasks, version control
+		\item Lead Developer - all major development tasks, version control
 		\item Artists - asset creation to specifications; 2D concept and UI
 		art, 3D models, textures, adhering to agreed asset standardisations
 		\item Sound Designer - creating and implementation of all sound effects
@@ -175,7 +176,7 @@ The original concept of the forklift game was conceived before the start of the 
 
 \paragraph{Pre-Production}
 
-During the initial stages of the project, the team had many group meetings for collaborative idea generation. This proved to be a very useful and productive stage of the process. Documentation was created that can be seen in figures \ref{fig:conceptForkSelect}- within Appendix D, this detailed such things as level design, user interface design, mechanics and character design. Code design documentation was also created detailing the classes needed and the required relationships between them.
+During the initial stages of the project, the team had many group meetings for collaborative idea generation. This proved to be a very useful and productive stage of the process. Documentation was created that can be seen in figures \ref{fig:conceptForkSelect}-\ref{fig:RedneckRough} within Appendix D, this detailed such things as level design, user interface design, mechanics and character design. Code design documentation was also created detailing the classes needed and the required relationships between them.
 
 \paragraph{Production}
 
@@ -194,7 +195,7 @@ Once the team had finalized the texturing, the models were ready to be exported 
 
 \subsubsection{Code}
 
-The task for the development was initially split into two parts; the lead developer worked on the initial game logic and code base for the mechanics of the movement within the game following the proposed class structure, see Figure \ref{fig:class} in Appendix D; the other developer worked on initially creating the menu elements to avoid working on the same scene at once which causes problems with merge conflicts. 
+The task for the development was initially split into two parts; the lead developer worked on the initial game logic and code base for the mechanics of the movement within the game following the proposed class structure, see Figure \ref{fig:code} in Appendix D; the other developer worked on initially creating the menu elements to avoid working on the same scene at once which causes problems with merge conflicts. 
 
 Learning how to use version control through git was one of the main learning objects of this project, which required the whole team to learn how to use git effectively on a collaborative project. A repository was hosted on GitHub, and the lead developer attempted to teach the team how to follow a standardised feature branch workflow. Each person developing on the project was to create their own working branch and merge to master when appropriate keeping the master branch release ready, with no compile errors. This began to get difficult for some of the members of the team so it was decided that when a merge was needed, the team member would issue a pull request that would be overseen and any merge conflicts or problems could be fixed by the lead developer.
 
@@ -206,7 +207,7 @@ The sound designer/engineer used the middleware FMOD Studio to make assets that 
 
 To create the final sounds heard within the game, each clip was layered within an FMOD editing session, for example, the sound of the forklift engines were clips of toothbrush and vacuum cleaner sounds that were processed heavily, using such effects as equalisation, pitch shift, and distortion to name a few. The sound clips also had to be looped seamlessly as the game is a real-time simulation the sounds must be continuous and cannot just stop abruptly.
 
-The most important part of this stage of development was communication between the sound designer and the developers to implement the audio within the game. Documentation that can be seen in figure \ref{fig:} from Appendix D details some of the more technical specifications for implementing the final sound clips.
+The most important part of this stage of development was communication between the sound designer and the developers to implement the audio within the game. Documentation that can be seen in figure \ref{sound} from Appendix D details some of the more technical specifications for implementing the final sound clips.
 
 \subsection{Testing}
 Types of testing undertaken throughout the project include mostly acceptance criteria testing, with some explorative testing. Testing sessions were planned from project start; aimed to coincide with the completion of major development tasks. However, due to the uncertain nature of the duration of some tasks, testing took on a more ad-hoc nature as the project matured. 
@@ -270,7 +271,13 @@ As is evident by comparing the above images of the teams predicted and actual pr
 
 \section{Appendix A}
 
-Original PID
+\begin{figure}[H] \centering{
+			\caption{Project Initiation Document}
+		\includegraphics[scale=0.80]{PID.pdf}}
+\end{figure}
+
+\newpage
+\includepdf[pages={2-}]{PID}
 
 \section{Appendix B}
 
@@ -278,16 +285,41 @@ Gantt charts
 
 \section{Appendix C}
 
+Test results:
+
+
 \section{Appendix D}
 
-\figuremacro{h}{conceptForkSelect}{Pre-production }{- concept design for forklift selection scene.}{1.0}
+\figuremacro{h}{conceptForkSelect}{Pre-production }{- concept design for forklift selection scene.}{0.5}
 \figuremacro{h}{overheadMapLayout}{Pre-production }{- original multiplayer map design.}{1.0}
+\figuremacro{h}{ClockInArea}{Pre-production }{- Clock-in area concept.}{1.0}
+\figuremacro{h}{dinkyConcept}{Pre-production }{- concept drawing of a forklift.}{1.0}
+\figuremacro{h}{RedneckRough}{Pre-production }{- concept drawing of a forklift.}{1.0}
 
-\figuremacro{h}{timeline}{arg3}{arg4}{1.0}
-\figuremacro{h}{code}{arg3}{arg4}{1.0}
-\figuremacro{h}{tasks}{arg3}{arg4}{1.0}
+\figuremacro{h}{timeline}{Pre-production }{- code achievement and scoring design.}{1.0}
+\figuremacro{h}{code}{Pre-production }{- code layout and design.}{1.0}
+\figuremacro{h}{tasks}{Pre-production }{- code task distribution.}{0.8}
 
-\figuremacro{h}{timeline}{arg3}{arg4}{1.0}
+\newpage
+\clearpage
+\begin{figure}[H] \centering{
+		\label{code}
+		\caption{Code definitions}
+		\includegraphics[scale=0.80]{codedef.pdf}}
+\end{figure}
 
+\newpage
+\includepdf[pages={2-}, scale =.8]{codedef}
+
+\newpage
+\clearpage
+\begin{figure}[H] \centering{
+		\label{sound}
+		\caption{Sound implementation details}
+		\includegraphics[scale=0.80]{sound.pdf}}
+\end{figure}
+
+\newpage
+\includepdf[pages={2-}, scale =.8]{sound}
 
 \end{document}
