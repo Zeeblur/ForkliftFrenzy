@@ -183,9 +183,30 @@ Once the design documentation was completed, the production stage could begin. D
 
 \subsubsection{Artwork}
 
+The task for the 3D artists was to produce game ready assets for the developers to implement into the Unity game engine. The process of producing the models would start with the concept artist delivering the required reference images. Next would be to develop the model from the concept images using Autodesk Maya. Once this process was complete the models will be re-topologized to ensure the polycount is correct and the level of detail remains sharp. For proper integration into the Unity game engine, the models needed to be structured with a naming hierarchy that worked for the game developers. During this stage, the asset needed to have the local space coordinates formatted correctly to be controlled using code within the game engine. 
+
+The model was then sent over to the lead developer for preliminary testing and would be sent back to the modellers for any final edits and adjustments. Once completed the asset was now ready for creating UV (texture) maps. This process is to unfold the external material correctly over the 3d asset before taking the asset into Substance Painter where they could be textured to the desired style. 
+Once the team had finalized the texturing, the models were ready to be exported and packaged as an FBX file with the texture maps. From here the Game developers would be able to properly integrate them into the game engine.
+
+\begin{center}
+	$ Concept \; Art \rightarrow Model \rightarrow Re-Topology \rightarrow Naming \; Hierarchy \rightarrow Formatting \; Coordinates \rightarrow Testing \rightarrow Adjustments \; Edits \rightarrow UVing \rightarrow Texturing \rightarrow Exporting \rightarrow Game \; Ready $
+\end{center}
+
 \subsubsection{Code}
 
+The task for the development was initially split into two parts; the lead developer worked on the initial game logic and code base for the mechanics of the movement within the game following the proposed class structure, see Figure \ref{fig:class} in Appendix D; the other developer worked on initially creating the menu elements to avoid working on the same scene at once which causes problems with merge conflicts. 
+
+Learning how to use version control through git was one of the main learning objects of this project, which required the whole team to learn how to use git effectively on a collaborative project. A repository was hosted on GitHub, and the lead developer attempted to teach the team how to follow a standardised feature branch workflow. Each person developing on the project was to create their own working branch and merge to master when appropriate keeping the master branch release ready, with no compile errors. This began to get difficult for some of the members of the team so it was decided that when a merge was needed, the team member would issue a pull request that would be overseen and any merge conflicts or problems could be fixed by the lead developer.
+
+As for the logic structure of the game itself, most of the development teams work had to be iteratively improved as and when the new models were finished by the artists. Their work included: scaling and transforming models correctly to tie into the logic of the code, work with the unity physics engine to attach colliders and rigid bodies to allow the models to interact appropriately, design and implement simple user interface features to allow for the user to control the game, and ensure that the single player prototype was a playable game. Initially research was done into the multiplayer aspect of the proposed game, however due to project scope and time constraints this did not end up in the finished product.  
+
 \subsubsection{Sound}
+
+The sound designer/engineer used the middleware FMOD Studio to make assets that were created game ready to plug-in straight to Unity. Pro Tools was used as the main digital audio workstation, most of the work in achieving the sounds the group needed for whatever purpose were recorded and edited at this stage. This process took several recording sessions, recording all sorts of different materials from cardboard boxes and sticks to heavy metal items in 24bit and 44.1kHz, to have full dynamic range without digital errors that sometimes occur in digital to analogue conversion. These clips were then edited be conservative for the sake of memory usage and such requirements for the audio to be game ready.
+
+To create the final sounds heard within the game, each clip was layered within an FMOD editing session, for example, the sound of the forklift engines were clips of toothbrush and vacuum cleaner sounds that were processed heavily, using such effects as equalisation, pitch shift, and distortion to name a few. The sound clips also had to be looped seamlessly as the game is a real-time simulation the sounds must be continuous and cannot just stop abruptly.
+
+The most important part of this stage of development was communication between the sound designer and the developers to implement the audio within the game. Documentation that can be seen in figure \ref{fig:} from Appendix D details some of the more technical specifications for implementing the final sound clips.
 
 \subsection{Testing}
 Types of testing undertaken throughout the project include mostly acceptance criteria testing, with some explorative testing. Testing sessions were planned from project start; aimed to coincide with the completion of major development tasks. However, due to the uncertain nature of the duration of some tasks, testing took on a more ad-hoc nature as the project matured. 
@@ -249,13 +270,24 @@ As is evident by comparing the above images of the teams predicted and actual pr
 
 \section{Appendix A}
 
+Original PID
+
 \section{Appendix B}
 
+Gantt charts
+
 \section{Appendix C}
+
 \section{Appendix D}
 
 \figuremacro{h}{conceptForkSelect}{Pre-production }{- concept design for forklift selection scene.}{1.0}
 \figuremacro{h}{overheadMapLayout}{Pre-production }{- original multiplayer map design.}{1.0}
+
+\figuremacro{h}{timeline}{arg3}{arg4}{1.0}
+\figuremacro{h}{code}{arg3}{arg4}{1.0}
+\figuremacro{h}{tasks}{arg3}{arg4}{1.0}
+
+\figuremacro{h}{timeline}{arg3}{arg4}{1.0}
 
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.5.3)  3 MAY 2017 14:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.5.3)  3 MAY 2017 16:27
 entering extended mode
 **./report.tex
 (report.tex
@@ -154,7 +154,11 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks20
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-(report.aux)
+(report.aux
+
+LaTeX Warning: Label `fig:timeline' multiply defined.
+
+)
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
@@ -364,75 +368,129 @@ File: images/dinkyRobo.png Graphic file (type png)
 <use images/dinkyRobo.png>
 Package pdftex.def Info: images/dinkyRobo.png used on input line 162.
 (pdftex.def)             Requested size: 512.14963pt x 228.05615pt.
- [9 <./images/redneckEZ.png> <./images/dinkyRobo.png>] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 207--217
+ [9 <./images/redneckEZ.png> <./images/dinkyRobo.png>]
+
+LaTeX Warning: Reference `fig:class' on page 10 undefined on input line 197.
+
+[10]
+
+LaTeX Warning: Reference `fig:' on page 11 undefined on input line 209.
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 228--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--217
+Underfull \hbox (badness 10000) in paragraph at lines 228--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--217
+Underfull \hbox (badness 10000) in paragraph at lines 228--238
 
  []
 
-[11] <images/ganttChart.png, id=62, 496.85625pt x 547.44525pt>
+[12] <images/ganttChart.png, id=66, 496.85625pt x 547.44525pt>
 File: images/ganttChart.png Graphic file (type png)
 
 <use images/ganttChart.png>
-Package pdftex.def Info: images/ganttChart.png used on input line 234.
+Package pdftex.def Info: images/ganttChart.png used on input line 255.
 (pdftex.def)             Requested size: 512.14963pt x 564.3427pt.
- [12]
-<images/livingTimeline.png, id=66, 1135.8435pt x 216.81pt>
+ [13]
+<images/livingTimeline.png, id=70, 1135.8435pt x 216.81pt>
 File: images/livingTimeline.png Graphic file (type png)
 
 <use images/livingTimeline.png>
-Package pdftex.def Info: images/livingTimeline.png used on input line 239.
+Package pdftex.def Info: images/livingTimeline.png used on input line 260.
 (pdftex.def)             Requested size: 454.32936pt x 86.72246pt.
- [13 <./images/ganttChart.png>] [14 <./images/livingTimeline.png>]
-<images/conceptForkSelect.jpg, id=74, 2457.18pt x 3276.24pt>
+ [14 <./images/ganttChart.png>] [15 <./images/livingTimeline.png>]
+<images/conceptForkSelect.jpg, id=78, 2457.18pt x 3276.24pt>
 File: images/conceptForkSelect.jpg Graphic file (type jpg)
 
 <use images/conceptForkSelect.jpg>
-Package pdftex.def Info: images/conceptForkSelect.jpg used on input line 257.
+Package pdftex.def Info: images/conceptForkSelect.jpg used on input line 283.
 (pdftex.def)             Requested size: 512.14963pt x 682.83162pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/overheadMapLayout.jpg, id=75, 3276.24pt x 2457.18pt>
+<images/overheadMapLayout.jpg, id=79, 3276.24pt x 2457.18pt>
 File: images/overheadMapLayout.jpg Graphic file (type jpg)
 
 <use images/overheadMapLayout.jpg>
-Package pdftex.def Info: images/overheadMapLayout.jpg used on input line 258.
+Package pdftex.def Info: images/overheadMapLayout.jpg used on input line 284.
 (pdftex.def)             Requested size: 512.14963pt x 384.0834pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[15
+<images/timeline.jpg, id=80, 1541.76pt x 867.24pt>
+File: images/timeline.jpg Graphic file (type jpg)
+ <use images/timeline.jpg>
+Package pdftex.def Info: images/timeline.jpg used on input line 286.
+(pdftex.def)             Requested size: 512.14963pt x 288.08241pt.
 
-] [16 <./images/conceptForkSelect.jpg>] [17 <./images/overheadMapLayout.jpg>] (
-report.aux) ) 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/code.jpg, id=81, 1541.76pt x 867.24pt>
+File: images/code.jpg Graphic file (type jpg)
+ <use images/code.jpg>
+Package pdftex.def Info: images/code.jpg used on input line 287.
+(pdftex.def)             Requested size: 512.14963pt x 288.08241pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/tasks.jpg, id=82, 304.88907pt x 542.025pt>
+File: images/tasks.jpg Graphic file (type jpg)
+ <use images/tasks.jpg>
+Package pdftex.def Info: images/tasks.jpg used on input line 288.
+(pdftex.def)             Requested size: 512.14963pt x 910.52135pt.
+
+
+LaTeX Warning: Float too large for page by 184.77925pt on input line 288.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: images/timeline.jpg Graphic file (type jpg)
+<use images/timeline.jpg>
+Package pdftex.def Info: images/timeline.jpg used on input line 290.
+(pdftex.def)             Requested size: 512.14963pt x 288.08241pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[16
+
+] [17 <./images/conceptForkSelect.jpg>] [18 <./images/overheadMapLayout.jpg> <.
+/images/timeline.jpg>] [19 <./images/code.jpg>] [20 <./images/tasks.jpg>]
+[21] (report.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3697 strings out of 493335
- 53508 string characters out of 3136672
- 130067 words of memory out of 3000000
- 7163 multiletter control sequences out of 15000+200000
+ 3717 strings out of 493335
+ 53846 string characters out of 3136672
+ 130136 words of memory out of 3000000
+ 7180 multiletter control sequences out of 15000+200000
  8808 words of font info for 31 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,8n,39p,914b,240s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-r12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17
-.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb>
-Output written on report.pdf (19 pages, 12836207 bytes).
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on report.pdf (23 pages, 13554942 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
+ 119 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
