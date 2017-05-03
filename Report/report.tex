@@ -1,7 +1,9 @@
 \documentclass[12pt]{article}
-\title{Forklift Frenzy Group Project Report}
+\title{Forklift Frenzy Group Report}
 \author{Matthew Newbigging 09004805}
 \date{\today}
+\usepackage{graphicx}
+\usepackage{float}
 \usepackage{pdfpages}
 \usepackage{titlesec}
 \setcounter{secnumdepth}{2}
@@ -11,7 +13,7 @@
 \newpage
 
 \section{Abstract}
-	This report details the progress made in completing the Forklift Frenzy group project, illustrates the various learning outcomes achieved and compares original aims with resulting deliverables. (rewrite)
+	This report details the progress made in completing the Forklift Frenzy group project, illustrates the various learning outcomes achieved and compares original aims with resulting deliverables.
 		
 	Forklift Frenzy is a 3D video game for use on Windows PC, suitable for an audience of all ages, created from original assets only. The game lets players take command of a number of various forklifts, with which they must navigate a map to retrieve and deliver certain packages for points, against the clock.
 	
@@ -24,7 +26,7 @@
 		\item Sound Designer - creating and implementation of all sound effects
 	\end{itemize}
 	
-	Described in detail further in this document, the project’s success relies on overcoming several key obstacles:
+	Described in detail further on in this document, the success of the project relied on overcoming several key obstacles:
 	\begin{itemize}
 		\item Agreeing on a work pipeline suitable to create usable game ready assets
 		\item Appropriate collaboration in having multiple artists and programmers work on similar tasks and the resolution of any conflicts 
@@ -54,7 +56,7 @@ A close second in terms of limitations is software experience, which impacts on 
 
 
 \subsection{Aims}
-The original aims of the project were to have the project feature:
+The original aims of the project were to have the game feature:
 \begin{itemize}
 	\item Single Player; a game mode which can be played without an internet connection. Allows players to complete missions to earn in-game currency, which can be redeemed to buy other types of forklift.
 	\item Multiplayer; a game mode requiring an internet connection, in which up to six players on two teams compete on the same map to collect as many boxes as they can, with the winners having the most boxes collected at the end of the round.
@@ -86,14 +88,79 @@ Another goal set aside was the submission of the game to Steam Greenlight. Unfor
  
 \subsection{Outcomes}
 With regard to each of the above outlined aims, this section compares the results achieved as seen in the final game. 
+\subsubsection{Single Player Mode}
+The vast majority of the work done throughout the project was put into the single player mode; most assets, sound clips and scripts created are showcased in this scene.
+\begin{figure}[H]
+	\caption{Single Player Screenshots}
+	\includegraphics[width=\textwidth]{images/sp}
+\end{figure}
+This image was taken during single player gameplay midway through a mission, illustrating the forklift having picked up a box and heading back towards the drop off point. The map itself is a warehouse, primarily filled with shelves and boxes, alongside other miscellaneous objects.
 
-* Single Player; the majority of the work done throughout the project was put into the single player mode. 
-* Menu System
-* Persistence
-* Four forklifts
+\begin{figure}[H]
+	\caption{Clock In Approach}
+	\includegraphics[width=\textwidth]{images/clockInApproach}
+\end{figure}
+The Clock-In object is how players begin missions within the game; by driving over the red circular activation pad on the ground in the spawn room, players can decide the difficulty level of the mission which affects the number of boxes spawned. 
+
+\begin{figure}[H]
+	\caption{Clock In Close-up}
+		\includegraphics[width=\textwidth]{images/clockInClose}
+\end{figure}
+A better view of the clock-in model; this clearly shows the in-game user interface with which the players interact to start missions.
+
+\subsubsection{Menu System}
+\begin{figure}[H]
+	\caption{Pause Screen}
+	\includegraphics[width=\textwidth]{images/pauseScreen}
+\end{figure}
+The above image displays the in game pause screen, which has several options the player can interact with. The image shown left of the boxes is chosen randomly from a set, each time the pause screen is opened. 
+
+\begin{figure}[H]
+	\caption{Main Menu}
+	\includegraphics[width=\textwidth]{images/mainMenu}
+\end{figure}
+The game begins by playing the main menu intro animation; the above forklift drives from screen right into centre screen, with the menu items appearing over the boxes once it stops. Throughout the animation, and whilst in main menu, the game music is playing. 
+
+\begin{figure}[H]
+	\caption{Forklift Selection Screen}
+	\includegraphics[width=\textwidth]{images/forkliftSelect}
+\end{figure}
+The forklift selection screen can be opened whilst the player is in the starting room, containing the clock-in object. It shows all four forklifts, their statistics, the players total funds, and allows the player to buy or select the currently displayed forklift. 
+
+\subsubsection{Persistence}
+\begin{figure}[H]
+	\caption{Persistence Screenshot}
+	\includegraphics[width=\textwidth]{images/score}
+\end{figure}
+The above image demonstrates the persistence aim being met; the high score value bottom middle is saved despite closing/reopening the application. As can also be seen in the above forklift selection screen image, the player funds and unlocked forklifts are also maintained over multiple playthroughs after having closed the game.
+
+\subsubsection{Four Forklift Classes}
+\begin{figure}[H]
+	\caption{Forklift Classes: Redneck (L) \& EZ-Reach (R)}
+	\includegraphics[width=\textwidth]{images/redneckEZ}
+\end{figure}
+Figure 8 illustrates two of the four forklift classes; Redneck and EZ-Reach models.
+
+\begin{figure}[H]
+	\caption{Forklift Classes: DinkyDink (L) \& Robotolift (R)}
+	\includegraphics[width=\textwidth]{images/dinkyRobo}
+\end{figure}
+The above shows the other two forklift classes made for the game; DinkyDink and Robotolift. 
+
 
 \subsection{Pipeline}
-* Describe our working pipeline
+% Describe our working pipeline
+
+After collaboratively working out a plan for features the implementation phase of the project could start. The working pipeline consisted of a similar structure to games development within the industry from concept design, pre-production and onto production. Unfortunately due to the limitations faced during the project, the post-production stage of the development was not completed.
+
+\subsection{Concept Design}
+
+The original concept of the forklift game was conceived before the start of the Group Project in January. This gave the team plenty of time to iron out the designs.
+
+\subsection{Pre-Production}
+
+During the initial stages of the project, the team had many group meetings for collaborative idea generation. This proved to be a very useful and productive stage of the process. A lot of documentation was created 
+
 
 \subsection{Testing}
 Types of testing undertaken throughout the project include mostly acceptance criteria testing, with some explorative testing. Testing sessions were planned from project start; aimed to coincide with the completion of major development tasks. However, due to the uncertain nature of the duration of some tasks, testing took on a more ad-hoc nature as the project matured. 
@@ -119,19 +186,40 @@ The MoSCoW method groups all project features into four categories; must have, s
 \newline
 \newline
 The project manager/programmer acted as client for this project, which allowed direct communication, quicker decision making, and a technical understanding of the development process. This resulted in saving a lot of time that would otherwise have been spent meeting with an outside client or waiting for decisions to be made, thereby catalysing the development process.
+\newline 
+\newline
+Further to the above, project risks were recorded in the risk register at the start of the project, and kept an eye on throughout. Issues faced later in the project were of a more interpersonal nature, and so dealt with privately on an ad-hoc basis. Backup plans were put in place to cover any work unable to be completed as a result of these issues. 
 \subsection{Collaboration}
 Various platforms were put in place to allow team members to communicate and collaborate on work with one another. At project start, several pieces of software were available for team use: 
 \begin{itemize}
-	\item Slack: Work-based messaging software, available on mobile and PC. The team had its own group that allowed users to discuss various topics (art, code, sound, ideas etc) on individual channels. Files were also shared through Slack. 
+	\item Slack: Work-based messaging software, available on mobile and PC. The team had its own group that allowed users to discuss various topics (art, code, sound, ideas etc) on individual channels. Files were also shared through Slack.  
 	\item Google Drive: The primary source of storing all files to do with the project. All members had access, allowing them to make backups of their work. Contains everything from photos of wireframe doodles, project management documents, to assets. Proved invaluable in having one place to store all work.
 	\item Github: Used primarily for the scripts created by programmers and sound designer for integrating FMOD into Unity. Allowed completed work to be shared easily and remotely. 
-	\item 
+	\item Meistertask: Used to create story cards from tasks assigned to all group members, in tracking the weekly sprint.  
+	\item Mural: Allows remote collaboration via an online drawing/planning tool. Allowed the team to create storyboards and share ideas throughout the week. 
 \end{itemize}
 
-*Lessons learned
-\subsection{Schedule} 
-* Comparison of original gantt chart and living timeline
+A few weeks into the project, however, saw the disuse of both Meistertask and Mural; it was evident that there were too many platforms for team members to record their ideas and view details of current or upcoming tasks. Following similar feedback from the team, task details and storyboards were moved to Google Drive, leaving only two or three places that team members need keep up to date with. This proved more effective, allowing the team to focus on development rather than admin. In order to encourage regular communication throughout the team, the project manager routinely wrote into the group chat and paid attention to the replies; should any member not be responsive throughout the week, they would receive a personal message inquiring about their progress. 
 
-\subsection{Lessons Learned (retitle)}
+As regards communication with module staff, the project manager and lead programmer attended weekly meetings with the group supervisor, to keep him updated on progress or issues for that week. The module leader was consulted on a few occasions, regarding setting up a git server for the team, and further consultation on issues. 
+
+\subsection{Schedule} 
+\begin{figure}[H]
+	\caption{Original Timeline Plan}
+	\includegraphics[width=\textwidth]{images/ganttChart}
+\end{figure}
+The above figure illustrates the original gantt chart included in the PID, as was planned prior to project kick-off. 
+\begin{figure}[H]
+	\caption{Living Timeline}
+	\includegraphics[scale=0.4]{images/livingTimeline}
+\end{figure}
+The above figure displays the actual timeline, which was kept updated throughout the project. 
+
+As is evident by comparing the above images of the teams predicted and actual progress, changes were made throughout the project. These changes were a necessity brought about largely by the difference between the projected and resulting time requirements of tasks. In keeping with Agile methodology, more time was allocated where necessary to certain tasks, thereby pushing back others. The original plan was useful in keeping goals in mind, whilst allowing a fluidity in the arrangement of tasks. 
+
 \section{Conclusion}
+
+\begin{appendix}
+	
+\end{appendix}
 \end{document}
